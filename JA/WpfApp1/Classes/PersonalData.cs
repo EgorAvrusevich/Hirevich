@@ -9,13 +9,13 @@ namespace JA.Classes
     internal class PersonalData
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName {  get; set; }
-        public string email { get; set; }
-        public string About { get; set; }
-        public string Education { get; set; }
-        public byte[] Photo { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName {  get; set; }
+        public string? email { get; set; }
+        public string? About { get; set; }
+        public string? Education { get; set; }
+        public byte[]? Photo { get; set; }
 
-        public PersonalData() { }
+        public PersonalData(int id) { Id = id; }
     }
 }

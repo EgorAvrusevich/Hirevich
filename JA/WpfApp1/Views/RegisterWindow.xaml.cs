@@ -100,8 +100,8 @@ namespace JA.Views
                         App.Database.Users.Add(newuser);
                         App.Database.SaveChanges();
 
-                        //MoreInfoWindow window = new MoreInfoWindow(newuser);
-                        MainWindow window = new MainWindow();
+                        MoreInfoWindow window = new MoreInfoWindow(newuser);
+                        //MainWindow window = new MainWindow();
                         window.Show();
                         Close();
                     }

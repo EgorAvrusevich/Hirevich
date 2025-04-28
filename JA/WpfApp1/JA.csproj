@@ -12,6 +12,7 @@
   <ItemGroup>
     <None Remove="Images\DarkLogo-removebg-preview.png" />
     <None Remove="Images\LightLogo-removebg-preview.png" />
+    <None Remove="Images\LoadPhoto.png" />
     <None Remove="Images\lupa.png" />
   </ItemGroup>
 
@@ -35,6 +36,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\LightLogo-removebg-preview.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LoadPhoto.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\lupa.png">

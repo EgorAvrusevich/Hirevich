@@ -22,11 +22,16 @@ namespace JA.Views
     /// </summary>
     public partial class MoreInfoWindow : Window
     {
-        private PersonalData PersonalData;
+        private PersonalData PersonalData { get; set; }
         public MoreInfoWindow(User newuser)
         {
-           PersonalData.Id = App.Database.Users.Find(newuser).id;
-           InitializeComponent();
+            InitializeComponent();
+
+            PersonalData = new PersonalData(App.Database.Users.FirstOrDefault(u => u.login == newuser.login).id);
+        }
+        public MoreInfoWindow()
+        {
+            InitializeComponent();
         }
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e)
@@ -72,7 +77,7 @@ namespace JA.Views
             bitmap.Freeze(); // Для безопасного использования в других потоках
 
             // Установка изображения в Image контрол
-            Photo.Source = bitmap;
+            Photo.ImageSource = bitmap;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -84,19 +89,19 @@ namespace JA.Views
                 PersonalData.LastName = LastNameBox.Text;
                 PersonalData.Education = EducationBox.Text;
                 PersonalData.About = AboutBox.Text;
-                if (Photo.Source is BitmapImage image) {
+                if (Photo.ImageSource is BitmapImage image) {
                     PersonalData.Photo = ConvertImageToBytes(image);
                 }
 
                 using (App.Database)
                 {
-                    App.Database.Update(PersonalData);
+                    App.Database.Users_data.Add(PersonalData);
                     App.Database.SaveChanges();
                 }
 
-                Close();
                 MainWindow window = new MainWindow();
                 window.Show();
+                Close();
             }
             catch(Exception ex)
             {
