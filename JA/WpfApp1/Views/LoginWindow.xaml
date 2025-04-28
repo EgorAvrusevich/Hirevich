@@ -1,0 +1,45 @@
+﻿<Window x:Class="JA.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JA"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="JA" Height="444" Width="500" MaxWidth="500" MinWidth="500" MinHeight="444">
+    <Grid MinWidth="500" MaxWidth="500" Width="495" Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Вход" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="35"/>
+        <Label Grid.Row="1" Content="Login" FontSize="16" Margin="40,0,0,0"/>
+        <Border Grid.Row="1" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48">
+            <TextBox x:Name="login_box" TextWrapping="Wrap" Text="" Background="#F8F8F8" VerticalAlignment="Center" BorderThickness="0" Margin="10, 0" FontSize="16"/>
+        </Border>
+        <Label Grid.Row="2" Content="Пароль" FontSize="16" Margin="40,0,0,0"/>
+        <Label Grid.Row="2" Content="Я забыл пароль" FontSize="16" Margin="0,0,40,0" HorizontalAlignment="Right"/>
+        <Border Grid.Row="2" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48">
+            <PasswordBox x:Name="password_box" Background="#F8F8F8" VerticalAlignment="Center" BorderThickness="0" Margin="10, 0" FontSize="16"/>
+        </Border>
+        <Label Grid.Row="2" x:Name="warning" Content="Неверный логин или пароль" Margin="0,75,0,0" Width="170" Foreground="#FFC76666" Visibility="Hidden"/>
+        <Border Grid.Row="3" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48"
+                BorderThickness="2" BorderBrush="#FF4A96" VerticalAlignment="Top">
+            <Button Background="#ffffff" BorderThickness="0" Content="Войти" FontSize="16" Foreground="#FFFF4A96" Click="Button_Click" />
+        </Border>
+        <Button BorderThickness="0" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20" Background="White" FontSize="15" Click="Button_Click_1">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Content" Value="У меня ещё нет аккаунта" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\J\\Desktop\\JA1\\JA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\ja\\wpfapp1\\views\\moreinfowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\moreinfowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 505,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MoreInfoWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\JA\\WpfApp1\\Views\\MoreInfoWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\MoreInfoWindow.xaml",
+              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\JA\\WpfApp1\\Views\\MoreInfoWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\MoreInfoWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-21T23:24:12.719Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
