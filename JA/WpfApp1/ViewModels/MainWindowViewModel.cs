@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace JA.ViewModels
 {
-    class MainViewModel : INotifyPropertyChanged
+    class MainWindowViewModel : INotifyPropertyChanged
     {
         private readonly AuthService _AuthService;
 
@@ -17,7 +17,7 @@ namespace JA.ViewModels
         public bool IsLoggedIn => _AuthService.IsLoggedIn;
         public User? CurrentUser => _AuthService.CurrentUser;
 
-        public MainViewModel(AuthService authService) {
+        public MainWindowViewModel(AuthService authService) {
             _AuthService = authService;
 
         }
@@ -26,6 +26,5 @@ namespace JA.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
     }
 }

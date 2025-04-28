@@ -13,16 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace JA.Views
+namespace JA.Views.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Cabinet.xaml
+    /// Логика взаимодействия для ApplicationsPage.xaml
     /// </summary>
-    public partial class Cabinet : Page
+    public partial class ApplicationsPage : Page
     {
-        public Cabinet()
+        public ApplicationsPage()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

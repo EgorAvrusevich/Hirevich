@@ -1,5 +1,6 @@
 ﻿using JA.Classes;
 using JA.ViewModels;
+using JA.Views.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,29 +24,22 @@ namespace JA.Views
     public partial class MainWindow : Window
     {
         
-        private readonly MainViewModel viewModel;
+        private readonly MainWindowViewModel viewModel;
 
         public MainWindow()
         {
             InitializeComponent();
-            viewModel = new MainViewModel(new AuthService(new AplicationContext()));
+            viewModel = new MainWindowViewModel(new AuthService(new AplicationContext()));
             DataContext = viewModel;
 
             viewModel.PropertyChanged += (s, e) => UpdateUI();
+            MainPanel.Navigate(new ApplicationsPage());
         }
 
         private void UpdateUI()
         {
-            Guest.Visibility = viewModel.IsLoggedIn ? Visibility.Collapsed : Visibility.Visible;
             //Loged_name.Visibility = viewModel.IsLoggedIn ? Visibility.Visible : Visibility.Collapsed;
             //Loged_photo.Visibility = viewModel.IsLoggedIn ? Visibility.Visible: Visibility.Collapsed;
-        }
-
-        private void Login_Click(object sender, MouseButtonEventArgs e)
-        {
-            LoginWindow LoginWindow = new LoginWindow();
-            LoginWindow.Show();
-            Close();
         }
     }
 }
