@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\J\Desktop\JA1\JA\WpfApp1\obj\Debug\net8.0-windows\
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\
 JA
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\J\Desktop\JA1\JA\WpfApp1\App.xaml
-4-36503546
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\App.xaml
+6145297614
 
-15-1742903505
-221-1393608203
-Views\MoreInfoWindow.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;
+21-138760462
+221-580175025
+Views\MoreInfoWindow.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;Views\Pages\ApplicationsPage.xaml;Views\Pages\CabinetPage.xaml;
 
 False
 

@@ -30,7 +30,7 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalAlignment="Center" FontSize="16" Foreground="#133F42" Margin="5,10">Почта</Label>
                     <TextBox Grid.Column="0" x:Name="EmailBox" FontSize="16" VerticalContentAlignment="Center" Margin="60,10,20,10"></TextBox>
-                    <Label Grid.Column="1" Foreground="#133F42" VerticalAlignment="Center">Образование</Label>
+                    <Label Grid.Column="1" FontSize="16" Foreground="#133F42" Margin="-20" VerticalAlignment="Center">Образование</Label>
                     <ComboBox Grid.Column="1" x:Name="EducationBox" Margin="85, 10, 20, 10" Foreground="#133F42">
                         <ComboBoxItem Content="Нет образования"/>
                         <ComboBoxItem Content="Среднее общее"/>
@@ -53,7 +53,7 @@
                         </Grid.RowDefinitions>
                         <Ellipse Grid.Row="0" Margin="5,10" Width="200" Height="200">
                             <Ellipse.Fill>
-                                <ImageBrush x:Name="Photo" ImageSource=""/>
+                                <ImageBrush x:Name="Photo" ImageSource="/Images/LoadPhoto.png"/>
                             </Ellipse.Fill>
                         </Ellipse>
                         <Label x:Name="LoadPhoto" Foreground="#133F42" Grid.Row="1" Margin="5" HorizontalAlignment="Center" MouseDown="Label_MouseDown">Загрузить фото</Label>

@@ -7,6 +7,7 @@ namespace JA.Classes
     public class AplicationContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        internal DbSet<PersonalData> Users_data { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

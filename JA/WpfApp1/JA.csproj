@@ -12,7 +12,11 @@
   <ItemGroup>
     <None Remove="Images\DarkLogo-removebg-preview.png" />
     <None Remove="Images\LightLogo-removebg-preview.png" />
+    <None Remove="Images\LightLogo.png" />
+    <None Remove="Images\LoadPhoto.png" />
     <None Remove="Images\lupa.png" />
+    <None Remove="Views\Pages\ApplicationsPage.xaml" />
+    <None Remove="Views\Pages\CabinetPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +32,12 @@
     <Page Include="Views\MainWindow.xaml" />
     <Page Include="Views\LoginWindow.xaml" />
     <Page Include="Views\RegisterWindow.xaml" />
+    <Page Include="Views\Pages\ApplicationsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\CabinetPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <ItemGroup>
@@ -37,15 +47,15 @@
     <Resource Include="Images\LightLogo-removebg-preview.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\LightLogo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LoadPhoto.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\lupa.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Views\Cabinet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
   </ItemGroup>
 
 </Project>
