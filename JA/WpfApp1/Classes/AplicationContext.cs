@@ -8,6 +8,8 @@ namespace JA.Classes
     {
         public DbSet<User> Users { get; set; }
         internal DbSet<PersonalData> Users_data { get; set; }
+        internal DbSet<Application> Applications { get; set; }
+        internal DbSet<Companys_data> Companys_data { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

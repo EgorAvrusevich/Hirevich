@@ -1,4 +1,5 @@
 ﻿using JA.Classes;
+using JA.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,7 @@ namespace JA.Views
                 {
                     if (user.password == password_box.Password)
                     {
-                        MainWindow MainWindow = new MainWindow();
+                        MainWindow MainWindow = new MainWindow(user);
                         MainWindow.Show();
                         Close();
                     }
@@ -47,8 +48,8 @@ namespace JA.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            RegisterWindow register = new RegisterWindow();
-            register.Show();
+            RegisterWindow window = new RegisterWindow();
+            window.Show();
             Close();
         }
     }

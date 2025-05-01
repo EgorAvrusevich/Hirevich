@@ -23,23 +23,16 @@ namespace JA.Views
     /// </summary>
     public partial class MainWindow : Window
     {
+        User _currentUser;
         
-        private readonly MainWindowViewModel viewModel;
 
-        public MainWindow()
+        public MainWindow(User currentUser)
         {
             InitializeComponent();
-            viewModel = new MainWindowViewModel(new AuthService(new AplicationContext()));
-            DataContext = viewModel;
-
-            viewModel.PropertyChanged += (s, e) => UpdateUI();
-            MainPanel.Navigate(new ApplicationsPage());
+            _currentUser = currentUser;
+            MainPanel.Content = new ApplicationsPage();
         }
 
-        private void UpdateUI()
-        {
-            //Loged_name.Visibility = viewModel.IsLoggedIn ? Visibility.Visible : Visibility.Collapsed;
-            //Loged_photo.Visibility = viewModel.IsLoggedIn ? Visibility.Visible: Visibility.Collapsed;
-        }
+
     }
 }

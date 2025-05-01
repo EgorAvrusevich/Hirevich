@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove="Images\DarkLogo-removebg-preview.png" />
+    <None Remove="Images\Job wage.png" />
     <None Remove="Images\LightLogo-removebg-preview.png" />
     <None Remove="Images\LightLogo.png" />
     <None Remove="Images\LoadPhoto.png" />
@@ -44,6 +45,9 @@
     <Resource Include="Images\DarkLogo-removebg-preview.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Job wage.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\LightLogo-removebg-preview.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -56,6 +60,16 @@
     <Resource Include="Images\lupa.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views\AdminWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\Base\" />
   </ItemGroup>
 
 </Project>
