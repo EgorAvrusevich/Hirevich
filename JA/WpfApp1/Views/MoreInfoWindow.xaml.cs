@@ -22,11 +22,12 @@ namespace JA.Views
     /// </summary>
     public partial class MoreInfoWindow : Window
     {
+        private User _currentUser { get; set; }
         private PersonalData PersonalData { get; set; }
         public MoreInfoWindow(User newuser)
         {
             InitializeComponent();
-
+            _currentUser = newuser;
             PersonalData = new PersonalData(App.Database.Users.FirstOrDefault(u => u.login == newuser.login).id);
         }
         public MoreInfoWindow()
@@ -99,7 +100,7 @@ namespace JA.Views
                     App.Database.SaveChanges();
                 }
 
-                MainWindow window = new MainWindow();
+                MainWindow window = new MainWindow(_currentUser);
                 window.Show();
                 Close();
             }

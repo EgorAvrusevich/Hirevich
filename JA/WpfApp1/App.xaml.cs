@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.IO;
 using System.Windows;
+using Application = System.Windows.Application;
 
 namespace JA
 {
