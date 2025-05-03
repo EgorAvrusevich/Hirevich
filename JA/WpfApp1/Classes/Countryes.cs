@@ -6,40 +6,40 @@ namespace JA.Classes
     public enum Country
     {
         [Description("Россия")]
-        Russia,
+        russia,
 
         [Description("Соединённые Штаты Америки")]
-        USA,
+        usa,
 
         [Description("Германия")]
-        Germany,
+        germany,
 
         [Description("Франция")]
-        France,
+        france,
 
         [Description("Китай")]
-        China,
+        china,
 
         [Description("Япония")]
-        Japan,
+        japan,
 
         [Description("Великобритания")]
         UK,
 
         [Description("Канада")]
-        Canada,
+        canada,
 
         [Description("Бразилия")]
-        Brazil,
+        brazil,
 
         [Description("Австралия")]
-        Australia,
+        australia,
 
         [Description("Буларусь")]
-        Belarus,
+        belarus,
 
         [Description("Украина")]
-        Ukrain
+        ukraine
     }
 
     public static class CountryExtensions

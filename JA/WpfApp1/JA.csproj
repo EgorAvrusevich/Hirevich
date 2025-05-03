@@ -11,6 +11,22 @@
 
   <ItemGroup>
     <None Remove="Images\DarkLogo-removebg-preview.png" />
+    <None Remove="Images\Edit.png" />
+    <None Remove="Images\exit-removebg-preview.png" />
+    <None Remove="Images\flags\australia_flag.png" />
+    <None Remove="Images\flags\belarus_flag.png" />
+    <None Remove="Images\flags\brazil_flag.png" />
+    <None Remove="Images\flags\canada_flag.png" />
+    <None Remove="Images\flags\china_flag.png" />
+    <None Remove="Images\flags\france_flag.png" />
+    <None Remove="Images\flags\germany_flag.png" />
+    <None Remove="Images\flags\japan_flag.png" />
+    <None Remove="Images\flags\others_flag.png" />
+    <None Remove="Images\flags\russia_flag.png" />
+    <None Remove="Images\flags\ukraine_flag.png" />
+    <None Remove="Images\flags\UK_flag.png" />
+    <None Remove="Images\flags\usa_flag.png" />
+    <None Remove="Images\google_logo.png" />
     <None Remove="Images\Job wage.png" />
     <None Remove="Images\LightLogo-removebg-preview.png" />
     <None Remove="Images\LightLogo.png" />
@@ -29,7 +45,8 @@
 
   <ItemGroup>
     <Page Include="App.xaml" />
-    <Page Include="Views\MoreInfoWindow.xaml" />
+    <Page Include="Views\MoreInfoWindowUser.xaml" />
+    <Page Include="Views\MoreInfoWindowCompany.xaml" />
     <Page Include="Views\MainWindow.xaml" />
     <Page Include="Views\LoginWindow.xaml" />
     <Page Include="Views\RegisterWindow.xaml" />
@@ -45,6 +62,24 @@
     <Resource Include="Images\DarkLogo-removebg-preview.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Edit.png" />
+    <Resource Include="Images\exit-removebg-preview.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\australia_flag.png" />
+    <Resource Include="Images\flags\belarus_flag.png" />
+    <Resource Include="Images\flags\brazil_flag.png" />
+    <Resource Include="Images\flags\canada_flag.png" />
+    <Resource Include="Images\flags\china_flag.png" />
+    <Resource Include="Images\flags\france_flag.png" />
+    <Resource Include="Images\flags\germany_flag.png" />
+    <Resource Include="Images\flags\japan_flag.png" />
+    <Resource Include="Images\flags\others_flag.png" />
+    <Resource Include="Images\flags\russia_flag.png" />
+    <Resource Include="Images\flags\ukraine_flag.png" />
+    <Resource Include="Images\flags\UK_flag.png" />
+    <Resource Include="Images\flags\usa_flag.png" />
+    <Resource Include="Images\google_logo.png" />
     <Resource Include="Images\Job wage.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -64,6 +99,9 @@
 
   <ItemGroup>
     <None Update="Views\AdminWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\MoreInfoWindowCompany.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

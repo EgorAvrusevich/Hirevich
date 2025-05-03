@@ -24,15 +24,36 @@ namespace JA.Views
     public partial class MainWindow : Window
     {
         User _currentUser;
+        readonly PersonalData? _personalData;
         
 
         public MainWindow(User currentUser)
         {
             InitializeComponent();
             _currentUser = currentUser;
+            using (var db = new AplicationContext())
+            {
+                _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
+            }
+            this.DataContext = _personalData;
             MainPanel.Content = new ApplicationsPage();
         }
 
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            LoginWindow window = new LoginWindow();
+            window.Show();
+            Close();
+        }
 
+        private void LoggedPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MainPanel.Content = new CabinetPage(_currentUser);
+        }
+
+        private void Vacaitions_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MainPanel.Content = new ApplicationsPage();
+        }
     }
 }

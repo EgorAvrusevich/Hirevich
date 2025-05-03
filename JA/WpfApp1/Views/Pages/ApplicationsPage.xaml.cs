@@ -33,7 +33,7 @@ namespace JA.Views.Pages
             LoadDataFromDataBase();
         }
 
-        private ObservableCollection<Application> applications = new ObservableCollection<Application>();
+        private ObservableCollection<AppForList> applications = new ObservableCollection<AppForList>();
 
         private void LoadDataFromDataBase()
         {
@@ -59,7 +59,7 @@ namespace JA.Views.Pages
                     // Добавляем загруженные данные в коллекцию
                     foreach (var app in appsFromDb)
                     {
-                        applications.Add(new Application
+                        applications.Add(new AppForList(new Application
                         {
                             Id = app.Application.Id,
                             Company_name = app.CompanyName,
@@ -68,7 +68,7 @@ namespace JA.Views.Pages
                             Experience = app.Application.Experience,
                             Country = app.Application.Country,
                             Description = app.Application.Description
-                        });
+                        }));
                     }
                 }
 

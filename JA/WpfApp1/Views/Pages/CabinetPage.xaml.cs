@@ -1,4 +1,5 @@
 ﻿using System;
+using JA.Classes;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,20 @@ namespace JA.Views.Pages
     /// <summary>
     /// Логика взаимодействия для Cabinet.xaml
     /// </summary>
-    public partial class Cabinet : Page
+    public partial class CabinetPage : Page
     {
-        public Cabinet()
+        User _currentUser;
+        PersonalData? _personalData;
+        public CabinetPage(User currentUser)
         {
-            //InitializeComponent();
+            InitializeComponent();
+            _currentUser = currentUser;
+            using (var db = new AplicationContext())
+            {
+                _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
+            }
+            DataContext = _personalData;
         }
+
     }
 }

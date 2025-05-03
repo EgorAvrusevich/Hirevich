@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\App.xaml
-6145297614
+7-1207892090
 
-261476112467
+29-2005718364
 221-580175025
-Views\MoreInfoWindow.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;Views\Pages\ApplicationsPage.xaml;Views\Pages\CabinetPage.xaml;
+Views\MoreInfoWindowUser.xaml;Views\MoreInfoWindowCompany.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;Views\Pages\ApplicationsPage.xaml;Views\Pages\CabinetPage.xaml;
 
-True
+False
 

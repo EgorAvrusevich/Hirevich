@@ -17,6 +17,7 @@ namespace JA.Classes
         public byte[]? Logo {  get; set; }
 
         public Companys_data() { }
+        public Companys_data(int id) { Id = id; }
         public Companys_data( string name, string discption, string email, byte[] logo) { 
             Name = name; 
             Discription = discption;

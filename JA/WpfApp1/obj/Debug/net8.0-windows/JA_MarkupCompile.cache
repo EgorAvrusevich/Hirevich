@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\App.xaml
-6145297614
+7-1207892090
 
-24-635211500
+27177924965
 221-580175025
-Views\MoreInfoWindow.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;Views\Pages\ApplicationsPage.xaml;Views\Pages\CabinetPage.xaml;
+Views\MoreInfoWindowUser.xaml;Views\MoreInfoWindowCompany.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;Views\Pages\ApplicationsPage.xaml;Views\Pages\CabinetPage.xaml;
 
 False
 
