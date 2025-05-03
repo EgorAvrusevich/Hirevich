@@ -161,7 +161,6 @@ C:\Users\J\Desktop\JA1\JA\WpfApp1\obj\Debug\net8.0-windows\JA.csproj.Up2Date
 C:\Users\J\Desktop\JA1\JA\WpfApp1\obj\Debug\net8.0-windows\JA.genruntimeconfig.cache
 C:\Users\J\Desktop\JA1\JA\WpfApp1\obj\Debug\net8.0-windows\ref\JA.dll
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\JA.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindow.g.cs
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\RegisterWindow.g.cs
@@ -229,7 +228,6 @@ C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\bin\Debug\net8.0-windows\runtimes\
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\App.baml
-C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindow.baml
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MainWindow.baml
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\LoginWindow.baml
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\RegisterWindow.baml
@@ -246,3 +244,7 @@ C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pag
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\ApplicationsPage.baml
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\CabinetPage.g.cs
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\CabinetPage.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindowUser.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindowCompany.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindowUser.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindowCompany.baml

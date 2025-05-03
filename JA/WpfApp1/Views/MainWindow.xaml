@@ -11,7 +11,7 @@
 
     <Grid Background="#F8F8F8">
         <Grid.RowDefinitions>
-            <RowDefinition Height="80" x:Name="nav" />
+            <RowDefinition Height="60" x:Name="nav" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="White">
@@ -27,26 +27,27 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0" CornerRadius="4" >
-                <Image Source="/Images/LightLogo-removebg-preview.png" Height="80" Width="80" Stretch="Uniform"/>
+                <Image Source="/Images/LightLogo-removebg-preview.png" Height="60" Width="60" Stretch="Uniform"/>
             </Border>
-            <Border Grid.Column="1" CornerRadius="4" Margin="8, 28" >
+            <Border x:Name="Vacaitions" Grid.Column="1" CornerRadius="4" VerticalAlignment="Center" MouseDown="Vacaitions_MouseDown" >
                 <Label  Content="Вакансии" VerticalAlignment="Center" HorizontalAlignment="Center" />
             </Border>
-            <Border Grid.Column="2" CornerRadius="4" Margin="8, 28" >
-                <Label Grid.Column="1" Content="Резюме" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Border Grid.Column="2" CornerRadius="4" VerticalAlignment="Center" >
+                <Label Grid.Column="1" Content="Резюме" HorizontalAlignment="Center" />
             </Border>
-            <StackPanel Grid.Column="8" x:Name="LoggedPanel" Orientation="Horizontal">
-                <TextBlock Text="{Binding _currentUser.FirstName}" 
+            <StackPanel Grid.Column="8" x:Name="LoggedPanel" VerticalAlignment="Center" Orientation="Horizontal" MouseDown="LoggedPanel_MouseDown">
+                <TextBlock Text="{Binding FirstName}" 
                                VerticalAlignment="Center"
                                Margin="-30,0,10,0"
                                FontSize="14"/>
                 <Ellipse Width="40" Height="40">
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="{Binding _currentUser.ProfileImage}"/>
+                        <ImageBrush ImageSource="{Binding Photo}"/>
                     </Ellipse.Fill>
                 </Ellipse>
             </StackPanel>
+            <Image Grid.Column="9" Source="/Images/exit-removebg-preview.png" Width="50" HorizontalAlignment="Center" MouseDown="Image_MouseDown"></Image>
         </Grid>
-        <Frame Grid.Row="1" x:Name="MainPanel"></Frame>
+        <Frame Grid.Row="1" x:Name="MainPanel" Background="#F8F8F8" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using JA.Classes;
 using JA.Views;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,9 +56,9 @@ namespace JA.Views
             Close();
         }
 
+        private static readonly object _dbLock = new object();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            db = new AplicationContext();
             bool pass = true;
             string login = loginTextBox.Text.Trim();
             string password = passwordTextBox.Password.Trim();
@@ -89,6 +90,7 @@ namespace JA.Views
                 {
                     using (db = new AplicationContext())
                     {
+                        db.Database.SetCommandTimeout(30);
                         // Проверка на существующего пользователя
                         if (db.Users.Any(u => u.login == login))
                         {
@@ -97,14 +99,18 @@ namespace JA.Views
                         }
 
                         User newuser = new User(login, password, isSercher);
-                        App.Database.Users.Add(newuser);
-                        App.Database.SaveChanges();
+                        db.Users.Add(newuser);
+                        db.SaveChanges();
 
-                        MoreInfoWindow window = new MoreInfoWindow(newuser);
-                        //MainWindow window = new MainWindow();
-                        window.Show();
+                        Window newWindow = isSercher ? new MoreInfoWindowUser(newuser) 
+                                                     : new MoreInfoWindowCompany(newuser);
+                        newWindow.Show();
                         Close();
                     }
+                }
+                catch (DbUpdateException dbEx)
+                {
+                    MessageBox.Show($"Ошибка сохранения данных: {dbEx.InnerException?.Message ?? dbEx.Message}");
                 }
                 catch (Exception ex)
                 {

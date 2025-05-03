@@ -5,10 +5,13 @@
     <Compile Update="Views\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\MoreInfoWindowCompany.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Pages\CabinetPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\MoreInfoWindow.xaml.cs">
+    <Compile Update="Views\MoreInfoWindowUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Pages\ApplicationsPage.xaml.cs">
@@ -17,6 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Update="Views\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\MoreInfoWindowCompany.xaml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
