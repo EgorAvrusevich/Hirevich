@@ -74,6 +74,53 @@ namespace JA.Views
                 PersonalData.LastName = LastNameBox.Text;
                 PersonalData.Education = EducationBox.Text;
                 PersonalData.About = AboutBox.Text;
+                PersonalData.age = AgeBox.Text;
+                PersonalData.speciality = SpeccialityBox.Text;
+                switch (Country.SelectedItem)
+                {
+                    case "Беларусь":
+                        PersonalData.Country = "belarus";
+                        break;
+                    case "Россия":
+                        PersonalData.Country = "russia";
+                        break;
+                    case "Украина":
+                        PersonalData.Country = "ukraine";
+                        break;
+                    case "Канада":
+                        PersonalData.Country = "canada";
+                        break;
+                    case "Бразилия":
+                        PersonalData.Country = "brazil";
+                        break;
+                    case "США":
+                        PersonalData.Country = "usa";
+                        break;
+                    case "Австралия":
+                        PersonalData.Country = "australia";
+                        break;
+                    case "Великобритания":
+                        PersonalData.Country = "UK";
+                        break;
+                    case "Китай":
+                        PersonalData.Country = "china";
+                        break;
+                    case "Япония":
+                        PersonalData.Country = "japan";
+                        break;
+                    case "Германия":
+                        PersonalData.Country = "germany";
+                        break;
+                    case "Франция":
+                        PersonalData.Country = "france";
+                        break;
+                    case "Другая":
+                        PersonalData.Country = "others";
+                        break;
+                    default:
+                        throw new Exception();
+                        
+                }
                 if (Photo.ImageSource is BitmapImage image) {
                     PersonalData.Photo = Load_Functions.ConvertImageToBytes(image);
                 }

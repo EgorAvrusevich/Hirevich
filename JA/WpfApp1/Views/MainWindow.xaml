@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainWindow"
       MinWidth = "750px">
-
+    
     <Grid Background="#F8F8F8">
         <Grid.RowDefinitions>
             <RowDefinition Height="60" x:Name="nav" />
@@ -29,11 +29,15 @@
             <Border Grid.Column="0" CornerRadius="4" >
                 <Image Source="/Images/LightLogo-removebg-preview.png" Height="60" Width="60" Stretch="Uniform"/>
             </Border>
-            <Border x:Name="Vacaitions" Grid.Column="1" CornerRadius="4" VerticalAlignment="Center" MouseDown="Vacaitions_MouseDown" >
-                <Label  Content="Вакансии" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Border Grid.Column="1" >
+                <Border x:Name="Vacaitions" CornerRadius="4" VerticalAlignment="Center" MouseDown="Vacaitions_MouseDown" >
+                    <Label  Content="Вакансии" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Border>
             </Border>
-            <Border Grid.Column="2" CornerRadius="4" VerticalAlignment="Center" >
-                <Label Grid.Column="1" Content="Резюме" HorizontalAlignment="Center" />
+            <Border Grid.Column="2" Visibility="Collapsed" x:Name="CVs_page">
+                <Border CornerRadius="4" VerticalAlignment="Center">
+                    <Label Grid.Column="1" Content="Резюме" HorizontalAlignment="Center" />
+                </Border>
             </Border>
             <StackPanel Grid.Column="8" x:Name="LoggedPanel" VerticalAlignment="Center" Orientation="Horizontal" MouseDown="LoggedPanel_MouseDown">
                 <TextBlock Text="{Binding FirstName}" 
@@ -46,7 +50,7 @@
                     </Ellipse.Fill>
                 </Ellipse>
             </StackPanel>
-            <Image Grid.Column="9" Source="/Images/exit-removebg-preview.png" Width="50" HorizontalAlignment="Center" MouseDown="Image_MouseDown"></Image>
+            <Image Grid.Column="8" Source="/Images/exit-removebg-preview.png" Width="50" HorizontalAlignment="Center" MouseDown="Image_MouseDown"></Image>
         </Grid>
         <Frame Grid.Row="1" x:Name="MainPanel" Background="#F8F8F8" NavigationUIVisibility="Hidden"></Frame>
     </Grid>

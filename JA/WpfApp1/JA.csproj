@@ -53,7 +53,10 @@
     <Page Include="Views\Pages\ApplicationsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\CabinetPage.xaml">
+	  <Page Include="Views\Pages\CabinetPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+	  </Page>
+    <Page Include="Views\Pages\CVsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -102,6 +105,9 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\MoreInfoWindowCompany.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\Pages\CVsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

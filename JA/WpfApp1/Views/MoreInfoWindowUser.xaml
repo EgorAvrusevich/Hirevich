@@ -17,7 +17,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label VerticalAlignment="Center" FontSize="16" Foreground="#133F42" Margin="5,10">Имя</Label>
-                    <TextBox x:Name="FirstNameBox" FontSize="16" VerticalContentAlignment="Center" Margin="60,10, 20,10"></TextBox>
+                    <TextBox x:Name="FirstNameBox" FontSize="16" VerticalContentAlignment="Center" Margin="70,10, 20,10"></TextBox>
                     <Label Grid.Column="1" VerticalAlignment="Center" FontSize="16" Foreground="#133F42" Margin="5,10">Фамилия</Label>
                     <TextBox x:Name="LastNameBox" FontSize="16" VerticalContentAlignment="Center" Grid.Column="1" Margin="85,10, 20, 10"></TextBox>
                 </Grid>
@@ -29,7 +29,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalAlignment="Center" FontSize="16" Foreground="#133F42" Margin="5,10">Почта</Label>
-                    <TextBox Grid.Column="0" x:Name="EmailBox" FontSize="16" VerticalContentAlignment="Center" Margin="60,10,20,10"></TextBox>
+                    <TextBox Grid.Column="0" x:Name="EmailBox" FontSize="16" VerticalContentAlignment="Center" Margin="70,10,20,10"></TextBox>
                     <Label Grid.Column="1" FontSize="16" Foreground="#133F42" Margin="-20" VerticalAlignment="Center">Образование</Label>
                     <ComboBox Grid.Column="1" x:Name="EducationBox" Margin="85, 10, 20, 10" Foreground="#133F42">
                         <ComboBoxItem Content="Нет образования"/>
@@ -37,6 +37,18 @@
                         <ComboBoxItem Content="Среднее специальное"/>
                         <ComboBoxItem Content="Высшее"/>
                     </ComboBox>
+                </Grid>
+            </Border>
+            <Border>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Center" FontSize="16" Foreground="#133F42" Margin="5,10">Возраст</Label>
+                    <TextBox x:Name="AgeBox" FontSize="16" VerticalContentAlignment="Center" Margin="70,10, 20,10"></TextBox>
+                    <Label Grid.Column="1" VerticalAlignment="Center" FontSize="16" Foreground="#133F42" Margin="5,10">Ты спец в:</Label>
+                    <TextBox x:Name="SpeccialityBox" FontSize="16" VerticalContentAlignment="Center" Grid.Column="1" Margin="85,10, 20, 10"></TextBox>
                 </Grid>
             </Border>
             <Border>
@@ -60,19 +72,38 @@
                     </Grid>
                     <Grid Grid.Column="1">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="45"/>
                             <RowDefinition Height="30"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Label  FontSize="16" Foreground="#133F42">Раскажите о себе:</Label>
-                        <TextBox TextWrapping="Wrap" Grid.Row="1" Margin="0,0,20,0" FontSize="16"
-                                 AcceptsReturn="True"
-                                 AcceptsTab="True"
-                                 VerticalScrollBarVisibility="Auto"
-                                 HorizontalScrollBarVisibility="Disabled"
-                                 MinHeight="100"
-                                 MaxHeight="220"
-                                 Text="{Binding LongTextProperty}"
-                                 x:Name="AboutBox"/>
+                            <Grid Grid.Row="0">
+                                <Label FontSize="16" Foreground="#133F42" Margin="0" VerticalAlignment="Center">Страна</Label>
+                                <ComboBox x:Name="Country" Margin="80, 10, 20, 10" Foreground="#133F42">
+                                    <ComboBoxItem Content="Беларусь"/>
+                                    <ComboBoxItem Content="Россия"/>
+                                    <ComboBoxItem Content="Украина"/>
+                                    <ComboBoxItem Content="Бразилия"/>
+                                    <ComboBoxItem Content="США"/>
+                                    <ComboBoxItem Content="Канада"/>
+                                    <ComboBoxItem Content="Китай"/>
+                                    <ComboBoxItem Content="Япония"/>
+                                    <ComboBoxItem Content="Австралия"/>
+                                    <ComboBoxItem Content="Германия"/>
+                                    <ComboBoxItem Content="Франция"/>
+                                    <ComboBoxItem Content="Великобритания"/>
+                                    <ComboBoxItem Content="Другая"/>
+                                </ComboBox>
+                            </Grid>
+                            <Label  FontSize="16" Foreground="#133F42" Grid.Row="1">Раскажите о себе:</Label>
+                            <TextBox TextWrapping="Wrap" Grid.Row="2" Margin="0,0,20,0" FontSize="16"
+                                     AcceptsReturn="True"
+                                     AcceptsTab="True"
+                                     VerticalScrollBarVisibility="Auto"
+                                     HorizontalScrollBarVisibility="Disabled"
+                                     MinHeight="100"
+                                     MaxHeight="220"
+                                     Text="{Binding LongTextProperty}"
+                                     x:Name="AboutBox"/>
                     </Grid>
                 </Grid>
             </Border>

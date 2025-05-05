@@ -1,7 +1,9 @@
 ﻿using JA.Classes;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using System.IO;
 using System.Windows;
+using System.Windows.Data;
 using Application = System.Windows.Application;
 
 namespace JA
