@@ -39,7 +39,10 @@ namespace JA.Classes
         belarus,
 
         [Description("Украина")]
-        ukraine
+        ukraine,
+        
+        [Description("Другая")]
+        others
     }
 
     public static class CountryExtensions

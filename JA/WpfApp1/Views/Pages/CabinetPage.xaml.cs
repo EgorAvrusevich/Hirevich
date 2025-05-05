@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Globalization;
 
 namespace JA.Views.Pages
 {
@@ -34,5 +35,21 @@ namespace JA.Views.Pages
             DataContext = _personalData;
         }
 
+
+        public class CountryToFlagConverter : IValueConverter
+        {
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                if (value == null) return null;
+
+                string country = value.ToString();
+                return $"/Images/flags/{country}_flag.png";
+            }
+
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

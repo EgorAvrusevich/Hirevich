@@ -3,6 +3,7 @@ using JA.ViewModels;
 using JA.Views.Pages;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,7 @@ namespace JA.Views
                 _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
             }
             this.DataContext = _personalData;
+            if(_currentUser.isSercher == 0) CVs_page.Visibility = Visibility.Visible;
             MainPanel.Content = new ApplicationsPage();
         }
 

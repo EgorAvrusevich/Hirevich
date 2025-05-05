@@ -248,3 +248,6 @@ C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Mor
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindowCompany.g.cs
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindowUser.baml
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\MoreInfoWindowCompany.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\CVsPage.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\CVsPage.baml

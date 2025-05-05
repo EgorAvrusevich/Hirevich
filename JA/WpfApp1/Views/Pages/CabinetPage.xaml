@@ -3,28 +3,86 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local1="clr-namespace:JA.Classes"
       xmlns:local="clr-namespace:JA.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Cabinet">
+    
+    <Page.Resources>
+        <local1:CountryToFlagConverter x:Key="CountryToFlagConverter"/>
+    </Page.Resources>
 
     <Grid Margin="20" Background="White">
         <Grid Margin="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
-                <RowDefinition/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Border CornerRadius="4" Background="#F8F8F8">
-                <StackPanel Grid.Row="0" Orientation="Horizontal" >
-                    <Ellipse Margin="20" Width="60">
-                        <Ellipse.Fill>
-                            <ImageBrush ImageSource="{Binding Photo}"></ImageBrush>
-                        </Ellipse.Fill>
-                    </Ellipse>
-                    <Label Margin="20,20,5,20" VerticalAlignment="Center" FontSize="32" Content="{Binding FirstName}"></Label>
-                    <Label Margin="0,20" VerticalAlignment="Center" FontSize="32" Content="{Binding LastName}"></Label>
-                </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" >
+                        <Ellipse Margin="20" Width="60">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{Binding Photo}"></ImageBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{Binding Country, Converter={StaticResource CountryToFlagConverter}}"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Label Margin="20,20,0,20" VerticalAlignment="Center" FontSize="32" Content="{Binding FirstName}"></Label>
+                        <Label Margin="0,20" VerticalAlignment="Center" FontSize="32" Content="{Binding LastName}"></Label>
+                        <Label Margin="10,20" VerticalAlignment="Center" FontSize="32" Content="{Binding age}"></Label>
+                    </StackPanel>
+                    <Image Grid.Column="1" HorizontalAlignment="Right" Source="/Images/Edit.png" Width="30"></Image>
+                </Grid>
+            </Border>
+            <Border Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label FontSize="14">Образование:</Label>
+                        <Label Content="{Binding Education}" FontSize="14"></Label>
+                    </StackPanel>
+                    <Image Grid.Column="1" Source="/Images/Edit.png" Width="30"></Image>
+                </Grid>
+            </Border>
+            <Border Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label FontSize="14">Специальзируюсь на:</Label>
+                        <Label Content="{Binding speciality}" FontSize="14"></Label>
+                    </StackPanel>
+                    <Image Grid.Column="1" Source="/Images/Edit.png" Width="30"></Image>
+                </Grid>
+            </Border>
+            <Border Grid.Row="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <Label Grid.Column="0" FontSize="14"> О себе:</Label>
+                        <TextBlock Grid.Column="0" FontSize="14" Text="{Binding About}"></TextBlock>
+                    </StackPanel>
+                    <Image Grid.Column="1" Grid.Row="1" Source="/Images/Edit.png" Width="30"></Image>
+                </Grid>
             </Border>
         </Grid>
     </Grid>
