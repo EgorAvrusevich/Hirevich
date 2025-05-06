@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics.Metrics;
+using System.Runtime.CompilerServices;
 
 namespace JA.Classes
 {
@@ -44,15 +45,4 @@ namespace JA.Classes
         [Description("Другая")]
         others
     }
-
-    public static class CountryExtensions
-    {
-        public static string GetName(this Country country)
-        {
-            var field = country.GetType().GetField(country.ToString());
-            var attribute = field.Attributes.ToString();
-            return attribute ?? country.ToString();
-        }
-    }
-
 }

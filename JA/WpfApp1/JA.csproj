@@ -69,19 +69,45 @@
     <Resource Include="Images\exit-removebg-preview.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\flags\australia_flag.png" />
-    <Resource Include="Images\flags\belarus_flag.png" />
-    <Resource Include="Images\flags\brazil_flag.png" />
-    <Resource Include="Images\flags\canada_flag.png" />
-    <Resource Include="Images\flags\china_flag.png" />
-    <Resource Include="Images\flags\france_flag.png" />
-    <Resource Include="Images\flags\germany_flag.png" />
-    <Resource Include="Images\flags\japan_flag.png" />
-    <Resource Include="Images\flags\others_flag.png" />
-    <Resource Include="Images\flags\russia_flag.png" />
-    <Resource Include="Images\flags\ukraine_flag.png" />
-    <Resource Include="Images\flags\UK_flag.png" />
-    <Resource Include="Images\flags\usa_flag.png" />
+    <Resource Include="Images\flags\australia_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\belarus_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\brazil_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\canada_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\china_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\france_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\germany_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\japan_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\others_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\russia_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\ukraine_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\UK_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\flags\usa_flag.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\google_logo.png" />
     <Resource Include="Images\Job wage.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

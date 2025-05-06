@@ -67,7 +67,8 @@ namespace JA.Views.Pages
                             Wage = app.Application.Wage,
                             Experience = app.Application.Experience,
                             Country = app.Application.Country,
-                            Description = app.Application.Description
+                            Description = app.Application.Description,
+                            Id_Company = app.Application.Id_Company
                         }));
                     }
                 }

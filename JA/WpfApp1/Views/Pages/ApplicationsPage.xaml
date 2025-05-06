@@ -59,7 +59,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Grid.Column="0" Content="{Binding application.Vacation_Name}"/>
-                                    <Image Source="{Binding company_logo}" MaxWidth="100"></Image>
+                                    <Image Source="{Binding Company_Logo}" HorizontalAlignment="Right" MaxWidth="100" MaxHeight="100"></Image>
                                 </Grid>
 
                                 <!-- Строка с зарплатой -->
@@ -82,7 +82,7 @@
                                 <StackPanel Orientation="Horizontal" Grid.Row="3">
                                     <Ellipse Width="20" Height="20">
                                         <Ellipse.Fill>
-                                            <ImageBrush ImageSource="{Binding application.country, Converter={StaticResource CountryToFlagConverter}}"></ImageBrush>
+                                            <ImageBrush ImageSource="{Binding flag_image}"></ImageBrush>
                                         </Ellipse.Fill>
                                     </Ellipse>
                                     <Label Content="{Binding application.Company_name}" />

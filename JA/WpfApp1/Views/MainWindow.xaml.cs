@@ -57,5 +57,10 @@ namespace JA.Views
         {
             MainPanel.Content = new ApplicationsPage();
         }
+
+        private void CVs_page_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MainPanel.Content = new CVsPage();
+        }
     }
 }
