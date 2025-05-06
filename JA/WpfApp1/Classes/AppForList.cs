@@ -13,9 +13,9 @@ namespace JA.Classes
     class AppForList
     {
 
-        public Application application { get; set; }
-        public BitmapImage flag_image { get; set; }
-        public BitmapImage? Company_Logo { get; set; }
+        public Application? application { get; set; }
+        public byte[]? flag_image { get; set; }
+        public byte[]? Company_Logo { get; set; }
         public AppForList() { }
 
         public AppForList(Application application)
@@ -25,18 +25,52 @@ namespace JA.Classes
 
             using (AplicationContext db = new AplicationContext())
             {
-                flag_image = Load_Functions.LoadImageFromFile("C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\flags\\" +
-                                                             $"{db.Applications.FirstOrDefault(u => u.Id == application.Id).Country}_flag.png");
-                var company = db.Companys_data
-                          .AsNoTracking() // Для оптимизации
-                          .FirstOrDefault(u => u.Id == application.Id_Company);
+                LoadFlagImage(db);
+                LoadCompanyLogo(db);
+            }
+        }
 
-                if (company?.Logo != null && company.Logo.Length > 0)
+        private void LoadFlagImage(AplicationContext db)
+        {
+            try
+            {
+                string? Country = db.Applications
+                    .AsNoTracking()
+                    .Where(a => a.Id == application.Id)
+                    .Select(a => a.Country)
+                    .FirstOrDefault();
+
+                    string flagPath = $"C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\flags\\{Country}_flag.png";
+                    if (File.Exists(flagPath))
+                    {
+                        flag_image = Load_Functions.ConvertImageToBytes(Load_Functions.LoadImageFromFile(flagPath));
+                    }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка загрузки флага: {ex.Message}");
+            }
+        }
+
+        private void LoadCompanyLogo(AplicationContext db)
+        {
+            try
+            {
+                var company = db.Companys_data
+                    .AsNoTracking()
+                    .FirstOrDefault(c => c.Id == application.Id_Company);
+
+                if (company != null)
                 {
-                    Company_Logo = Load_Functions.ConvertBytesToImage(company.Logo);
+                    // Безопасная проверка на null и пустой массив
+                    Company_Logo = company.Logo?.Length > 0 ? company.Logo : null;
                 }
-                else Company_Logo = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка загрузки логотипа: {ex.Message}");
             }
         }
     }
+
 }

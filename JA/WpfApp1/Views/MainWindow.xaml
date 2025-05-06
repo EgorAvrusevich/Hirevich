@@ -34,7 +34,7 @@
                     <Label  Content="Вакансии" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Border>
             </Border>
-            <Border Grid.Column="2" Visibility="Collapsed" x:Name="CVs_page">
+            <Border Grid.Column="2" Visibility="Collapsed" x:Name="CVs_page" MouseDown="CVs_page_MouseDown">
                 <Border CornerRadius="4" VerticalAlignment="Center">
                     <Label Grid.Column="1" Content="Резюме" HorizontalAlignment="Center" />
                 </Border>

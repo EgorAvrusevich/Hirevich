@@ -37,25 +37,20 @@ namespace JA.Views.Pages
             {
                 using (var db = new AplicationContext())
                 {
-                    // Очищаем текущую коллекцию перед загрузкой новых данных
                     CVs.Clear();
 
-                    // Загружаем данные из базы
                     var CVsFromDb = db.Users_data.ToList();
 
-                    // Добавляем загруженные данные в коллекцию
                     foreach (var CV in CVsFromDb)
                     {
                         CVs.Add(CV);
                     }
                 }
 
-                // Обновляем привязку данных (если используется в WPF)
                 CVsList.ItemsSource = CVs;
             }
             catch (Exception ex)
             {
-                // Обработка ошибок
                 MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
             }
         }

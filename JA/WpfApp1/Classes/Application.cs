@@ -14,7 +14,7 @@ namespace JA.Classes
         public string? Vacation_Name { get; set; }
         public string? Wage { get; set; }
         public string? Description { get; set; }
-        public Country? Country { get; set; }
+        public string? Country { get; set; }
         public string? Experience { get; set; }
 
         public Application() { }
@@ -30,7 +30,7 @@ namespace JA.Classes
             Experience = applications.Experience;
         }
 
-        public Application(int id, int? IdCompany, string? CompanyName, string? vacationName, string? wage, string? vacationDescription, Country? country, string? expirience)
+        public Application(int id, int? IdCompany, string? CompanyName, string? vacationName, string? wage, string? vacationDescription, string? country, string? expirience)
         {
             Id = id;
             Id_Company = IdCompany;
