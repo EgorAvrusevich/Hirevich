@@ -37,7 +37,11 @@ namespace JA.Views
                 _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
             }
             this.DataContext = _personalData;
-            if(_currentUser.isSercher == 0) CVs_page.Visibility = Visibility.Visible;
+            if (_currentUser.isSercher == 0)
+            {
+                CVs_page.Visibility = Visibility.Visible;
+                MyApps_page.Visibility = Visibility.Visible;
+            }
             MainPanel.Content = new ApplicationsPage();
         }
 
@@ -61,6 +65,11 @@ namespace JA.Views
         private void CVs_page_MouseDown(object sender, MouseButtonEventArgs e)
         {
             MainPanel.Content = new CVsPage();
+        }
+
+        private void MyApps_page_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MainPanel.Content = new MyAppsPage(_currentUser);
         }
     }
 }

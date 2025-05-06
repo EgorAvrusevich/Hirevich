@@ -34,9 +34,14 @@
                     <Label  Content="Вакансии" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Border>
             </Border>
-            <Border Grid.Column="2" Visibility="Collapsed" x:Name="CVs_page" MouseDown="CVs_page_MouseDown">
+            <Border Grid.Column="3" Visibility="Collapsed" x:Name="CVs_page" MouseDown="CVs_page_MouseDown">
                 <Border CornerRadius="4" VerticalAlignment="Center">
                     <Label Grid.Column="1" Content="Резюме" HorizontalAlignment="Center" />
+                </Border>
+            </Border>
+            <Border Grid.Column="2" Visibility="Collapsed" x:Name="MyApps_page" MouseDown="MyApps_page_MouseDown">
+                <Border CornerRadius="4" VerticalAlignment="Center">
+                    <Label Grid.Column="1" Content="Мои ваканчии" HorizontalAlignment="Center" />
                 </Border>
             </Border>
             <StackPanel Grid.Column="8" x:Name="LoggedPanel" VerticalAlignment="Center" Orientation="Horizontal" MouseDown="LoggedPanel_MouseDown">

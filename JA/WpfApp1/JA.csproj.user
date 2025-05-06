@@ -20,6 +20,9 @@
     <Compile Update="Views\Pages\CVsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Pages\MyAppsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Update="Views\AdminWindow.xaml">
@@ -29,6 +32,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\Pages\CVsPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\Pages\MyAppsPage.xaml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
