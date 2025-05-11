@@ -44,6 +44,10 @@
                                VerticalAlignment="Center"
                                Margin="-30,0,10,0"
                                FontSize="14"/>
+                <TextBlock Text="{Binding Name}" 
+                               VerticalAlignment="Center"
+                               Margin="-30,0,10,0"
+                               FontSize="14"/>
                 <Ellipse Width="40" Height="40">
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="{Binding Photo}"/>

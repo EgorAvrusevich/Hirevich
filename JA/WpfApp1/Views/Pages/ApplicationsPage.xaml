@@ -82,7 +82,7 @@
                                 <StackPanel Orientation="Horizontal" Grid.Row="3">
                                     <Ellipse Width="20" Height="20">
                                         <Ellipse.Fill>
-                                            <ImageBrush ImageSource="{Binding flag_image}"></ImageBrush>
+                                            <ImageBrush ImageSource="{Binding application.Country, Converter={StaticResource CountryToFlagConverter}}"></ImageBrush>
                                         </Ellipse.Fill>
                                     </Ellipse>
                                     <Label Content="{Binding application.Company_name}" />

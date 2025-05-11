@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\
 JA
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\App.xaml
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\App.xaml
 81384742695
 
 29-95821237
-221-580175025
+221-1393608203
 Views\MoreInfoWindowUser.xaml;Views\MoreInfoWindowCompany.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;Views\Pages\ApplicationsPage.xaml;Views\Pages\CabinetPage.xaml;Views\Pages\CVsPage.xaml;
 
 False

@@ -26,18 +26,30 @@ namespace JA.Views
     {
         User _currentUser;
         readonly PersonalData? _personalData;
+        readonly Companys_data? _companyData;
         
 
         public MainWindow(User currentUser)
         {
             InitializeComponent();
             _currentUser = currentUser;
-            using (var db = new AplicationContext())
+            if (_currentUser.isSercher == 1)
             {
-                _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
+                using (var db = new AplicationContext())
+                {
+                    _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
+                }
+                DataContext = _personalData;
             }
-            this.DataContext = _personalData;
-            if(_currentUser.isSercher == 0) CVs_page.Visibility = Visibility.Visible;
+            else
+            {
+                CVs_page.Visibility = Visibility.Visible;
+                using (var db = new AplicationContext())
+                {
+                    _companyData = db.Companys_data.FirstOrDefault(u => u.Id == _currentUser.id);
+                }
+                DataContext = _companyData;
+            }
             MainPanel.Content = new ApplicationsPage();
         }
 
