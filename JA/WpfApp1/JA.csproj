@@ -46,6 +46,8 @@
   <ItemGroup>
     <Page Include="App.xaml" />
     <Page Include="Views\MoreInfoWindowUser.xaml" />
+    <Page Include="Views\AppWindow.xaml" />
+    <Page Include="Views\CVWindow.xaml" />
     <Page Include="Views\MoreInfoWindowCompany.xaml" />
     <Page Include="Views\MainWindow.xaml" />
     <Page Include="Views\LoginWindow.xaml" />
@@ -59,6 +61,12 @@
     <Page Include="Views\Pages\CVsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+	<Page Include="Views\Pages\CabinetCompanyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+	  <Page Include="Views\Pages\MyVacationsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+	  </Page>
   </ItemGroup>
 
   <ItemGroup>
@@ -130,10 +138,22 @@
     <None Update="Views\AdminWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Views\AppWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\CVWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\MoreInfoWindowCompany.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Views\Pages\CabinetCompanyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\Pages\CVsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\Pages\MyVacationsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

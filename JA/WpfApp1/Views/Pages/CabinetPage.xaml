@@ -52,7 +52,7 @@
                         <ColumnDefinition Width="30"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
-                        <Label FontSize="14">Образование:</Label>
+                        <Label  FontSize="14" FontWeight="Bold">Образование:</Label>
                         <Label Content="{Binding Education}" FontSize="14"></Label>
                     </StackPanel>
                     <Image Grid.Column="1" Source="/Images/Edit.png" Width="30"></Image>
@@ -65,7 +65,7 @@
                         <ColumnDefinition Width="30"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
-                        <Label FontSize="14">Специальзируюсь на:</Label>
+                        <Label  FontSize="14" FontWeight="Bold">Специальзируюсь на:</Label>
                         <Label Content="{Binding speciality}" FontSize="14"></Label>
                     </StackPanel>
                     <Image Grid.Column="1" Source="/Images/Edit.png" Width="30"></Image>
@@ -78,7 +78,7 @@
                         <ColumnDefinition Width="30"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel>
-                        <Label Grid.Column="0" FontSize="14"> О себе:</Label>
+                        <Label Grid.Column="0"  FontSize="14" FontWeight="Bold"> О себе:</Label>
                         <TextBlock Grid.Column="0" FontSize="14" Text="{Binding About}"></TextBlock>
                     </StackPanel>
                     <Image Grid.Column="1" Grid.Row="1" Source="/Images/Edit.png" Width="30"></Image>

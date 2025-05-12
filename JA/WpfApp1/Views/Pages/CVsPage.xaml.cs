@@ -54,5 +54,18 @@ namespace JA.Views.Pages
                 MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
             }
         }
+
+        private void CVsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (CVsList.SelectedItem is PersonalData selectedApp)
+            {
+                // Создаем и показываем окно с деталями
+                var detailWindow = new CVWindow(selectedApp);
+                detailWindow.ShowDialog();
+
+                // Сбрасываем выбор (опционально)
+                CVsList.SelectedItem = null;
+            }
+        }
     }
 }

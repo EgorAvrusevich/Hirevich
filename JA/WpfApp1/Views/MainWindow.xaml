@@ -31,7 +31,7 @@
             </Border>
             <Border Grid.Column="1" >
                 <Border x:Name="Vacaitions" CornerRadius="4" VerticalAlignment="Center" MouseDown="Vacaitions_MouseDown" >
-                    <Label  Content="Вакансии" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label x:Name="Vacaitions_label"  Content="Вакансии" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Border>
             </Border>
             <Border Grid.Column="2" Visibility="Collapsed" x:Name="CVs_page" MouseDown="CVs_page_MouseDown">

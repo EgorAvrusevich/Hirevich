@@ -22,15 +22,13 @@ namespace JA.Views.Pages
     /// </summary>
     public partial class CabinetPage : Page
     {
-        User _currentUser;
         PersonalData? _personalData;
         public CabinetPage(User currentUser)
         {
             InitializeComponent();
-            _currentUser = currentUser;
             using (var db = new AplicationContext())
             {
-                _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
+                _personalData = db.Users_data.FirstOrDefault(u => u.Id == currentUser.id);
             }
             DataContext = _personalData;
         }

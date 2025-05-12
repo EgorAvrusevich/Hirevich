@@ -5,7 +5,16 @@
     <Compile Update="Views\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AppWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CVWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MoreInfoWindowCompany.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\CabinetCompanyPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Pages\CabinetPage.xaml.cs">
@@ -20,15 +29,30 @@
     <Compile Update="Views\Pages\CVsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Pages\MyVacationsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Update="Views\AdminWindow.xaml">
       <SubType>Designer</SubType>
     </None>
+    <None Update="Views\AppWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\CVWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
     <None Update="Views\MoreInfoWindowCompany.xaml">
       <SubType>Designer</SubType>
     </None>
+    <None Update="Views\Pages\CabinetCompanyPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
     <None Update="Views\Pages\CVsPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\Pages\MyVacationsPage.xaml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

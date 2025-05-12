@@ -1,0 +1,89 @@
+﻿<Window x:Class="JA.Views.AppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JA.Views"
+        mc:Ignorable="d"
+        Title="AppWindow" MinHeight="450" MinWidth="400" MaxHeight="450" MaxWidth="400">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Шапка с названием вакансии и логотипом -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="{Binding application.Vacation_Name}" 
+                           FontSize="24" 
+                           FontWeight="Bold"
+                           Margin="0,0,0,10"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/Job wage.png" Width="16" Height="16"/>
+                    <TextBlock Text="{Binding application.Wage}" 
+                               Margin="5,0,0,0"
+                               FontSize="14"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Border x:Name="LogoBorder"
+                    Grid.Column="1" 
+                    Width="80" 
+                    Height="80" 
+                    Background="#F8F8F8"
+                    CornerRadius="4">
+                <Image Source="{Binding Company_Logo}" 
+                       Stretch="Uniform"/>
+            </Border>
+        </Grid>
+
+        <!-- Информация о компании и стране -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,20,0,20">
+            <Ellipse Width="24" Height="24">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding application.Country, Converter={StaticResource CountryToFlagConverter}}"/>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <TextBlock Text="{Binding application.Company_name}" 
+                       Margin="10,0,20,0"
+                       FontSize="14"/>
+
+            <TextBlock Text="{Binding application.Experience}" 
+                       Foreground="#849A9C"
+                       FontSize="14"/>
+        </StackPanel>
+
+        <!-- Подробное описание -->
+        <Border Grid.Row="2" 
+                BorderThickness="1" 
+                BorderBrush="#E0E0E0" 
+                CornerRadius="4"
+                Padding="15">
+            <ScrollViewer>
+                <TextBlock Text="{Binding application.Description}" 
+                           TextWrapping="Wrap"
+                           FontSize="14"/>
+            </ScrollViewer>
+        </Border>
+
+        <!-- Кнопка закрытия -->
+        <Button Grid.Row="3" 
+                Content="Закрыть" 
+                Width="120" 
+                Height="35"
+                HorizontalAlignment="Right"
+                Margin="0,20,0,0"
+                Click="CloseButton_Click"
+                Style="{StaticResource ModernButtonStyle}"/>
+    </Grid>
+</Window>

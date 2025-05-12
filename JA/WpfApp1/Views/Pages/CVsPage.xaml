@@ -35,7 +35,9 @@
 
         <!-- Список заявок -->
         <Grid Grid.Row="1" Margin="20,0,20,20">
-            <ListBox Background="#F8F8F8" BorderThickness="0" x:Name="CVsList" ItemsSource="{Binding CVs}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch">
+            <ListBox Background="#F8F8F8" BorderThickness="0" x:Name="CVsList" 
+                     ItemsSource="{Binding CVs}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                     HorizontalContentAlignment="Stretch" SelectionChanged="CVsList_SelectionChanged">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>

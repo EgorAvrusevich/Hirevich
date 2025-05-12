@@ -43,6 +43,7 @@ namespace JA.Views
             }
             else
             {
+                Vacaitions_label.Content = "Мои вакансии";
                 CVs_page.Visibility = Visibility.Visible;
                 using (var db = new AplicationContext())
                 {
@@ -62,12 +63,19 @@ namespace JA.Views
 
         private void LoggedPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MainPanel.Content = new CabinetPage(_currentUser);
+            if (_currentUser.isSercher == 1)
+                MainPanel.Content = new CabinetPage(_currentUser);
+            else 
+                MainPanel.Content = new CabinetCompanyPage(_currentUser);
         }
 
         private void Vacaitions_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MainPanel.Content = new ApplicationsPage();
+            if (_currentUser.isSercher == 1)
+                MainPanel.Content = new ApplicationsPage();
+            else
+                MainPanel.Content = new MyVacationsPage(_currentUser);
+
         }
 
         private void CVs_page_MouseDown(object sender, MouseButtonEventArgs e)

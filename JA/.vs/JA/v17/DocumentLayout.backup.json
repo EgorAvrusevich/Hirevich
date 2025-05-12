@@ -1,133 +1,181 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\applicationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\applicationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\myvacationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\myvacationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\appforlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\appforlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\myvacationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\myvacationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\applicationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\applicationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\countrytoflagconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\countrytoflagconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\cvspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\cvspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\applicationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\applicationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\load_functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\load_functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\applicationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\applicationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\companys_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\companys_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\cabinetcompanypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\cabinetcompanypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\personaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\personaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\moreinfowindowcompany.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\moreinfowindowcompany.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\flags\\china_flag.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\flags\\china_flag.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\edit.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\edit.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\ja.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\ja.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\cabinetpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\cabinetpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\cabinetpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\job wage.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\job wage.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\cvspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\cvspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\google_logo.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\google_logo.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\ja.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\ja.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\countryes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\countryes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\viewmodels\\loginwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\viewmodels\\loginwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\viewmodels\\pagesviewmodels\\cabinetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\viewmodels\\pagesviewmodels\\cabinetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\viewmodels\\moreinfowindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\appwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\appwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\cvwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\cvwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\moreinfowindowcompany.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\moreinfowindowcompany.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\moreinfowindowuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\moreinfowindowuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\registerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\cabinetpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\cabinetpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\cabinetcompanypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\cabinetcompanypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\companys_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\companys_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\cvwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\cvwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\pages\\cvspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\pages\\cvspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\personaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\personaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\moreinfowindowcompany.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\moreinfowindowcompany.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\appwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\appwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\appforlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\appforlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\countrytoflagconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\countrytoflagconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\load_functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\load_functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\flags\\china_flag.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\flags\\china_flag.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\edit.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\edit.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\job wage.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\job wage.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\google_logo.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\google_logo.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\classes\\countryes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\classes\\countryes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\viewmodels\\loginwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\viewmodels\\loginwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\viewmodels\\pagesviewmodels\\cabinetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\viewmodels\\pagesviewmodels\\cabinetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\viewmodels\\moreinfowindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\viewmodels\\moreinfowindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\views\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\views\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\lupa.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\lupa.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\lupa.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\loadphoto.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\images\\loadphoto.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\images\\loadphoto.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\j\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|c:\\users\\user\\desktop\\ja1\\hirevich\\ja\\wpfapp1\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{413019D1-437E-4E56-9482-F060E25F6ACF}|WpfApp1\\JA.csproj|solutionrelative:wpfapp1\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -141,105 +189,123 @@
       "DocumentGroups": [
         {
           "DockedHeight": 505,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Load_Functions.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Load_Functions.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Classes\\Load_Functions.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Load_Functions.cs",
-              "RelativeToolTip": "WpfApp1\\Classes\\Load_Functions.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:59:27.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppForList.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\AppForList.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Classes\\AppForList.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\AppForList.cs",
-              "RelativeToolTip": "WpfApp1\\Classes\\AppForList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:58:41.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\ApplicationsPage.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\ApplicationsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\ApplicationsPage.xaml.cs",
-              "RelativeToolTip": "WpfApp1\\Views\\Pages\\ApplicationsPage.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:58:33.478Z",
-              "EditorCaption": ""
+              "DocumentIndex": 6,
+              "Title": "CabinetPage.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\CabinetPage.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetPage.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\CabinetPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-06T12:34:36.373Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "CabinetCompanyPage.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetCompanyPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\CabinetCompanyPage.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetCompanyPage.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\CabinetCompanyPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-11T23:11:31.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\ApplicationsPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\ApplicationsPage.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\ApplicationsPage.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\ApplicationsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-06T12:34:39.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp1\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MainWindow.xaml.cs",
               "RelativeToolTip": "WpfApp1\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDQAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAcwE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-11T16:50:10.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MoreInfoWindowCompany.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MoreInfoWindowCompany.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\Views\\MoreInfoWindowCompany.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MoreInfoWindowCompany.xaml",
-              "RelativeToolTip": "WpfApp1\\Views\\MoreInfoWindowCompany.xaml",
+              "DocumentIndex": 0,
+              "Title": "MyVacationsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\MyVacationsPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\MyVacationsPage.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\MyVacationsPage.xaml*",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\MyVacationsPage.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-11T16:48:58.378Z",
+              "WhenOpened": "2025-05-12T00:31:40.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\AuthService.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Classes\\AuthService.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\AuthService.cs",
-              "RelativeToolTip": "WpfApp1\\Classes\\AuthService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MyVacationsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\MyVacationsPage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\MyVacationsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\MyVacationsPage.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\MyVacationsPage.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADYAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T16:46:58.394Z",
+              "WhenOpened": "2025-05-12T00:31:42.912Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\User.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Classes\\User.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\User.cs",
-              "RelativeToolTip": "WpfApp1\\Classes\\User.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAABDAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ApplicationsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\ApplicationsPage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\ApplicationsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\ApplicationsPage.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\ApplicationsPage.xaml.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwBoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T11:48:03.621Z",
+              "WhenOpened": "2025-05-11T16:58:33.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
+              "Title": "CVsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CVsPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\CVsPage.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CVsPage.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\CVsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-06T12:34:34.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JA.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\JA.csproj",
+              "RelativeDocumentMoniker": "WpfApp1\\JA.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\JA.csproj",
+              "RelativeToolTip": "WpfApp1\\JA.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-06T12:36:53.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\Views\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MainWindow.xaml",
               "RelativeToolTip": "WpfApp1\\Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-06T12:41:20.335Z",
@@ -247,153 +313,196 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "china_flag.png",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\flags\\china_flag.png",
-              "RelativeDocumentMoniker": "WpfApp1\\Images\\flags\\china_flag.png",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\flags\\china_flag.png",
-              "RelativeToolTip": "WpfApp1\\Images\\flags\\china_flag.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-05-06T12:37:50.782Z"
+              "DocumentIndex": 10,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\AdminWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AdminWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\AdminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T14:52:37.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Edit.png",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\Edit.png",
-              "RelativeDocumentMoniker": "WpfApp1\\Images\\Edit.png",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\Edit.png",
-              "RelativeToolTip": "WpfApp1\\Images\\Edit.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-05-06T12:37:12.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "JA.csproj",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\JA.csproj",
-              "RelativeDocumentMoniker": "WpfApp1\\JA.csproj",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\JA.csproj",
-              "RelativeToolTip": "WpfApp1\\JA.csproj",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-06T12:36:53.938Z"
+              "DocumentIndex": 11,
+              "Title": "AppWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AppWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\AppWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AppWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\AppWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-11T22:10:42.47Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "CVWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\CVWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\CVWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\CVWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\CVWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-11T22:54:47.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\Views\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\LoginWindow.xaml",
               "RelativeToolTip": "WpfApp1\\Views\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-06T12:36:44.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T12:36:44.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PersonalData.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\PersonalData.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Classes\\PersonalData.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\PersonalData.cs",
-              "RelativeToolTip": "WpfApp1\\Classes\\PersonalData.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:36:07.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Companys_data.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Companys_data.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Classes\\Companys_data.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Companys_data.cs",
-              "RelativeToolTip": "WpfApp1\\Classes\\Companys_data.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:36:02.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\ApplicationsPage.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\ApplicationsPage.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\ApplicationsPage.xaml*",
-              "RelativeToolTip": "WpfApp1\\Views\\Pages\\ApplicationsPage.xaml*",
+              "DocumentIndex": 14,
+              "Title": "MoreInfoWindowCompany.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MoreInfoWindowCompany.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\MoreInfoWindowCompany.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MoreInfoWindowCompany.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\MoreInfoWindowCompany.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-06T12:34:39.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-11T16:48:58.378Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CabinetPage.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetPage.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\CabinetPage.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetPage.xaml",
-              "RelativeToolTip": "WpfApp1\\Views\\Pages\\CabinetPage.xaml",
+              "DocumentIndex": 15,
+              "Title": "MoreInfoWindowUser.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MoreInfoWindowUser.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\MoreInfoWindowUser.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MoreInfoWindowUser.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\MoreInfoWindowUser.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-06T12:34:36.373Z"
+              "WhenOpened": "2025-05-12T00:17:26.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CVsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CVsPage.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\CVsPage.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CVsPage.xaml",
-              "RelativeToolTip": "WpfApp1\\Views\\Pages\\CVsPage.xaml",
+              "DocumentIndex": 16,
+              "Title": "RegisterWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\RegisterWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\RegisterWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\RegisterWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\Views\\RegisterWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-06T12:34:34.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T19:51:20.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Job wage.png",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\Job wage.png",
-              "RelativeDocumentMoniker": "WpfApp1\\Images\\Job wage.png",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\Job wage.png",
-              "RelativeToolTip": "WpfApp1\\Images\\Job wage.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-05-06T12:29:29.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "google_logo.png",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\google_logo.png",
-              "RelativeDocumentMoniker": "WpfApp1\\Images\\google_logo.png",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\google_logo.png",
-              "RelativeToolTip": "WpfApp1\\Images\\google_logo.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-05-06T12:29:22.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CountryToFlagConverter.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\CountryToFlagConverter.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Classes\\CountryToFlagConverter.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\CountryToFlagConverter.cs",
-              "RelativeToolTip": "WpfApp1\\Classes\\CountryToFlagConverter.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "CabinetPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetPage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\CabinetPage.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetPage.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\CabinetPage.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:21:25.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-11T22:39:18.345Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "CabinetCompanyPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetCompanyPage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\CabinetCompanyPage.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CabinetCompanyPage.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\CabinetCompanyPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T23:11:33.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CVWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\CVWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\CVWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\CVWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Views\\CVWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T22:54:56.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PersonalData.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\PersonalData.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Classes\\PersonalData.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\PersonalData.cs",
+              "RelativeToolTip": "WpfApp1\\Classes\\PersonalData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:36:07.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CVsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CVsPage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\Pages\\CVsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\Pages\\CVsPage.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Views\\Pages\\CVsPage.xaml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAuwDsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T22:39:15.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Companys_data.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Companys_data.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Classes\\Companys_data.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Companys_data.cs",
+              "RelativeToolTip": "WpfApp1\\Classes\\Companys_data.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:36:02.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MoreInfoWindowCompany.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MoreInfoWindowCompany.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\MoreInfoWindowCompany.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\MoreInfoWindowCompany.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Views\\MoreInfoWindowCompany.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T22:15:17.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AppWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AppWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Views\\AppWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AppWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Views\\AppWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T22:10:52.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AppForList.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\AppForList.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Classes\\AppForList.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\AppForList.cs",
+              "RelativeToolTip": "WpfApp1\\Classes\\AppForList.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T16:58:41.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\App.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\App.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\App.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\App.xaml",
               "RelativeToolTip": "WpfApp1\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-06T12:19:31.983Z",
@@ -401,11 +510,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 32,
+              "Title": "Edit.png",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\Edit.png",
+              "RelativeDocumentMoniker": "WpfApp1\\Images\\Edit.png",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\Edit.png",
+              "RelativeToolTip": "WpfApp1\\Images\\Edit.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-06T12:37:12.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "china_flag.png",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\flags\\china_flag.png",
+              "RelativeDocumentMoniker": "WpfApp1\\Images\\flags\\china_flag.png",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\flags\\china_flag.png",
+              "RelativeToolTip": "WpfApp1\\Images\\flags\\china_flag.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-06T12:37:50.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\User.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Classes\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\User.cs",
+              "RelativeToolTip": "WpfApp1\\Classes\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T11:48:03.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\AuthService.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Classes\\AuthService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\AuthService.cs",
+              "RelativeToolTip": "WpfApp1\\Classes\\AuthService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T16:46:58.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Load_Functions.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Load_Functions.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Classes\\Load_Functions.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Load_Functions.cs",
+              "RelativeToolTip": "WpfApp1\\Classes\\Load_Functions.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T16:59:27.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Job wage.png",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\Job wage.png",
+              "RelativeDocumentMoniker": "WpfApp1\\Images\\Job wage.png",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\Job wage.png",
+              "RelativeToolTip": "WpfApp1\\Images\\Job wage.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-06T12:29:29.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "google_logo.png",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\google_logo.png",
+              "RelativeDocumentMoniker": "WpfApp1\\Images\\google_logo.png",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\google_logo.png",
+              "RelativeToolTip": "WpfApp1\\Images\\google_logo.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-05-06T12:29:22.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CountryToFlagConverter.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\CountryToFlagConverter.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Classes\\CountryToFlagConverter.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\CountryToFlagConverter.cs",
+              "RelativeToolTip": "WpfApp1\\Classes\\CountryToFlagConverter.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:21:25.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "Countryes.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Countryes.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Countryes.cs",
               "RelativeDocumentMoniker": "WpfApp1\\Classes\\Countryes.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Countryes.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Classes\\Countryes.cs",
               "RelativeToolTip": "WpfApp1\\Classes\\Countryes.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -413,11 +614,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 36,
               "Title": "LoginWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\LoginWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\LoginWindowViewModel.cs",
               "RelativeDocumentMoniker": "WpfApp1\\ViewModels\\LoginWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\LoginWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\LoginWindowViewModel.cs",
               "RelativeToolTip": "WpfApp1\\ViewModels\\LoginWindowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -425,11 +626,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 37,
               "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "WpfApp1\\ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "WpfApp1\\ViewModels\\MainWindowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -437,11 +638,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 38,
               "Title": "CabinetViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\PagesViewModels\\CabinetViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\PagesViewModels\\CabinetViewModel.cs",
               "RelativeDocumentMoniker": "WpfApp1\\ViewModels\\PagesViewModels\\CabinetViewModel.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\PagesViewModels\\CabinetViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\PagesViewModels\\CabinetViewModel.cs",
               "RelativeToolTip": "WpfApp1\\ViewModels\\PagesViewModels\\CabinetViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -449,22 +650,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AdminWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AdminWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\Views\\AdminWindow.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AdminWindow.xaml",
-              "RelativeToolTip": "WpfApp1\\Views\\AdminWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-29T14:52:37.41Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 39,
               "Title": "MoreInfoWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\MoreInfoWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\MoreInfoWindowViewModel.cs",
               "RelativeDocumentMoniker": "WpfApp1\\ViewModels\\MoreInfoWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\MoreInfoWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\ViewModels\\MoreInfoWindowViewModel.cs",
               "RelativeToolTip": "WpfApp1\\ViewModels\\MoreInfoWindowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -472,11 +662,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 40,
               "Title": "AdminWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AdminWindow.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp1\\Views\\AdminWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\AdminWindow.xaml.cs",
               "RelativeToolTip": "WpfApp1\\Views\\AdminWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAawBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -484,30 +674,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RegisterWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\RegisterWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp1\\Views\\RegisterWindow.xaml",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Views\\RegisterWindow.xaml",
-              "RelativeToolTip": "WpfApp1\\Views\\RegisterWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-28T19:51:20.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 41,
               "Title": "lupa.png",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\lupa.png",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\lupa.png",
               "RelativeDocumentMoniker": "WpfApp1\\Images\\lupa.png",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\lupa.png",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\lupa.png",
               "RelativeToolTip": "WpfApp1\\Images\\lupa.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
               "WhenOpened": "2025-04-28T20:04:20.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 44,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -519,22 +697,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 42,
               "Title": "LoadPhoto.png",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\LoadPhoto.png",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\LoadPhoto.png",
               "RelativeDocumentMoniker": "WpfApp1\\Images\\LoadPhoto.png",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\LoadPhoto.png",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\Images\\LoadPhoto.png",
               "RelativeToolTip": "WpfApp1\\Images\\LoadPhoto.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
               "WhenOpened": "2025-04-28T20:00:02.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 43,
               "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "WpfApp1\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\J\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\AssemblyInfo.cs",
               "RelativeToolTip": "WpfApp1\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

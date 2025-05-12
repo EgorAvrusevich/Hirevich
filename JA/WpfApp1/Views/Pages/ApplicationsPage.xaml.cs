@@ -24,8 +24,6 @@ namespace JA.Views.Pages
     /// </summary>
     public partial class ApplicationsPage : Page
     {
-        AplicationContext db;
-
         public ApplicationsPage()
         {
             InitializeComponent();
@@ -80,6 +78,19 @@ namespace JA.Views.Pages
             {
                 // Обработка ошибок
                 MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
+            }
+        }
+
+        private void ApplicationsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ApplicationsList.SelectedItem is AppForList selectedApp)
+            {
+                // Создаем и показываем окно с деталями
+                var detailWindow = new AppWindow(selectedApp);
+                detailWindow.ShowDialog();
+
+                // Сбрасываем выбор (опционально)
+                ApplicationsList.SelectedItem = null;
             }
         }
     }

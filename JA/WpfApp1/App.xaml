@@ -6,6 +6,29 @@
     <Application.Resources>
         <ResourceDictionary>
             <local1:CountryToFlagConverter x:Key="CountryToFlagConverter"/>
+            <Style x:Key="ModernButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="#3498db"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" 
+                        CornerRadius="4">
+                                <ContentPresenter HorizontalAlignment="Center" 
+                                      VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#2980b9"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
             <Style TargetType="Button">
                 <Setter Property="Background" Value="#ffffff"/>
                 <Setter Property="BorderBrush" Value="#FF4A96"/>
