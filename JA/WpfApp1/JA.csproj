@@ -52,6 +52,8 @@
     <Page Include="Views\MainWindow.xaml" />
     <Page Include="Views\LoginWindow.xaml" />
     <Page Include="Views\RegisterWindow.xaml" />
+    <Page Include="Views\EditWindows\EditNameWindow.xaml" />
+    <Page Include="Views\EditWindows\EditCompanyInfoWindow.xaml" />
     <Page Include="Views\Pages\ApplicationsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +144,12 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\CVWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditWindows\EditCompanyInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditWindows\EditNameWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\MoreInfoWindowCompany.xaml">

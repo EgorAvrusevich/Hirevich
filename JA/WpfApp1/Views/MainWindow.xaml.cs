@@ -27,12 +27,18 @@ namespace JA.Views
         User _currentUser;
         readonly PersonalData? _personalData;
         readonly Companys_data? _companyData;
+        ApplicationsPage? appPage;
+        CabinetPage? cabPage;
+        CabinetCompanyPage? cabCompPage;
+        CVsPage? cvsPage;
+        MyVacationsPage? myVacationsPage;
         
 
         public MainWindow(User currentUser)
         {
             InitializeComponent();
             _currentUser = currentUser;
+            appPage = new ApplicationsPage();
             if (_currentUser.isSercher == 1)
             {
                 using (var db = new AplicationContext())
@@ -40,6 +46,7 @@ namespace JA.Views
                     _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
                 }
                 DataContext = _personalData;
+                cabPage = new CabinetPage(_currentUser);
             }
             else
             {
@@ -50,8 +57,11 @@ namespace JA.Views
                     _companyData = db.Companys_data.FirstOrDefault(u => u.Id == _currentUser.id);
                 }
                 DataContext = _companyData;
+                cabCompPage = new CabinetCompanyPage(_currentUser);
+                cvsPage = new CVsPage();
+                myVacationsPage = new MyVacationsPage(_currentUser);
             }
-            MainPanel.Content = new ApplicationsPage();
+            MainPanel.Content = appPage;
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
@@ -64,23 +74,23 @@ namespace JA.Views
         private void LoggedPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (_currentUser.isSercher == 1)
-                MainPanel.Content = new CabinetPage(_currentUser);
+                MainPanel.Content = cabPage;
             else 
-                MainPanel.Content = new CabinetCompanyPage(_currentUser);
+                MainPanel.Content = cabCompPage;
         }
 
         private void Vacaitions_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (_currentUser.isSercher == 1)
-                MainPanel.Content = new ApplicationsPage();
+                MainPanel.Content = appPage;
             else
-                MainPanel.Content = new MyVacationsPage(_currentUser);
+                MainPanel.Content = myVacationsPage;
 
         }
 
         private void CVs_page_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MainPanel.Content = new CVsPage();
+            MainPanel.Content = cvsPage;
         }
     }
 }

@@ -11,6 +11,12 @@
     <Compile Update="Views\CVWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EditWindows\EditCompanyInfoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditWindows\EditNameWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MoreInfoWindowCompany.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -41,6 +47,12 @@
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\CVWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\EditWindows\EditCompanyInfoWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\EditWindows\EditNameWindow.xaml">
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\MoreInfoWindowCompany.xaml">

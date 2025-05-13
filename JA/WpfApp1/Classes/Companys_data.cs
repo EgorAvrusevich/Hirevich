@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace JA.Classes
 {
 
-    internal class Companys_data
+    internal class Companys_data : INotifyPropertyChanged
     {
         public int Id {  get; set; }
         public string? Name {  get; set; }
@@ -23,6 +24,12 @@ namespace JA.Classes
             Discription = discption;
             Email = email;
             Logo = logo;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

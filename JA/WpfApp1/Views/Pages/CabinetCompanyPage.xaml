@@ -43,6 +43,7 @@
                            HorizontalAlignment="Right" 
                            Source="/Images/Edit.png" 
                            Width="30"
+                           MouseDown="EditCompanyinfo_Click"
                            />
                 </Grid>
             </Border>

@@ -1,36 +1,69 @@
 ﻿using JA.Classes;
+using JA.Views.EditWindows;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.PortableExecutable;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace JA.Views.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для CabinetCompanyPage.xaml
-    /// </summary>
-    public partial class CabinetCompanyPage : Page
+    public partial class CabinetCompanyPage : Page, INotifyPropertyChanged
     {
-        Companys_data? data;
-        public CabinetCompanyPage(User currentUser)
+        private Companys_data _data;
+        public Companys_data Data
+        {
+            get => _data;
+            set
+            {
+                _data = value;
+                OnPropertyChanged(nameof(Data));
+            }
+        }
+
+        internal CabinetCompanyPage(User currentUser)
         {
             InitializeComponent();
+            LoadCompanyData(currentUser.id);
+        }
+
+        private void LoadCompanyData(int companyId)
+        {
             using (var db = new AplicationContext())
             {
-                data = db.Companys_data.FirstOrDefault(u => u.Id == currentUser.id);
+                Data = db.Companys_data.FirstOrDefault(u => u.Id == companyId);
             }
-            DataContext = data;
+        }
+
+        private void EditCompanyInfo_Click(object sender, RoutedEventArgs e)
+        {
+            if (Data == null) return;
+
+            var editWindow = new EditCompanyInfoWindow(Data.Logo, Data.Name);
+            if (editWindow.ShowDialog() == true)
+            {
+                using (var db = new AplicationContext())
+                {
+                    var company = db.Companys_data.Find(Data.Id);
+                    if (company == null) return;
+
+                    company.Name = editWindow.CompanyName;
+
+                    if (editWindow.NewLogo != null && !editWindow.NewLogo.SequenceEqual(Data.Logo ?? Array.Empty<byte>()))
+                    {
+                        company.Logo = editWindow.NewLogo;
+                    }
+
+                    db.SaveChanges();
+                    Data = company; // Обновляем всю сущность
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

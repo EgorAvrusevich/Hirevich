@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\
 JA
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\App.xaml
-121090163266
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\App.xaml
+14-42058815
 
-351688583934
-221-580175025
-Views\MoreInfoWindowUser.xaml;Views\AppWindow.xaml;Views\CVWindow.xaml;Views\MoreInfoWindowCompany.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;Views\Pages\ApplicationsPage.xaml;Views\Pages\CabinetPage.xaml;Views\Pages\CVsPage.xaml;Views\Pages\CabinetCompanyPage.xaml;Views\Pages\MyVacationsPage.xaml;
+372052683561
+221-1393608203
+Views\MoreInfoWindowUser.xaml;Views\AppWindow.xaml;Views\CVWindow.xaml;Views\MoreInfoWindowCompany.xaml;Views\MainWindow.xaml;Views\LoginWindow.xaml;Views\RegisterWindow.xaml;Views\EditWindows\EditNameWindow.xaml;Views\EditWindows\EditCompanyInfoWindow.xaml;Views\Pages\ApplicationsPage.xaml;Views\Pages\CabinetPage.xaml;Views\Pages\CVsPage.xaml;Views\Pages\CabinetCompanyPage.xaml;Views\Pages\MyVacationsPage.xaml;
 
-False
+True
 
