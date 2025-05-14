@@ -9,13 +9,50 @@ using System.Threading.Tasks;
 namespace JA.Classes
 {
 
-    internal class Companys_data : INotifyPropertyChanged
+    public class Companys_data : INotifyPropertyChanged
     {
         public int Id {  get; set; }
-        public string? Name {  get; set; }
-        public string? Discription {  get; set; }
-        public string? Email {  get; set; }
-        public byte[]? Logo {  get; set; }
+        private string? _discription {  get; set; }
+        public string? Discription
+        {
+            get => _discription;
+            set
+            {
+                _discription = value;
+                OnPropertyChanged(nameof(Discription));
+            }
+        }
+        private string? _email {  get; set; }
+        public string? Email
+        {
+            get => _email;
+            set
+            {
+                _email = value;
+                OnPropertyChanged(nameof(Email));
+            }
+        }
+        private string? _name {  get; set; }
+        public string? Name
+        {
+            get => _name;
+            set
+            {
+                _name = value;
+                OnPropertyChanged(nameof(Name));
+            }
+        }
+        private byte[]? _logo {  get; set; }
+
+        public byte[]? Logo
+        {
+            get => _logo;
+            set
+            {
+                _logo = value;
+                OnPropertyChanged(nameof(Logo));
+            }
+        }
 
         public Companys_data() { }
         public Companys_data(int id) { Id = id; }
@@ -26,7 +63,7 @@ namespace JA.Classes
             Logo = logo;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

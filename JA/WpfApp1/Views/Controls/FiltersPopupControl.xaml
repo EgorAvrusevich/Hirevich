@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="JA.Views.Controls.FiltersPopupControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JA.Views.Controls"
+             xmlns:converters="clr-namespace:JA.Classes"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="250">
+
+    <UserControl.Resources>
+        <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
+    </UserControl.Resources>
+    
+    <Border BorderBrush="#849A9C" BorderThickness="1" CornerRadius="4" Background="White" Padding="10">
+        <StackPanel>
+            <!-- Фильтр по стране -->
+            <Label Content="Страна:" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding Source={x:Static converters:CountryValues.Values}}"
+                      SelectedItem="{Binding SelectedCountry}"
+                      Width="200"
+                      Margin="0,0,0,10">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!-- Фильтр по зарплате -->
+            <Label Content="Зарплата от:" FontWeight="Bold"/>
+            <TextBox Text="{Binding MinSalary}" Width="200" Margin="0,0,0,10"/>
+
+            <!-- Фильтр по опыту -->
+            <Label Content="Опыт работы:" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding ExperienceLevels}" 
+                      SelectedItem="{Binding SelectedExperience}"
+                      Width="200"
+                      Margin="0,0,0,10"/>
+
+            <!-- Кнопки -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Сбросить" Width="80" Margin="0,0,10,0" 
+                        Command="{Binding ResetFiltersCommand}"/>
+                <Button Content="Применить" Width="80" 
+                        Command="{Binding ApplyFiltersCommand}"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

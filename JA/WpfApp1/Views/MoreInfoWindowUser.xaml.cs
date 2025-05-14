@@ -70,12 +70,12 @@ namespace JA.Views
             try
             {
                 PersonalData.FirstName = FirstNameBox.Text;
-                PersonalData.email = EmailBox.Text;
+                PersonalData.Email = EmailBox.Text;
                 PersonalData.LastName = LastNameBox.Text;
                 PersonalData.Education = EducationBox.Text;
                 PersonalData.About = AboutBox.Text;
-                PersonalData.age = AgeBox.Text;
-                PersonalData.speciality = SpeccialityBox.Text;
+                PersonalData.Age = AgeBox.Text;
+                PersonalData.Speciality = SpeccialityBox.Text;
                 switch (Country.SelectedItem)
                 {
                     case "Беларусь":

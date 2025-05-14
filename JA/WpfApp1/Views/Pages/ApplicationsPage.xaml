@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:JA.Views.Pages" 
+      xmlns:controls="clr-namespace:JA.Views.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ApplicationsPage">
@@ -27,8 +28,25 @@
                     </Grid>
                 </Border>
                 <Border Margin="0,0,10,0" Height="25" Width="180" HorizontalAlignment="Right" 
-                        BorderThickness="0.3" BorderBrush="#849A9C" CornerRadius="4">
-                    <Label Content="Фильтр" FontSize="10" HorizontalAlignment="Center" Foreground="#FF849A9C"/>
+                        BorderThickness="0.3" BorderBrush="#849A9C" CornerRadius="4"
+                        MouseDown="FilterButton_Click">
+                    <Grid>
+                        <!-- Кнопка фильтра -->
+                        <Button x:Name="FilterButton" 
+                                Content="Фильтр" 
+                                Width="180"
+                                HorizontalAlignment="Right"
+                                Click="FilterButton_Click"/>
+
+                        <!-- Popup с фильтрами -->
+                        <Popup x:Name="FiltersPopup" 
+                               PlacementTarget="{Binding ElementName=FilterButton}"
+                               Placement="Bottom"
+                               StaysOpen="False"
+                               AllowsTransparency="True">
+                            <controls:FiltersPopupControl/>
+                        </Popup>
+                    </Grid>
                 </Border>
             </Grid>
         </Border>

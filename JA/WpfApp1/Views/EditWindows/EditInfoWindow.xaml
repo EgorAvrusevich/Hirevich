@@ -1,0 +1,64 @@
+﻿<Window x:Class="JA.Views.EditWindows.EditInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:converters="clr-namespace:JA.Classes"
+        mc:Ignorable="d"
+        Title="Редактирование профиля"
+        Height="500"
+        Width="400"
+        WindowStartupLocation="CenterOwner">
+
+    <Window.Resources>
+        <converters:CountryToFlagConverter x:Key="CountryToFlagConverter"/>
+    </Window.Resources>
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Фото профиля -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,20">
+            <Border Width="100" Height="100" CornerRadius="50" BorderBrush="#CCCCCC" BorderThickness="1">
+                <Image Source="{Binding Photo}"
+                       Stretch="UniformToFill">
+                    <Image.Clip>
+                        <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                    </Image.Clip>
+                </Image>
+            </Border>
+            <Button Content="Изменить фото" 
+                    Margin="20,0,0,0" 
+                    VerticalAlignment="Center"
+                    Width="120"
+                    Click="ChangePhoto_Click"/>
+        </StackPanel>
+
+        <!-- Имя -->
+        <Label Grid.Row="1" Content="Имя:" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="2" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15"/>
+
+        <!-- Фамилия -->
+        <Label Grid.Row="3" Content="Фамилия:" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="4" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15"/>
+
+        <!-- Возраст -->
+        <Label Grid.Row="5" Content="Возраст:" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="6" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15"/>
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Отмена" Width="80" Margin="0,0,10,0" Click="CancelButton_Click"/>
+            <Button Content="Сохранить" Width="80" Click="SaveButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

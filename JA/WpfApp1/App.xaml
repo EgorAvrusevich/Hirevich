@@ -1,11 +1,12 @@
 ﻿<Application x:Class="JA.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:JA" xmlns:local1="clr-namespace:JA.Classes"
+             xmlns:local="clr-namespace:JA" xmlns:local1="clr-namespace:JA.Classes" xmlns:local2="clr-namespace:JA.Views.Controls"
              StartupUri="Views/LoginWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <local1:CountryToFlagConverter x:Key="CountryToFlagConverter"/>
+            <local2:FiltersPopupControl x:Key="FilterPopupControl"/>
             <Style x:Key="ModernButtonStyle" TargetType="Button">
                 <Setter Property="Background" Value="#3498db"/>
                 <Setter Property="Foreground" Value="White"/>

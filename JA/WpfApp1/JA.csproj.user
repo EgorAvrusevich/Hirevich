@@ -11,10 +11,19 @@
     <Compile Update="Views\CVWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EditWindows\EditCompanyDiscriptionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditWindows\EditCompanyEmailWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\EditWindows\EditCompanyInfoWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\EditWindows\EditNameWindow.xaml.cs">
+    <Compile Update="Views\EditWindows\EditInfoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\FiltersPopupControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MoreInfoWindowCompany.xaml.cs">
@@ -49,12 +58,21 @@
     <None Update="Views\CVWindow.xaml">
       <SubType>Designer</SubType>
     </None>
+    <None Update="Views\EditWindows\EditCompanyDiscriptionWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\EditWindows\EditCompanyEmailWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
     <None Update="Views\EditWindows\EditCompanyInfoWindow.xaml">
       <SubType>Designer</SubType>
     </None>
-    <None Update="Views\EditWindows\EditNameWindow.xaml">
+    <None Update="Views\EditWindows\EditInfoWindow.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Views\Controls\FiltersPopupControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <None Update="Views\MoreInfoWindowCompany.xaml">
       <SubType>Designer</SubType>
     </None>

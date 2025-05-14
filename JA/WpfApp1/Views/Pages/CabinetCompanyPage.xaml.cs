@@ -25,6 +25,7 @@ namespace JA.Views.Pages
         {
             InitializeComponent();
             LoadCompanyData(currentUser.id);
+            DataContext = this;
         }
 
         private void LoadCompanyData(int companyId)
@@ -32,6 +33,46 @@ namespace JA.Views.Pages
             using (var db = new AplicationContext())
             {
                 Data = db.Companys_data.FirstOrDefault(u => u.Id == companyId);
+            }
+        }
+
+        private void EditCompanyEmail_Click(object sender, RoutedEventArgs e)
+        {
+            if (Data == null) return;
+
+            var editWindow = new EditCompanyEmailWindow(Data.Email);
+            if (editWindow.ShowDialog() == true)
+            {
+                using (var db = new AplicationContext())
+                {
+                    var company = db.Companys_data.Find(Data.Id);
+                    if (company == null) return;
+
+                    company.Email = editWindow.Email;
+
+                    db.SaveChanges();
+                    Data = company;
+                }
+            }
+        }
+
+        private void EditCompanyDiscription_Click(object sender, RoutedEventArgs e)
+        {
+            if (Data == null) return;
+
+            var editWindow = new EditCompanyDiscriptionWindow(Data.Discription);
+            if (editWindow.ShowDialog() == true)
+            {
+                using (var db = new AplicationContext())
+                {
+                    var company = db.Companys_data.Find(Data.Id);
+                    if (company == null) return;
+
+                    company.Discription = editWindow.Discription;
+
+                    db.SaveChanges();
+                    Data = company;
+                }
             }
         }
 
@@ -55,12 +96,12 @@ namespace JA.Views.Pages
                     }
 
                     db.SaveChanges();
-                    Data = company; // Обновляем всю сущность
+                    Data = company;
                 }
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

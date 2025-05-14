@@ -1,4 +1,5 @@
 ﻿using JA.Classes;
+using JA.Views.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -28,7 +29,11 @@ namespace JA.Views.Pages
         {
             InitializeComponent();
             DataContext = this;
+            Loaded += OnLoaded;
             LoadDataFromDataBase();
+
+            var filtersControl = (FiltersPopupControl)FiltersPopup.Child;
+            filtersControl.ViewModel.FiltersApplied += ApplyFilters;
         }
 
         private ObservableCollection<AppForList> applications = new ObservableCollection<AppForList>();
@@ -92,6 +97,45 @@ namespace JA.Views.Pages
                 // Сбрасываем выбор (опционально)
                 ApplicationsList.SelectedItem = null;
             }
+        }
+
+        private void OnLoaded(object sender, RoutedEventArgs e)
+        {
+            if (FiltersPopup.Child is FiltersPopupControl control)
+            {
+                control.ViewModel.FiltersApplied += ApplyFilters;
+            }
+        }
+
+        private void FilterButton_Click(object sender, RoutedEventArgs e)
+        {
+            FiltersPopup.IsOpen = !FiltersPopup.IsOpen;
+        }
+
+        private void ApplyFilters(FiltersViewModel filters)
+        {
+            // Закрываем popup после применения фильтров
+            FiltersPopup.IsOpen = false;
+
+            // Ваша логика фильтрации данных
+            if (filters == null) return;
+
+            
+            var filteredData = applications.Where(item =>
+            {
+                if (filters.SelectedCountry != default && item.application.Country != filters.SelectedCountry)
+                    return false;
+                    
+                if (!string.IsNullOrEmpty(filters.MinSalary) && 
+                    int.TryParse(filters.MinSalary, out var minSalary) &&
+                    item.application.Wage < minSalary)
+                    return false;
+                    
+                return true;
+            });
+            
+            ApplicationsList.ItemsSource = filteredData.ToList();
+            
         }
     }
 }

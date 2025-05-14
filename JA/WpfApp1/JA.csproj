@@ -32,6 +32,7 @@
     <None Remove="Images\LightLogo.png" />
     <None Remove="Images\LoadPhoto.png" />
     <None Remove="Images\lupa.png" />
+    <None Remove="Views\FiltersPopupControl.xaml" />
     <None Remove="Views\Pages\ApplicationsPage.xaml" />
     <None Remove="Views\Pages\CabinetPage.xaml" />
   </ItemGroup>
@@ -52,8 +53,10 @@
     <Page Include="Views\MainWindow.xaml" />
     <Page Include="Views\LoginWindow.xaml" />
     <Page Include="Views\RegisterWindow.xaml" />
-    <Page Include="Views\EditWindows\EditNameWindow.xaml" />
+    <Page Include="Views\EditWindows\EditInfoWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyInfoWindow.xaml" />
+    <Page Include="Views\EditWindows\EditCompanyEmailWindow.xaml" />
+    <Page Include="Views\EditWindows\EditCompanyDiscriptionWindow.xaml" />
     <Page Include="Views\Pages\ApplicationsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +137,9 @@
     <Resource Include="Images\lupa.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Page Include="Views\Controls\FiltersPopupControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <ItemGroup>
@@ -146,10 +152,16 @@
     <None Update="Views\CVWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Views\EditWindows\EditCompanyDiscriptionWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditWindows\EditCompanyEmailWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\EditWindows\EditCompanyInfoWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="Views\EditWindows\EditNameWindow.xaml">
+    <None Update="Views\EditWindows\EditInfoWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\MoreInfoWindowCompany.xaml">
@@ -164,10 +176,6 @@
     <None Update="Views\Pages\MyVacationsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModels\Base\" />
   </ItemGroup>
 
 </Project>

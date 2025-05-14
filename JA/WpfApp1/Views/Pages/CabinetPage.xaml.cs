@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Globalization;
+using JA.Views.EditWindows;
+using System.ComponentModel;
 
 namespace JA.Views.Pages
 {
@@ -22,7 +24,17 @@ namespace JA.Views.Pages
     /// </summary>
     public partial class CabinetPage : Page
     {
-        PersonalData? _personalData;
+        private PersonalData? _personalData;
+        public PersonalData? PersonalData
+        {
+            get => _personalData;
+            set
+            {
+                _personalData = value;
+                OnPropertyChanged(nameof(PersonalData));
+            }
+        }
+        
         public CabinetPage(User currentUser)
         {
             InitializeComponent();
@@ -30,7 +42,7 @@ namespace JA.Views.Pages
             {
                 _personalData = db.Users_data.FirstOrDefault(u => u.Id == currentUser.id);
             }
-            DataContext = _personalData;
+            DataContext = this;
         }
 
 
@@ -48,6 +60,49 @@ namespace JA.Views.Pages
             {
                 throw new NotImplementedException();
             }
+        }
+
+        private void EditInfo_Click(object sender, RoutedEventArgs e)
+        {
+            var editWindow = new EditInfoWindow(
+                _personalData.Photo,
+                _personalData.FirstName,
+                _personalData.LastName,
+                _personalData.Age,
+                _personalData.Country);
+
+            if (editWindow.ShowDialog() == true)
+            {
+                using (var db = new AplicationContext())
+                {
+                    var personalData = db.Users_data.Find(_personalData.Id);
+                    personalData.FirstName = editWindow.FirstName;
+                    personalData.LastName = editWindow.LastName;
+                    personalData.Age = editWindow.Age;
+
+                    if (editWindow.Photo != null && !editWindow.Photo.SequenceEqual(_personalData.Photo ?? Array.Empty<byte>()))
+                    {
+                        personalData.Photo = editWindow.Photo;
+                    }
+
+                    db.SaveChanges();
+
+                    // Обновляем локальные данные
+                    _personalData.FirstName = editWindow.FirstName;
+                    _personalData.LastName = editWindow.LastName;
+                    _personalData.Age = editWindow.Age;
+                    _personalData.Photo = editWindow.Photo;
+
+                    // Уведомляем об изменениях
+                    OnPropertyChanged(nameof(_personalData));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using JA.Classes;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +49,7 @@ namespace JA.Views.EditWindows
                 try
                 {
                     NewLogo = File.ReadAllBytes(openFileDialog.FileName);
+                    newlogo.Source = Load_Functions.ConvertBytesToImage(NewLogo);
                     OnPropertyChanged(nameof(NewLogo));
                 }
                 catch (Exception ex)
@@ -62,7 +64,7 @@ namespace JA.Views.EditWindows
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(CompanyName))
+            if (string.IsNullOrWhiteSpace(_CompanyName.Text))
             {
                 MessageBox.Show("Название компании не может быть пустым",
                                "Ошибка",

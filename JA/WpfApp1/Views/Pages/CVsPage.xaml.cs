@@ -1,4 +1,5 @@
 ﻿using JA.Classes;
+using JA.Views.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace JA.Views.Pages
 {
@@ -66,6 +68,46 @@ namespace JA.Views.Pages
                 // Сбрасываем выбор (опционально)
                 CVsList.SelectedItem = null;
             }
+        }
+
+
+        private void OnLoaded(object sender, RoutedEventArgs e)
+        {
+            if (FiltersPopup.Child is FiltersPopupControl control)
+            {
+                control.ViewModel.FiltersApplied += ApplyFilters;
+            }
+        }
+
+        private void FilterButton_Click(object sender, RoutedEventArgs e)
+        {
+            FiltersPopup.IsOpen = !FiltersPopup.IsOpen;
+        }
+
+        private void ApplyFilters(FiltersViewModel filters)
+        {
+            // Закрываем popup после применения фильтров
+            FiltersPopup.IsOpen = false;
+
+            // Ваша логика фильтрации данных
+            if (filters == null) return;
+
+
+            //var filteredData = CVs.Where(item =>
+            //{
+            //    if (filters.SelectedCountry != default && item.CVs.Country != filters.SelectedCountry)
+            //        return false;
+
+            //    if (!string.IsNullOrEmpty(filters.MinSalary) &&
+            //        int.TryParse(filters.MinSalary, out var minSalary) &&
+            //        item.application.Wage < minSalary)
+            //        return false;
+
+            //    return true;
+            //});
+
+            //CVsList.ItemsSource = filteredData.ToList();
+
         }
     }
 }

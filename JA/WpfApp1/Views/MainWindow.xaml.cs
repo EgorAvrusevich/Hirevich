@@ -1,5 +1,4 @@
 ﻿using JA.Classes;
-using JA.ViewModels;
 using JA.Views.Pages;
 using System;
 using System.Collections.Generic;
