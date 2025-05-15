@@ -55,7 +55,7 @@
                         <Label  FontSize="14" FontWeight="Bold">Образование:</Label>
                         <Label Content="{Binding PersonalData.Education}" FontSize="14"></Label>
                     </StackPanel>
-                    <Image Grid.Column="1" Source="/Images/Edit.png" Width="30"></Image>
+                    <Image Grid.Column="1" Source="/Images/Edit.png" Width="30" MouseDown="EditEducation_Click"></Image>
                 </Grid>
             </Border>
             <Border Grid.Row="2">
@@ -68,7 +68,7 @@
                         <Label  FontSize="14" FontWeight="Bold">Специальзируюсь на:</Label>
                         <Label Content="{Binding PersonalData.Speciality}" FontSize="14"></Label>
                     </StackPanel>
-                    <Image Grid.Column="1" Source="/Images/Edit.png" Width="30"></Image>
+                    <Image Grid.Column="1" Source="/Images/Edit.png" Width="30" MouseDown="EditSpeciality_Click"></Image>
                 </Grid>
             </Border>
             <Border Grid.Row="3">
@@ -81,7 +81,7 @@
                         <Label Grid.Column="0"  FontSize="14" FontWeight="Bold"> О себе:</Label>
                         <TextBlock Grid.Column="0" FontSize="14" Text="{Binding PersonalData.About}"></TextBlock>
                     </StackPanel>
-                    <Image Grid.Column="1" Grid.Row="1" Source="/Images/Edit.png" Width="30"></Image>
+                    <Image Grid.Column="1" Grid.Row="1" Source="/Images/Edit.png" Width="30" MouseDown="EditAbout_Click"></Image>
                 </Grid>
             </Border>
         </Grid>

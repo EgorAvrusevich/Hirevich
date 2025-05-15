@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JA.Views"
         mc:Ignorable="d"
-        Title="Добавление новой вакансии" 
-        Height="550" 
-        Width="500"
+        Title="Добавление вакансии" 
+        Height="500" Width="400"
         WindowStartupLocation="CenterOwner">
 
-    <Grid Margin="15">
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -23,13 +22,15 @@
         </Grid.RowDefinitions>
 
         <!-- Название вакансии -->
-        <Label Grid.Row="0" Content="Название вакансии:" Margin="0,0,0,5"/>
-        <TextBox Grid.Row="1" Text="{Binding Vacation_Name, UpdateSourceTrigger=PropertyChanged}" 
+        <Label Grid.Row="0" Content="Название вакансии*:"/>
+        <TextBox Grid.Row="1" x:Name="VacationNameBox" 
+                 Text="{Binding NewVacancy.Vacation_Name, UpdateSourceTrigger=PropertyChanged}"
                  Margin="0,0,0,10"/>
 
         <!-- Зарплата -->
-        <Label Grid.Row="2" Content="Зарплата:" Margin="0,0,0,5"/>
-        <TextBox Grid.Row="3" Text="{Binding Wage, UpdateSourceTrigger=PropertyChanged}" 
+        <Label Grid.Row="2" Content="Зарплата:"/>
+        <TextBox Grid.Row="3" x:Name="WageBox"
+                 Text="{Binding NewVacancy.Wage, UpdateSourceTrigger=PropertyChanged}"
                  Margin="0,0,0,10"/>
 
         <!-- Страна и опыт -->
@@ -41,34 +42,35 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <Label Content="Страна:" Margin="0,0,0,5"/>
-                <ComboBox ItemsSource="{Binding Countries}" 
-                          SelectedItem="{Binding Country}"
+                <Label Content="Страна*:"/>
+                <ComboBox x:Name="CountryBox"
+                          ItemsSource="{Binding Countries}"
                           DisplayMemberPath="Value"
-                          SelectedValuePath="Key"/>
+                          SelectedValuePath="Key"
+                          SelectedValue="{Binding NewVacancy.Country}"/>
             </StackPanel>
 
             <StackPanel Grid.Column="2">
-                <Label Content="Требуемый опыт:" Margin="0,0,0,5"/>
-                <ComboBox ItemsSource="{Binding ExperienceLevels}" 
-                          SelectedItem="{Binding Experience}"/>
+                <Label Content="Опыт*:"/>
+                <ComboBox x:Name="ExpBox"
+                          ItemsSource="{Binding ExperienceLevels}"
+                          SelectedItem="{Binding NewVacancy.Experience}"/>
             </StackPanel>
         </Grid>
 
         <!-- Описание -->
-        <Label Grid.Row="5" Content="Описание вакансии:" Margin="0,0,0,5"/>
-        <TextBox Grid.Row="6" Text="{Binding Description}" 
+        <Label Grid.Row="5" Content="Описание:"/>
+        <TextBox Grid.Row="6" x:Name="DescriptionBox"
+                 Text="{Binding NewVacancy.Description}"
                  AcceptsReturn="True"
                  TextWrapping="Wrap"
                  VerticalScrollBarVisibility="Auto"
-                 Height="150"
                  Margin="0,0,0,15"/>
 
         <!-- Кнопки -->
         <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Отмена" Width="100" Margin="0,0,10,0" Click="CancelButton_Click"/>
-            <Button Content="Добавить" Width="100" Click="SaveButton_Click"
-                    IsEnabled="{Binding IsFormValid}"/>
+            <Button Content="Отмена" Width="80" Margin="0,0,10,0" Click="CancelButton_Click"/>
+            <Button Content="Сохранить" Width="80" Click="SaveButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

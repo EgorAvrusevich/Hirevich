@@ -1,26 +1,37 @@
 ﻿using JA.Classes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
-using System.ComponentModel;
+using Microsoft.EntityFrameworkCore;
 using Application = JA.Classes.Application;
 
 namespace JA.Views
 {
     public partial class AddVacancyWindow : Window, INotifyPropertyChanged
     {
-        public Application NewVacancy { get; set; } = new Application();
+        public Application NewVacancy { get; } = new Application();
 
-        // Список стран и уровней опыта
-        public Dictionary<string, string> Countries { get; } = new Dictionary<string, string>
+        public Dictionary<string, string> Countries { get; } = new()
         {
+            {"australia", "Австралия"},
+            {"belarus", "Беларусь"},
+            {"brazil", "Бразилия"},
+            {"canada", "Канада"},
+            {"china", "Кита"},
+            {"france", "Франция"},
+            {"germany", "Германия"},
+            {"japan", "Япония"},
             {"russia", "Россия"},
+            {"UK", "Великобритания"},
+            {"ukraine", "Украина"},
             {"usa", "США"},
-            // Добавьте другие страны
+            {"others", "Другая"},
+
         };
 
-        public List<string> ExperienceLevels { get; } = new List<string>
+        public List<string> ExperienceLevels { get; } = new()
         {
             "Без опыта",
             "1-3 года",
@@ -28,30 +39,43 @@ namespace JA.Views
             "Более 6 лет"
         };
 
-        // Флаг валидности формы
         public bool IsFormValid => !string.IsNullOrWhiteSpace(NewVacancy.Vacation_Name) &&
                                  !string.IsNullOrWhiteSpace(NewVacancy.Country) &&
                                  !string.IsNullOrWhiteSpace(NewVacancy.Experience);
 
-        public int? CompanyId { get; }
-        public string? CompanyName { get; }
-
         public AddVacancyWindow(int companyId)
         {
             InitializeComponent();
-            CompanyId = companyId;
-            using (var db = new AplicationContext())
+
+            using var db = new AplicationContext();
+            var company = db.Companys_data.AsNoTracking().FirstOrDefault(c => c.Id == companyId);
+
+            if (company != null)
             {
-                CompanyName = db.Companys_data.FirstOrDefault(u => companyId == u.Id).Name;
+                NewVacancy.Id_Company = companyId;
+                NewVacancy.Company_name = company.Name;
             }
-            NewVacancy.Id_Company = companyId;
-            NewVacancy.Company_name = CompanyName;
+
             DataContext = this;
+            Loaded += (s, e) => VacationNameBox.Focus();
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!IsFormValid) return;
+            if (!IsFormValid)
+            {
+                MessageBox.Show("Заполните все обязательные поля", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Дополнительная проверка числовых полей
+            if (WageBox.Text != "" && !int.TryParse(WageBox.Text, out _))
+            {
+                MessageBox.Show("Укажите корректную зарплату", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
             DialogResult = true;
             Close();
@@ -64,9 +88,7 @@ namespace JA.Views
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        protected void OnPropertyChanged(string name) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }

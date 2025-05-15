@@ -17,6 +17,9 @@
     <Compile Update="Views\CVWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EditWindows\EditAboutWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\EditWindows\EditCompanyDiscriptionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -26,10 +29,16 @@
     <Compile Update="Views\EditWindows\EditCompanyInfoWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EditWindows\EditEducationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\EditWindows\EditInfoWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Controls\FiltersPopupControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditWindows\EditSpecialityWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MoreInfoWindowCompany.xaml.cs">
@@ -62,6 +71,15 @@
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\AppWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\EditWindows\EditAboutWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\EditWindows\EditEducationWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\EditWindows\EditSpecialityWindow.xaml">
       <SubType>Designer</SubType>
     </None>
     <Page Update="Views\Controls\FiltersPopupCVsControl.xaml">

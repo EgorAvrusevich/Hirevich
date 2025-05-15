@@ -382,3 +382,13 @@ C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Contro
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Controls\FiltersPopupCVsControl.baml
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AddVacancyWindow.g.cs
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AddVacancyWindow.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Controls\FiltersPopupCVsControl.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AddVacancyWindow.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Controls\FiltersPopupCVsControl.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AddVacancyWindow.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditEducationWindow.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditEducationWindow.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditSpecialityWindow.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditSpecialityWindow.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditAboutWindow.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditAboutWindow.baml

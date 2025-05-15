@@ -59,6 +59,9 @@
     <Page Include="Views\AddVacancyWindow.xaml" />
     <Page Include="Views\RegisterWindow.xaml" />
     <Page Include="Views\EditWindows\EditInfoWindow.xaml" />
+    <Page Include="Views\EditWindows\EditEducationWindow.xaml" />
+    <Page Include="Views\EditWindows\EditSpecialityWindow.xaml" />
+    <Page Include="Views\EditWindows\EditAboutWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyInfoWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyEmailWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyDiscriptionWindow.xaml" />
@@ -160,6 +163,9 @@
     <None Update="Views\CVWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Views\EditWindows\EditAboutWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\EditWindows\EditCompanyDiscriptionWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
@@ -169,7 +175,13 @@
     <None Update="Views\EditWindows\EditCompanyInfoWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Views\EditWindows\EditEducationWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\EditWindows\EditInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditWindows\EditSpecialityWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\MoreInfoWindowCompany.xaml">

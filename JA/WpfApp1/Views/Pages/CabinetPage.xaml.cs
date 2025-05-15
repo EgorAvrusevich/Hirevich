@@ -99,6 +99,63 @@ namespace JA.Views.Pages
             }
         }
 
+        private void EditEducation_Click(object sender, RoutedEventArgs e)
+        {
+            var editWindow = new EditEducationWindow(PersonalData.Education ?? "");
+            if (editWindow.ShowDialog() == true)
+            {
+                using (var db = new AplicationContext())
+                {
+                    var userData = db.Users_data.Find(PersonalData.Id);
+                    if (userData != null)
+                    {
+                        userData.Education = editWindow.EducationText;
+                        db.SaveChanges();
+                        PersonalData.Education = editWindow.EducationText;
+                        OnPropertyChanged(nameof(PersonalData));
+                    }
+                }
+            }
+        }
+
+        private void EditSpeciality_Click(object sender, RoutedEventArgs e)
+        {
+            var editWindow = new EditSpecialityWindow(PersonalData.Speciality ?? "");
+            if (editWindow.ShowDialog() == true)
+            {
+                using (var db = new AplicationContext())
+                {
+                    var userData = db.Users_data.Find(PersonalData.Id);
+                    if (userData != null)
+                    {
+                        userData.Speciality = editWindow.SpecialityText;
+                        db.SaveChanges();
+                        PersonalData.Speciality = editWindow.SpecialityText;
+                        OnPropertyChanged(nameof(PersonalData));
+                    }
+                }
+            }
+        }
+
+        private void EditAbout_Click(object sender, RoutedEventArgs e)
+        {
+            var editWindow = new EditAboutWindow(PersonalData.About ?? "");
+            if (editWindow.ShowDialog() == true)
+            {
+                using (var db = new AplicationContext())
+                {
+                    var userData = db.Users_data.Find(PersonalData.Id);
+                    if (userData != null)
+                    {
+                        userData.About = editWindow.AboutText;
+                        db.SaveChanges();
+                        PersonalData.About = editWindow.AboutText;
+                        OnPropertyChanged(nameof(PersonalData));
+                    }
+                }
+            }
+        }
+
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {

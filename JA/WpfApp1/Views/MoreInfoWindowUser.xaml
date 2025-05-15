@@ -35,6 +35,7 @@
                         <ComboBoxItem Content="Нет образования"/>
                         <ComboBoxItem Content="Среднее общее"/>
                         <ComboBoxItem Content="Среднее специальное"/>
+                        <ComboBoxItem Content="Неоконченное высшее"/>
                         <ComboBoxItem Content="Высшее"/>
                     </ComboBox>
                 </Grid>

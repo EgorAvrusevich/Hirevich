@@ -36,7 +36,7 @@ namespace JA.Classes
         [Description("Австралия")]
         australia,
 
-        [Description("Буларусь")]
+        [Description("Беларусь")]
         belarus,
 
         [Description("Украина")]
