@@ -94,5 +94,20 @@ namespace JA.Views.Pages
                 ApplicationsList.SelectedItem = null;
             }
         }
+
+        private void AddVacancy_Click(object sender, MouseButtonEventArgs e)
+        {
+            var addWindow = new AddVacancyWindow(_currentUser.id);
+            if (addWindow.ShowDialog() == true)
+            {
+                using (var db = new AplicationContext())
+                {
+                    db.Applications.Add(addWindow.NewVacancy);
+                    db.SaveChanges();
+
+                    LoadDataFromDataBase();
+                }
+            }
+        }
     }
 }

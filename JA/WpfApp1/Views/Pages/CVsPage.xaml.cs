@@ -28,7 +28,12 @@ namespace JA.Views.Pages
         {
             InitializeComponent();
             DataContext = this;
+            Loaded += OnLoaded;
             LoadDataFromDataBase();
+
+
+            var filtersControl = (FiltersPopupCVsControl)FiltersPopupCVs.Child;
+            filtersControl.ViewModel.FiltersApplied += ApplyFilters;
         }
 
         private ObservableCollection<PersonalData> CVs = new ObservableCollection<PersonalData>();
@@ -73,7 +78,7 @@ namespace JA.Views.Pages
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
-            if (FiltersPopup.Child is FiltersPopupControl control)
+            if (FiltersPopupCVs.Child is FiltersPopupCVsControl control)
             {
                 control.ViewModel.FiltersApplied += ApplyFilters;
             }
@@ -81,32 +86,27 @@ namespace JA.Views.Pages
 
         private void FilterButton_Click(object sender, RoutedEventArgs e)
         {
-            FiltersPopup.IsOpen = !FiltersPopup.IsOpen;
+            FiltersPopupCVs.IsOpen = !FiltersPopupCVs.IsOpen;
         }
 
         private void ApplyFilters(FiltersViewModel filters)
         {
             // Закрываем popup после применения фильтров
-            FiltersPopup.IsOpen = false;
+            FiltersPopupCVs.IsOpen = false;
 
             // Ваша логика фильтрации данных
             if (filters == null) return;
 
 
-            //var filteredData = CVs.Where(item =>
-            //{
-            //    if (filters.SelectedCountry != default && item.CVs.Country != filters.SelectedCountry)
-            //        return false;
+            var filteredData = CVs.Where(item =>
+            {
+                if (filters.SelectedCountry != default && item.Country != filters.SelectedCountry)
+                    return false;
 
-            //    if (!string.IsNullOrEmpty(filters.MinSalary) &&
-            //        int.TryParse(filters.MinSalary, out var minSalary) &&
-            //        item.application.Wage < minSalary)
-            //        return false;
+                return true;
+            });
 
-            //    return true;
-            //});
-
-            //CVsList.ItemsSource = filteredData.ToList();
+            CVsList.ItemsSource = filteredData.ToList();
 
         }
     }

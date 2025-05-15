@@ -2,10 +2,16 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="Views\AddVacancyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AppWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\FiltersPopupCVsControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\CVWindow.xaml.cs">
@@ -49,12 +55,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Update="Views\AddVacancyWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
     <None Update="Views\AdminWindow.xaml">
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\AppWindow.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Views\Controls\FiltersPopupCVsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <None Update="Views\CVWindow.xaml">
       <SubType>Designer</SubType>
     </None>

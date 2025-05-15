@@ -32,6 +32,7 @@
     <None Remove="Images\LightLogo.png" />
     <None Remove="Images\LoadPhoto.png" />
     <None Remove="Images\lupa.png" />
+    <None Remove="Views\Controls\FiltersPopupCVsControl.xaml" />
     <None Remove="Views\FiltersPopupControl.xaml" />
     <None Remove="Views\Pages\ApplicationsPage.xaml" />
     <None Remove="Views\Pages\CabinetPage.xaml" />
@@ -46,12 +47,16 @@
 
   <ItemGroup>
     <Page Include="App.xaml" />
+    <Page Include="Views\Controls\FiltersPopupCVsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MoreInfoWindowUser.xaml" />
     <Page Include="Views\AppWindow.xaml" />
     <Page Include="Views\CVWindow.xaml" />
     <Page Include="Views\MoreInfoWindowCompany.xaml" />
     <Page Include="Views\MainWindow.xaml" />
     <Page Include="Views\LoginWindow.xaml" />
+    <Page Include="Views\AddVacancyWindow.xaml" />
     <Page Include="Views\RegisterWindow.xaml" />
     <Page Include="Views\EditWindows\EditInfoWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyInfoWindow.xaml" />
@@ -143,6 +148,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Views\AddVacancyWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\AdminWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>

@@ -39,12 +39,12 @@
                 Click="FilterButton_Click"/>
 
                         <!-- Popup с фильтрами -->
-                        <Popup x:Name="FiltersPopup" 
+                        <Popup x:Name="FiltersPopupCVs" 
                PlacementTarget="{Binding ElementName=FilterButton}"
                Placement="Bottom"
                StaysOpen="False"
                AllowsTransparency="True">
-                            <controls:FiltersPopupControl/>
+                            <controls:FiltersPopupCVsControl/>
                         </Popup>
                     </Grid>
                 </Border>

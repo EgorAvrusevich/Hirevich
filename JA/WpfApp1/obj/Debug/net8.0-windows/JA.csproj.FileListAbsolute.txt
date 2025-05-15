@@ -259,10 +259,6 @@ C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AppWin
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\CVWindow.baml
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\CabinetCompanyPage.baml
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\MyVacationsPage.baml
-C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditNameWindow.g.cs
-C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditNameWindow.baml
-C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyNameWindow.baml
-C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyNameWindow.g.cs
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyInfoWindow.g.cs
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\JA.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyInfoWindow.baml
@@ -373,3 +369,16 @@ C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\refint\JA
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\JA.pdb
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\JA.genruntimeconfig.cache
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\ref\JA.dll
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyInfoWindow.baml
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyEmailWindow.baml
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyDiscriptionWindow.baml
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditInfoWindow.g.cs
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyEmailWindow.g.cs
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditCompanyDiscriptionWindow.g.cs
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Controls\FiltersPopupControl.g.cs
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditInfoWindow.baml
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Controls\FiltersPopupControl.baml
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Controls\FiltersPopupCVsControl.g.cs
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Controls\FiltersPopupCVsControl.baml
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AddVacancyWindow.g.cs
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AddVacancyWindow.baml

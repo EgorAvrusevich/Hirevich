@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JA.Classes
 {
-    class Application
+    public class Application
     {
         public int Id { get; set; }
         public int? Id_Company { get; set; }

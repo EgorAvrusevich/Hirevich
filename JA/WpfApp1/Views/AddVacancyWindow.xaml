@@ -1,0 +1,74 @@
+﻿<Window x:Class="JA.Views.AddVacancyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JA.Views"
+        mc:Ignorable="d"
+        Title="Добавление новой вакансии" 
+        Height="550" 
+        Width="500"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Название вакансии -->
+        <Label Grid.Row="0" Content="Название вакансии:" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="1" Text="{Binding Vacation_Name, UpdateSourceTrigger=PropertyChanged}" 
+                 Margin="0,0,0,10"/>
+
+        <!-- Зарплата -->
+        <Label Grid.Row="2" Content="Зарплата:" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="3" Text="{Binding Wage, UpdateSourceTrigger=PropertyChanged}" 
+                 Margin="0,0,0,10"/>
+
+        <!-- Страна и опыт -->
+        <Grid Grid.Row="4" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <Label Content="Страна:" Margin="0,0,0,5"/>
+                <ComboBox ItemsSource="{Binding Countries}" 
+                          SelectedItem="{Binding Country}"
+                          DisplayMemberPath="Value"
+                          SelectedValuePath="Key"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <Label Content="Требуемый опыт:" Margin="0,0,0,5"/>
+                <ComboBox ItemsSource="{Binding ExperienceLevels}" 
+                          SelectedItem="{Binding Experience}"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Описание -->
+        <Label Grid.Row="5" Content="Описание вакансии:" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="6" Text="{Binding Description}" 
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 Height="150"
+                 Margin="0,0,0,15"/>
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Отмена" Width="100" Margin="0,0,10,0" Click="CancelButton_Click"/>
+            <Button Content="Добавить" Width="100" Click="SaveButton_Click"
+                    IsEnabled="{Binding IsFormValid}"/>
+        </StackPanel>
+    </Grid>
+</Window>

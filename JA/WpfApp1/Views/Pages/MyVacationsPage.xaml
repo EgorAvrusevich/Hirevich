@@ -16,7 +16,7 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Label Margin="20, 10" FontSize="26"> Мои вакансии</Label>
-            <Button Margin="20,15" Width="170">+ Добавить вакансию</Button>
+            <Button Margin="20,15" Width="170" MouseDown="AddVacancy_Click">+ Добавить вакансию</Button>
         </StackPanel>
 
             <Grid Grid.Row="1" Margin="20,0,20,20">
