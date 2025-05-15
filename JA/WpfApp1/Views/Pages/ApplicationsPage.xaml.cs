@@ -1,4 +1,5 @@
-﻿using JA.Classes;
+﻿using GalaSoft.MvvmLight.Command;
+using JA.Classes;
 using JA.Views.Controls;
 using System;
 using System.Collections.Generic;
@@ -25,12 +26,23 @@ namespace JA.Views.Pages
     /// </summary>
     public partial class ApplicationsPage : Page
     {
-        public ApplicationsPage()
+        private User _сurrentUser { get; set; }
+        public User CurrentUser
+        {
+            get => _сurrentUser;
+            set
+            {
+                _сurrentUser = value;
+                LoadDataFromDataBase();
+            }
+        }
+
+        public ApplicationsPage(User user)
         {
             InitializeComponent();
             DataContext = this;
             Loaded += OnLoaded;
-            LoadDataFromDataBase();
+            CurrentUser = user;
 
             var filtersControl = (FiltersPopupControl)FiltersPopup.Child;
             filtersControl.ViewModel.FiltersApplied += ApplyFilters;
@@ -72,7 +84,7 @@ namespace JA.Views.Pages
                             Country = app.Application.Country,
                             Description = app.Application.Description,
                             Id_Company = app.Application.Id_Company
-                        }));
+                        }, _сurrentUser.id));
                     }
                 }
 
@@ -98,6 +110,23 @@ namespace JA.Views.Pages
                 ApplicationsList.SelectedItem = null;
             }
         }
+
+        public ICommand RespondCommand => new RelayCommand<Application>(vacancy =>
+        {
+            using(var db = new AplicationContext())
+            {
+                var response = new Response(
+                    vacancy.Id,
+                    _сurrentUser.id
+                );
+
+                db.Add(response);
+                db.SaveChanges();
+
+                MessageBox.Show("Отклик успешно отправлен!");
+            }
+            LoadDataFromDataBase();
+        });
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {

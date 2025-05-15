@@ -14,6 +14,14 @@ namespace JA.Classes
         public int ApplicantId { get; set; }     // ID соискателя
         public DateTime ResponseDate { get; set; } = DateTime.Now;
         public ResponseStatus Status { get; set; } = ResponseStatus.Pending;
+
+        public Response() { }
+
+        public Response(int vacancyId, int applicantId)
+        {
+            VacancyId = vacancyId;
+            ApplicantId = applicantId;
+        }
     }
 
     public enum ResponseStatus
@@ -27,5 +35,18 @@ namespace JA.Classes
         [Description("Отклонено")]
         Rejected,
 
+        [Description("Отозвано")]
+        Withdrawn
+    }
+    public static class ResponseStatusExtensions
+    {
+        public static string GetDescription(this ResponseStatus value)
+        {
+            var field = value.GetType().GetField(value.ToString());
+            var attribute = (DescriptionAttribute)Attribute.GetCustomAttribute(
+                field,
+                typeof(DescriptionAttribute));
+            return attribute?.Description ?? value.ToString();
+        }
     }
 }

@@ -7,7 +7,7 @@
         mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainWindow"
-      MinWidth = "750px">
+      MinWidth = "850px">
     
     <Grid Background="#F8F8F8">
         <Grid.RowDefinitions>
@@ -35,6 +35,11 @@
                 </Border>
             </Border>
             <Border Grid.Column="2" Visibility="Collapsed" x:Name="CVs_page" MouseDown="CVs_page_MouseDown">
+                <Border CornerRadius="4" VerticalAlignment="Center">
+                    <Label Grid.Column="1" Content="Резюме" HorizontalAlignment="Center" />
+                </Border>
+            </Border>
+            <Border Grid.Column="2" x:Name="MyResponses_page" MouseDown="MyResponses_page_MouseDown">
                 <Border CornerRadius="4" VerticalAlignment="Center">
                     <Label Grid.Column="1" Content="Резюме" HorizontalAlignment="Center" />
                 </Border>

@@ -95,21 +95,6 @@ namespace JA.Views.Pages
             }
         }
 
-        //private void AddVacancy_Click(object sender, MouseButtonEventArgs e)
-        //{
-        //    var addWindow = new AddVacancyWindow(_currentUser.id);
-        //    if (addWindow.ShowDialog() == true)
-        //    {
-        //        using (var db = new AplicationContext())
-        //        {
-        //            db.Applications.Add(addWindow.NewVacancy);
-        //            db.SaveChanges();
-
-        //            LoadDataFromDataBase();
-        //        }
-        //    }
-        //}
-
         private void AddVacancy_Click(object sender, RoutedEventArgs e)
         {
             var addWindow = new AddVacancyWindow(_currentUser.id);

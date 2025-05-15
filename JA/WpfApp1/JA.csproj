@@ -43,6 +43,7 @@
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.4" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -78,6 +79,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
 	  <Page Include="Views\Pages\MyVacationsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	  <Page Include="Views\Pages\MyResponsesPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 	  </Page>
   </ItemGroup>
@@ -191,6 +195,9 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\Pages\CVsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\Pages\MyResponsesPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\Pages\MyVacationsPage.xaml">

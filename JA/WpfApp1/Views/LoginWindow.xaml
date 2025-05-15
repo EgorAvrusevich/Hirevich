@@ -26,8 +26,8 @@
         </Border>
         <Label Grid.Row="2" x:Name="warning" Content="Неверный логин или пароль" Margin="0,75,0,0" Width="170" Foreground="#FFC76666" Visibility="Hidden"/>
         <Border Grid.Row="3" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48"
-                BorderThickness="2" BorderBrush="#FF4A96" VerticalAlignment="Top">
-            <Button Background="#ffffff" BorderThickness="0" Content="Войти" FontSize="16" Foreground="#FFFF4A96" Click="Button_Click" />
+                VerticalAlignment="Top">
+            <Button  BorderThickness="0" Content="Войти" FontSize="16"  Click="Button_Click" />
         </Border>
         <Button BorderThickness="0" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20" Background="White" FontSize="15" Click="Button_Click_1">
             <Button.Style>

@@ -31,13 +31,16 @@ namespace JA.Views
         CabinetCompanyPage? cabCompPage;
         CVsPage? cvsPage;
         MyVacationsPage? myVacationsPage;
+        MyResponsesPage? myResponsesPage;
         
 
         public MainWindow(User currentUser)
         {
             InitializeComponent();
             _currentUser = currentUser;
-            appPage = new ApplicationsPage();
+
+            appPage = new ApplicationsPage(_currentUser);
+
             if (_currentUser.isSercher == 1)
             {
                 using (var db = new AplicationContext())
@@ -46,11 +49,13 @@ namespace JA.Views
                 }
                 DataContext = _personalData;
                 cabPage = new CabinetPage(_currentUser);
+                myResponsesPage = new MyResponsesPage(_currentUser);
             }
             else
             {
                 Vacaitions_label.Content = "Мои вакансии";
                 CVs_page.Visibility = Visibility.Visible;
+                MyResponses_page.Visibility = Visibility.Collapsed;
                 using (var db = new AplicationContext())
                 {
                     _companyData = db.Companys_data.FirstOrDefault(u => u.Id == _currentUser.id);
@@ -90,6 +95,10 @@ namespace JA.Views
         private void CVs_page_MouseDown(object sender, MouseButtonEventArgs e)
         {
             MainPanel.Content = cvsPage;
+        }
+        private void MyResponses_page_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MainPanel.Content = myResponsesPage;
         }
     }
 }

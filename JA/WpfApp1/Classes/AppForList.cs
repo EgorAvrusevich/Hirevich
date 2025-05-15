@@ -10,12 +10,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JA.Classes
 {
-    class AppForList
+    public class AppForList
     {
 
         public Application? application { get; set; }
         public byte[]? flag_image { get; set; }
         public byte[]? Company_Logo { get; set; }
+        public bool HasResponded { get; set; }
         public AppForList() { }
 
         public AppForList(Application application)
@@ -25,6 +26,17 @@ namespace JA.Classes
 
             using (AplicationContext db = new AplicationContext())
             {
+                LoadFlagImage(db);
+                LoadCompanyLogo(db);
+            }
+        }
+        public AppForList(Application application, int currentUserId)
+        {
+            this.application = application;
+
+            using (AplicationContext db = new AplicationContext())
+            {
+                HasResponded = db.Responses.Any(r => r.VacancyId == application.Id && r.ApplicantId == currentUserId);
                 LoadFlagImage(db);
                 LoadCompanyLogo(db);
             }
@@ -72,5 +84,4 @@ namespace JA.Classes
             }
         }
     }
-
 }

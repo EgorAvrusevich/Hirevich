@@ -99,15 +99,40 @@
                                         MaxWidth="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
                                         HorizontalAlignment="Stretch"/>
                                 </Border>
-                                <StackPanel Orientation="Horizontal" Grid.Row="3">
-                                    <Ellipse Width="20" Height="20">
-                                        <Ellipse.Fill>
-                                            <ImageBrush ImageSource="{Binding application.Country, Converter={StaticResource CountryToFlagConverter}}"></ImageBrush>
-                                        </Ellipse.Fill>
-                                    </Ellipse>
-                                    <Label Content="{Binding application.Company_name}" />
-                                    <Label Content="{Binding application.Experience}" />
-                                </StackPanel>
+                                <Grid Grid.Row="3" Width="auto">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Ellipse Width="25" Height="25">
+                                            <Ellipse.Fill>
+                                                <ImageBrush ImageSource="{Binding application.Country, Converter={StaticResource CountryToFlagConverter}}"></ImageBrush>
+                                            </Ellipse.Fill>
+                                        </Ellipse>
+                                        <Label VerticalAlignment="Center" Content="{Binding application.Company_name}" />
+                                        <Label VerticalAlignment="Center" Content="{Binding application.Experience}" />
+                                    </StackPanel>
+                                    <Button Grid.Row="4" 
+                                            Content="Откликнуться" 
+                                            HorizontalAlignment="Right"
+                                            Margin="0,10,0,0"
+                                            Padding="10,5"
+                                            Width="120"
+                                            Command="{Binding DataContext.RespondCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                            CommandParameter="{Binding application}"
+                                            >   
+                                        <Button.Style>
+                                            <Style TargetType="Button">
+                                                <Setter Property="Background" Value="#3498db"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding HasResponded}" Value="True">
+                                                        <Setter Property="Content" Value="Отклик отправлен"/>
+                                                        <Setter Property="Background" Value="#7f8c8d"/>
+                                                        <Setter Property="IsEnabled" Value="False"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                </Grid>
                             </Grid>
                         </Border>
                     </DataTemplate>

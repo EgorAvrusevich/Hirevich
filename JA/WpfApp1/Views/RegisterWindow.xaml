@@ -34,8 +34,8 @@
             <PasswordBox x:Name="passwordTextBox" Background="#F8F8F8" VerticalAlignment="Center" BorderThickness="0" Margin="10, 0" FontSize="16" />
         </Border>
         <Border Grid.Row="4" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48"
-        BorderThickness="2" BorderBrush="#FF4A96" VerticalAlignment="Top">
-            <Button Background="#ffffff" BorderThickness="0" Content="Зарегистрироваться" FontSize="16" Foreground="#FFFF4A96" Click="Button_Click" />
+                VerticalAlignment="Top">
+            <Button  BorderThickness="0" Content="Зарегистрироваться" FontSize="16" Click="Button_Click" />
         </Border>
         <Button BorderThickness="0" Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20" Background="White" FontSize="15" Click="Button_Click_1">
             <Button.Style>
