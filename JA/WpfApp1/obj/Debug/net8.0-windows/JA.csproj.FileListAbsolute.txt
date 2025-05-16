@@ -410,3 +410,9 @@ C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\bin\Debug\net8.0-windows\runtimes\
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\bin\Debug\net8.0-windows\runtimes\win7-x86\native\libuv.dll
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\MyResponsesPage.g.cs
 C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\MyResponsesPage.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\CompanyResponsesPage.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\Pages\CompanyResponsesPage.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\ChangeStatusDialog.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\ChangeStatusDialog.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AdminWindow.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\AdminWindow.baml

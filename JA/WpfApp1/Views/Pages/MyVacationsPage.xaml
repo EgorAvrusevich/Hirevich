@@ -52,7 +52,7 @@
                                 <!-- Строка с зарплатой -->
                                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5,0,0">
                                     <Image Width="15" Height="15" Source="/Images/Job wage.png"/>
-                                    <Label Content="{Binding application.Wage}" Margin="5,0,0,0"/>
+                                    <Label Content="{Binding application.Wage, StringFormat='Зарплата: {0:C}'}" Margin="5,0,0,0"/>
                                 </StackPanel>
 
                                 <!-- Описание с обрезкой -->
@@ -66,7 +66,12 @@
                                 MaxWidth="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
                                 HorizontalAlignment="Stretch"/>
                                 </Border>
-                                <StackPanel Orientation="Horizontal" Grid.Row="3">
+                                <Grid Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    
                                     <Ellipse Width="20" Height="20">
                                         <Ellipse.Fill>
                                             <ImageBrush ImageSource="{Binding application.Country, Converter={StaticResource CountryToFlagConverter}}"></ImageBrush>
@@ -74,7 +79,15 @@
                                     </Ellipse>
                                     <Label Content="{Binding application.Company_name}" />
                                     <Label Content="{Binding application.Experience}" />
-                                </StackPanel>
+                                    <Button Grid.Column="1"
+                                            Content="Удалить" 
+                                            Command="{Binding DataContext.DeleteVacancyCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                            CommandParameter="{Binding}"
+                                            Padding="10,3"
+                                            Width="120"
+                                            Background="#e74c3c"
+                                            Foreground="White"/>
+                                </Grid>
                             </Grid>
                         </Border>
                     </DataTemplate>

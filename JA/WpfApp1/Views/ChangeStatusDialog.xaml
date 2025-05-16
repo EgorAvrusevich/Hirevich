@@ -1,0 +1,31 @@
+﻿<Window x:Class="JA.Views.ChangeStatusDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:JA.Classes"
+        Title="Изменение статуса" Height="200" Width="300"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Выберите новый статус:" Margin="0 0 0 10"/>
+
+        <ComboBox x:Name="StatusComboBox" Grid.Row="1" SelectedIndex="0">
+            <ComboBox.ItemsSource>
+                <x:Array Type="{x:Type local:ResponseStatus}">
+                    <local:ResponseStatus>Pending</local:ResponseStatus>
+                    <local:ResponseStatus>Approved</local:ResponseStatus>
+                    <local:ResponseStatus>Rejected</local:ResponseStatus>
+                    <local:ResponseStatus>Withdrawn</local:ResponseStatus>
+                </x:Array>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+
+        <Button Grid.Row="2" Content="Сохранить" HorizontalAlignment="Right"
+                Margin="0 15 0 0" Padding="15 3" Click="SaveButton_Click"/>
+    </Grid>
+</Window>

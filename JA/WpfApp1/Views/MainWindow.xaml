@@ -41,7 +41,17 @@
             </Border>
             <Border Grid.Column="2" x:Name="MyResponses_page" MouseDown="MyResponses_page_MouseDown">
                 <Border CornerRadius="4" VerticalAlignment="Center">
-                    <Label Grid.Column="1" Content="Резюме" HorizontalAlignment="Center" />
+                    <Label Grid.Column="1" Content="Мои отклики" HorizontalAlignment="Center" />
+                </Border>
+            </Border>
+            <Border Grid.Column="3" x:Name="CompanyResponses_page" MouseDown="CompanyResponses_page_MouseDown" Visibility="Collapsed">
+                <Border CornerRadius="4" VerticalAlignment="Center">
+                    <Label Grid.Column="1" Content="Мои отклики" HorizontalAlignment="Center" />
+                </Border>
+            </Border>
+            <Border Grid.Column="4" x:Name="Admin_window" MouseDown="Admin_window_MouseDown" Visibility="Collapsed">
+                <Border CornerRadius="4" VerticalAlignment="Center">
+                    <Label Grid.Column="1" Content="Админ панель" HorizontalAlignment="Center" />
                 </Border>
             </Border>
             <StackPanel Grid.Column="7" x:Name="LoggedPanel" VerticalAlignment="Center" Orientation="Horizontal" MouseDown="LoggedPanel_MouseDown">

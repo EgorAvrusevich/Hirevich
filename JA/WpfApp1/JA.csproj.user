@@ -11,6 +11,9 @@
     <Compile Update="Views\AppWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ChangeStatusDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Controls\FiltersPopupCVsControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -56,6 +59,9 @@
     <Compile Update="Views\Pages\ApplicationsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Pages\CompanyResponsesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Pages\CVsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <None Update="Views\AppWindow.xaml">
       <SubType>Designer</SubType>
     </None>
+    <None Update="Views\ChangeStatusDialog.xaml">
+      <SubType>Designer</SubType>
+    </None>
     <None Update="Views\EditWindows\EditAboutWindow.xaml">
       <SubType>Designer</SubType>
     </None>
@@ -83,6 +92,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\EditWindows\EditSpecialityWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\Pages\CompanyResponsesPage.xaml">
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\Pages\MyResponsesPage.xaml">

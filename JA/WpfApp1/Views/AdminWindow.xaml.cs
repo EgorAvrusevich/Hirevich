@@ -21,7 +21,7 @@ namespace JA.Views
     {
         public AdminWindow()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

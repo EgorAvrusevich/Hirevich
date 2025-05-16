@@ -75,8 +75,8 @@
                 <!-- Контактная информация -->
                 <Label Content="Контактная информация" Style="{StaticResource FieldLabel}"/>
                 <StackPanel Margin="20,0,0,0">
-                    <TextBlock Text="{Binding email}" Style="{StaticResource InfoTextBlock}"/>
-                    <TextBlock Text="{Binding age, StringFormat='Возраст: {0}'}" Style="{StaticResource InfoTextBlock}"/>
+                    <TextBlock Text="{Binding Email}" Style="{StaticResource InfoTextBlock}"/>
+                    <TextBlock Text="{Binding Age, StringFormat='Возраст: {0}'}" Style="{StaticResource InfoTextBlock}"/>
                 </StackPanel>
 
                 <!-- Образование -->

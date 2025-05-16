@@ -126,6 +126,7 @@ namespace JA.Views.Pages
                 MessageBox.Show("Отклик успешно отправлен!");
             }
             LoadDataFromDataBase();
+            
         });
 
         private void OnLoaded(object sender, RoutedEventArgs e)

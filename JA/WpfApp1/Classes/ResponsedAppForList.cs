@@ -12,9 +12,16 @@ namespace JA.Classes
     {
         public AppForList AppForList { get; set; }
         public ResponseStatus Status { get; set; }
+        public PersonalData? PersonalData { get; set; }
 
         public ResponsedAppForList() { }
 
+        public ResponsedAppForList(AppForList app, ResponseStatus status, PersonalData personalData)
+        {
+            AppForList = app;
+            Status = status;
+            PersonalData = personalData;
+        }
         public ResponsedAppForList(AppForList app, ResponseStatus status)
         {
             AppForList = app;

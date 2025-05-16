@@ -1,0 +1,106 @@
+﻿<Page x:Class="JA.Views.Pages.CompanyResponsesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Отклики компании">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" Text="Отклики на вакансии" 
+                   FontSize="24" FontWeight="Bold" Margin="0 0 0 20"/>
+
+        <!-- Панель управления -->
+        <Grid Grid.Row="1" Margin="0 0 0 15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <ComboBox x:Name="FilterComboBox" Width="150" Margin="0 0 10 0"
+                      SelectionChanged="FilterComboBox_SelectionChanged">
+                <ComboBoxItem Tag="Все" Content="Все статусы"/>
+                <ComboBoxItem Tag="На рассмотрении" Content="На рассмотрении"/>
+                <ComboBoxItem Tag="Приглашение" Content="Приглашение"/>
+                <ComboBoxItem Tag="Отклонено" Content="Отклонено"/>
+                <ComboBoxItem Tag="Отозвано" Content="Отозвано"/>
+            </ComboBox>
+
+            <TextBox x:Name="SearchTextBox" Padding="5" Grid.Column="1"
+                     TextChanged="SearchTextBox_TextChanged"/>
+        </Grid>
+
+        <!-- Список откликов -->
+        <ListView x:Name="ResponsesListView" Grid.Row="2" SelectionChanged="CVsList_SelectionChanged">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border CornerRadius="5" BorderThickness="1" BorderBrush="#DDD" 
+                            Margin="0 5" Padding="10" Background="White">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="{Binding AppForList.application.Vacation_Name}" 
+                                           FontWeight="Bold" FontSize="16"/>
+                                <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                                    <Ellipse Width="30" Height="30" Margin="0 0 5 0">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{Binding PersonalData.Photo}"/>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding PersonalData.FullName}" FontWeight="SemiBold"/>
+                                        <TextBlock Text="{Binding PersonalData.Email}" Foreground="Gray"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <TextBlock Text="{Binding AppForList.application.Company_name}" 
+               Margin="0 5 0 0" FontSize="14"/>
+
+                                <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                                    <TextBlock Text="{Binding AppForList.application.Wage, StringFormat='Зарплата: {0:C}'}"/>
+                                    <TextBlock Text="{Binding AppForList.application.Experience, StringFormat='Опыт: {0}'}" 
+                                               Margin="10 0 0 0"/>
+                                    <TextBlock Text="{Binding AppForList.application.Country}" 
+                                               Margin="10 0 0 0"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Статус:" Margin="0 0 5 0"/>
+                                    <TextBlock Text="{Binding StatusText}" 
+                                               Foreground="{Binding StatusColor}"
+                                               FontWeight="Bold"/>
+                                </StackPanel>
+
+                                <Button Content="Изменить статус" 
+                                        Command="{Binding ChangeStatusCommand, 
+                                                 RelativeSource={RelativeSource AncestorType=Page}}"
+                                        CommandParameter="{Binding}"
+                                        Margin="0 10 0 0" Padding="10 2"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

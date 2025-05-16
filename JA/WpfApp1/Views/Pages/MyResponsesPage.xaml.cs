@@ -118,5 +118,35 @@ namespace JA.Views.Pages
                 }
             }
         });
+
+        public ICommand DeleteResponseCommand => new RelayCommand<ResponsedAppForList>(async item =>
+        {
+            if (MessageBox.Show("Вы действительно хотите удалить этот отклик?",
+                "Подтверждение удаления",
+                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    using (var db = new AplicationContext())
+                    {
+                        var response = await db.Responses
+                            .FirstOrDefaultAsync(r => r.VacancyId == item.AppForList.application.Id &&
+                                                   r.ApplicantId == _currentUser.id);
+
+                        if (response != null)
+                        {
+                            db.Responses.Remove(response);
+                            await db.SaveChangesAsync();
+                            LoadDataFromDataBase(); // Обновляем список
+                            MessageBox.Show("Отклик успешно удален");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при удалении отклика: {ex.Message}");
+                }
+            }
+        });
     }
 }

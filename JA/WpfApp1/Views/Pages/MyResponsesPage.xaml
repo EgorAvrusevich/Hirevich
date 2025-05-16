@@ -36,6 +36,7 @@
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
 
                                 <!-- Строка с названиями -->
@@ -90,6 +91,29 @@
                                                    Margin="5,0"/>
                                     </StackPanel>
                                 </Grid>
+
+                                <!-- Кнопка удаления отклика -->
+                                <Button Grid.Row="4" 
+                                        Content="Удалить отклик" 
+                                        HorizontalAlignment="Right"
+                                        Margin="0,10,0,0"
+                                        Padding="10,5"
+                                        Width="120"
+                                        Command="{Binding DeleteResponseCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                        CommandParameter="{Binding}"
+                                        Background="#e74c3c"
+                                        Foreground="White">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Status}" Value="Withdrawn">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                    <Setter Property="Background" Value="#95a5a6"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
                             </Grid>
                         </Border>
                     </DataTemplate>

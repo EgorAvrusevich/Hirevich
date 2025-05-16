@@ -32,6 +32,7 @@ namespace JA.Views
         CVsPage? cvsPage;
         MyVacationsPage? myVacationsPage;
         MyResponsesPage? myResponsesPage;
+        CompanyResponsesPage? companyResponsesPage;
         
 
         public MainWindow(User currentUser)
@@ -39,10 +40,12 @@ namespace JA.Views
             InitializeComponent();
             _currentUser = currentUser;
 
-            appPage = new ApplicationsPage(_currentUser);
+            if (_currentUser.admin == 1) Admin_window.Visibility = Visibility.Visible;
+
 
             if (_currentUser.isSercher == 1)
             {
+                appPage = new ApplicationsPage(_currentUser);
                 using (var db = new AplicationContext())
                 {
                     _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
@@ -50,10 +53,13 @@ namespace JA.Views
                 DataContext = _personalData;
                 cabPage = new CabinetPage(_currentUser);
                 myResponsesPage = new MyResponsesPage(_currentUser);
+                MainPanel.Content = appPage;
             }
             else
             {
                 Vacaitions_label.Content = "Мои вакансии";
+                CompanyResponses_page.Visibility = Visibility.Visible;
+                companyResponsesPage = new CompanyResponsesPage(_currentUser);
                 CVs_page.Visibility = Visibility.Visible;
                 MyResponses_page.Visibility = Visibility.Collapsed;
                 using (var db = new AplicationContext())
@@ -64,8 +70,8 @@ namespace JA.Views
                 cabCompPage = new CabinetCompanyPage(_currentUser);
                 cvsPage = new CVsPage();
                 myVacationsPage = new MyVacationsPage(_currentUser);
+                MainPanel.Content = myVacationsPage;
             }
-            MainPanel.Content = appPage;
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
@@ -92,6 +98,12 @@ namespace JA.Views
 
         }
 
+        private void Admin_window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            AdminWindow window = new AdminWindow();
+            window.Show();
+            Close();
+        }
         private void CVs_page_MouseDown(object sender, MouseButtonEventArgs e)
         {
             MainPanel.Content = cvsPage;
@@ -99,6 +111,10 @@ namespace JA.Views
         private void MyResponses_page_MouseDown(object sender, MouseButtonEventArgs e)
         {
             MainPanel.Content = myResponsesPage;
+        }
+        private void CompanyResponses_page_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MainPanel.Content = companyResponsesPage;
         }
     }
 }
