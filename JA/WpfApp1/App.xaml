@@ -5,6 +5,9 @@
              StartupUri="Views/LoginWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
             <local1:CountryToFlagConverter x:Key="CountryToFlagConverter"/>
             <local2:FiltersPopupControl x:Key="FilterPopupControl"/>
             <Style TargetType="Button">

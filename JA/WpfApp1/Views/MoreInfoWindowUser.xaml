@@ -79,7 +79,7 @@
                         </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
                                 <Label FontSize="16" Foreground="#133F42" Margin="0" VerticalAlignment="Center">Страна</Label>
-                                <ComboBox x:Name="Country" Margin="80, 10, 20, 10" Foreground="#133F42">
+                                <ComboBox x:Name="CountryBox" Margin="80, 10, 20, 10" Foreground="#133F42">
                                     <ComboBoxItem Content="Беларусь"/>
                                     <ComboBoxItem Content="Россия"/>
                                     <ComboBoxItem Content="Украина"/>

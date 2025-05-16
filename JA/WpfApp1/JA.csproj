@@ -32,6 +32,7 @@
     <None Remove="Images\LightLogo.png" />
     <None Remove="Images\LoadPhoto.png" />
     <None Remove="Images\lupa.png" />
+    <None Remove="Styles.xaml" />
     <None Remove="Views\Controls\FiltersPopupCVsControl.xaml" />
     <None Remove="Views\FiltersPopupControl.xaml" />
     <None Remove="Views\Pages\ApplicationsPage.xaml" />
@@ -153,6 +154,9 @@
     </Resource>
     <Resource Include="Images\lupa.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </Resource>
     <Page Include="Views\Controls\FiltersPopupControl.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -8,80 +8,159 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Cabinet">
-    
+
     <Page.Resources>
         <local1:CountryToFlagConverter x:Key="CountryToFlagConverter"/>
+
+        <!-- Стили для страницы кабинета -->
+        <Style x:Key="CabinetContainer" TargetType="Border">
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Background" Value="{StaticResource LightGrayBrush}"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style x:Key="ProfileHeader" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="ProfilePhoto" TargetType="Ellipse">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Margin" Value="20,0"/>
+        </Style>
+
+        <Style x:Key="CountryFlag" TargetType="Ellipse">
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="NameLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20,0,0,0"/>
+        </Style>
+
+        <Style x:Key="SectionTitle" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+
+        <Style x:Key="SectionContent" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+
+        <Style x:Key="EditIcon" TargetType="Image">
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
     </Page.Resources>
 
-    <Grid Margin="20" Background="White">
+    <Grid Margin="20" Background="{StaticResource WhiteBrush}">
         <Grid Margin="20">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="80"/>
-                <RowDefinition Height="80"/>
-                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Border CornerRadius="4" Background="#F8F8F8">
+
+            <!-- Профиль пользователя -->
+            <Border Grid.Row="0" Style="{StaticResource CabinetContainer}">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Row="0" Orientation="Horizontal" >
-                        <Ellipse Margin="20" Width="60">
+
+                    <StackPanel Grid.Column="0" Style="{StaticResource ProfileHeader}">
+                        <Ellipse Style="{StaticResource ProfilePhoto}">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="{Binding PersonalData.Photo}"></ImageBrush>
+                                <ImageBrush ImageSource="{Binding PersonalData.Photo}"/>
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Ellipse>
+
+                        <Ellipse Style="{StaticResource CountryFlag}">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="{Binding PersonalData.Country, Converter={StaticResource CountryToFlagConverter}}"/>
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Label Margin="20,20,0,20" VerticalAlignment="Center" FontSize="32" Content="{Binding PersonalData.FirstName}"></Label>
-                        <Label Margin="0,20" VerticalAlignment="Center" FontSize="32" Content="{Binding PersonalData.LastName}"></Label>
-                        <Label Margin="10,20" VerticalAlignment="Center" FontSize="32" Content="{Binding PersonalData.Age}"></Label>
+
+                        <Label Style="{StaticResource NameLabel}" Content="{Binding PersonalData.FirstName}"/>
+                        <Label Style="{StaticResource NameLabel}" Content="{Binding PersonalData.LastName}"/>
+                        <Label Style="{StaticResource NameLabel}" Content="{Binding PersonalData.Age}"/>
                     </StackPanel>
-                    <Image Grid.Column="1" HorizontalAlignment="Right" Source="/Images/Edit.png" Width="30" MouseDown="EditInfo_Click"></Image>
+
+                    <Image Grid.Column="1" 
+                           Style="{StaticResource EditIcon}" 
+                           Source="/Images/Edit.png" 
+                           MouseDown="EditInfo_Click"/>
                 </Grid>
             </Border>
-            <Border Grid.Row="1">
+
+            <!-- Образование -->
+            <Border Grid.Row="1" Style="{StaticResource CabinetContainer}" Margin="0,10,0,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
+
                     <StackPanel Grid.Column="0">
-                        <Label  FontSize="14" FontWeight="Bold">Образование:</Label>
-                        <Label Content="{Binding PersonalData.Education}" FontSize="14"></Label>
+                        <Label Style="{StaticResource SectionTitle}" Content="Образование:"/>
+                        <TextBlock Style="{StaticResource SectionContent}" Text="{Binding PersonalData.Education}"/>
                     </StackPanel>
-                    <Image Grid.Column="1" Source="/Images/Edit.png" Width="30" MouseDown="EditEducation_Click"></Image>
+
+                    <Image Grid.Column="1" 
+                           Style="{StaticResource EditIcon}" 
+                           Source="/Images/Edit.png" 
+                           MouseDown="EditEducation_Click"/>
                 </Grid>
             </Border>
-            <Border Grid.Row="2">
+
+            <!-- Специализация -->
+            <Border Grid.Row="2" Style="{StaticResource CabinetContainer}" Margin="0,10,0,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
+
                     <StackPanel Grid.Column="0">
-                        <Label  FontSize="14" FontWeight="Bold">Специальзируюсь на:</Label>
-                        <Label Content="{Binding PersonalData.Speciality}" FontSize="14"></Label>
+                        <Label Style="{StaticResource SectionTitle}" Content="Специализируюсь на:"/>
+                        <TextBlock Style="{StaticResource SectionContent}" Text="{Binding PersonalData.Speciality}"/>
                     </StackPanel>
-                    <Image Grid.Column="1" Source="/Images/Edit.png" Width="30" MouseDown="EditSpeciality_Click"></Image>
+
+                    <Image Grid.Column="1" 
+                           Style="{StaticResource EditIcon}" 
+                           Source="/Images/Edit.png" 
+                           MouseDown="EditSpeciality_Click"/>
                 </Grid>
             </Border>
-            <Border Grid.Row="3">
+
+            <!-- О себе -->
+            <Border Grid.Row="3" Style="{StaticResource CabinetContainer}" Margin="0,10,0,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel>
-                        <Label Grid.Column="0"  FontSize="14" FontWeight="Bold"> О себе:</Label>
-                        <TextBlock Grid.Column="0" FontSize="14" Text="{Binding PersonalData.About}"></TextBlock>
+
+                    <StackPanel Grid.Column="0">
+                        <Label Style="{StaticResource SectionTitle}" Content="О себе:"/>
+                        <TextBlock Style="{StaticResource SectionContent}" Text="{Binding PersonalData.About}"/>
                     </StackPanel>
-                    <Image Grid.Column="1" Grid.Row="1" Source="/Images/Edit.png" Width="30" MouseDown="EditAbout_Click"></Image>
+
+                    <Image Grid.Column="1" 
+                           Style="{StaticResource EditIcon}" 
+                           Source="/Images/Edit.png" 
+                           MouseDown="EditAbout_Click"/>
                 </Grid>
             </Border>
         </Grid>

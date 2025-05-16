@@ -73,6 +73,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Resource Update="Styles.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
     <None Update="Views\AddVacancyWindow.xaml">
       <SubType>Designer</SubType>
     </None>

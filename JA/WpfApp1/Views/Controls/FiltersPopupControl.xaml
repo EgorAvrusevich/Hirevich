@@ -10,39 +10,142 @@
 
     <UserControl.Resources>
         <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
+
+        <!-- Стили для фильтров -->
+        <Style x:Key="FilterLabel" TargetType="Label">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <Style x:Key="FilterComboBox" TargetType="ComboBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="BorderBrush" Value="#DDDDDD"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="ComboBoxItem">
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ComboBoxItem">
+                                    <Border Background="Transparent">
+                                        <ContentPresenter/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsHighlighted" Value="True">
+                                            <Setter Property="Background" Value="#F0F8FF"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="FilterTextBox" TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="BorderBrush" Value="#DDDDDD"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#333333"/>
+        </Style>
+
+        <Style x:Key="FilterButton" TargetType="Button">
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Opacity" Value="0.6"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="PrimaryButton" TargetType="Button" BasedOn="{StaticResource FilterButton}">
+            <Setter Property="Background" Value="#3498db"/>
+        </Style>
+
+        <Style x:Key="SecondaryButton" TargetType="Button" BasedOn="{StaticResource FilterButton}">
+            <Setter Property="Background" Value="#95a5a6"/>
+        </Style>
+
+        <!-- Анимация появления -->
+        <Storyboard x:Key="FadeInAnimation">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                             From="0" To="1" Duration="0:0:0.3"/>
+        </Storyboard>
     </UserControl.Resources>
-    
-    <Border BorderBrush="#849A9C" BorderThickness="1" CornerRadius="4" Background="White" Padding="10">
+
+    <Border BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="6" 
+            Background="White" Padding="15" Effect="{StaticResource DropShadowEffect}">
         <StackPanel>
+            <!-- Анимация появления -->
+            <StackPanel.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard Storyboard="{StaticResource FadeInAnimation}"/>
+                </EventTrigger>
+            </StackPanel.Triggers>
+
             <!-- Фильтр по стране -->
-            <Label Content="Страна:" FontWeight="Bold"/>
+            <Label Content="Страна:" Style="{StaticResource FilterLabel}"/>
             <ComboBox ItemsSource="{Binding Source={x:Static converters:CountryValues.Values}}"
                       SelectedItem="{Binding SelectedCountry}"
-                      Width="200"
-                      Margin="0,0,0,10">
+                      Style="{StaticResource FilterComboBox}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="16" Height="16" Margin="0,0,5,0"
+                                   Source="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                            <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
 
             <!-- Фильтр по зарплате -->
-            <Label Content="Зарплата от:" FontWeight="Bold"/>
-            <TextBox Text="{Binding MinSalary}" Width="200" Margin="0,0,0,10"/>
+            <Label Content="Зарплата от:" Style="{StaticResource FilterLabel}"/>
+            <TextBox Text="{Binding MinSalary}" Style="{StaticResource FilterTextBox}"/>
 
             <!-- Фильтр по опыту -->
-            <Label Content="Опыт работы:" FontWeight="Bold"/>
+            <Label Content="Опыт работы:" Style="{StaticResource FilterLabel}"/>
             <ComboBox ItemsSource="{Binding ExperienceLevels}" 
                       SelectedItem="{Binding SelectedExperience}"
-                      Width="200"
-                      Margin="0,0,0,10"/>
+                      Style="{StaticResource FilterComboBox}"/>
 
             <!-- Кнопки -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Сбросить" Width="80" Margin="0,0,10,0" 
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                <Button Content="Сбросить" Style="{StaticResource SecondaryButton}"
                         Command="{Binding ResetFiltersCommand}"/>
-                <Button Content="Применить" Width="80" 
+                <Button Content="Применить" Style="{StaticResource PrimaryButton}"
                         Command="{Binding ApplyFiltersCommand}"/>
             </StackPanel>
         </StackPanel>

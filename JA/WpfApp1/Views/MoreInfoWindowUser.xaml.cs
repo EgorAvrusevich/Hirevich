@@ -76,7 +76,7 @@ namespace JA.Views
                 PersonalData.About = AboutBox.Text;
                 PersonalData.Age = AgeBox.Text;
                 PersonalData.Speciality = SpeccialityBox.Text;
-                switch (Country.SelectedItem)
+                switch (CountryBox.SelectedItem)
                 {
                     case "Беларусь":
                         PersonalData.Country = "belarus";
