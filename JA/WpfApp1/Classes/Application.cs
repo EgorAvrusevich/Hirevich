@@ -1,14 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace JA.Classes
 {
+    [Table("Applications")]
     public class Application
     {
+        [Key]
         public int Id { get; set; }
+        [ForeignKey("Companys_data")]
+        [Column("Id_Company")]
         public int? Id_Company { get; set; }
         public string? Company_name { get; set; }
         public string? Vacation_Name { get; set; }
@@ -16,6 +22,9 @@ namespace JA.Classes
         public string? Description { get; set; }
         public string? Country { get; set; }
         public string? Experience { get; set; }
+
+        public Companys_data Companys_data { get; set; }
+        public ICollection<Response> Responses { get; set; }
 
         public Application() { }
         public Application(Application applications)

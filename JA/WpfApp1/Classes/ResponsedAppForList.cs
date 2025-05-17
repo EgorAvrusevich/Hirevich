@@ -14,12 +14,21 @@ namespace JA.Classes
         public ResponseStatus Status { get; set; }
         public PersonalData? PersonalData { get; set; }
 
+        public Response? Response { get; set; }
+
         public ResponsedAppForList() { }
 
         public ResponsedAppForList(AppForList app, ResponseStatus status, PersonalData personalData)
         {
             AppForList = app;
             Status = status;
+            PersonalData = personalData;
+        }
+        public ResponsedAppForList(AppForList app, ResponseStatus status, PersonalData personalData, Response resp)
+        {
+            AppForList = app;
+            Status = status;
+            Response = resp;
             PersonalData = personalData;
         }
         public ResponsedAppForList(AppForList app, ResponseStatus status)

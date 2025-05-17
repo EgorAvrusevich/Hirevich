@@ -47,13 +47,15 @@ namespace JA.Views
         {
             InitializeComponent();
 
-            using var db = new AplicationContext();
-            var company = db.Companys_data.AsNoTracking().FirstOrDefault(c => c.Id == companyId);
-
-            if (company != null)
+            using (var db = new AplicationContext())
             {
-                NewVacancy.Id_Company = companyId;
-                NewVacancy.Company_name = company.Name;
+                var company = db.Companys_data.AsNoTracking().FirstOrDefault(c => c.Id == companyId);
+
+                if (company != null)
+                {
+                    NewVacancy.Id_Company = companyId;
+                    NewVacancy.Company_name = company.Name;
+                }
             }
 
             DataContext = this;

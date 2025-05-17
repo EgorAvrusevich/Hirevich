@@ -29,9 +29,20 @@ namespace JA.Views
         }
         public MoreInfoWindowCompany(User newcompany)
         {
-            InitializeComponent();
-            _currentUser = newcompany;
-            Companys_data = new Companys_data(App.Database.Users.FirstOrDefault(u => u.login == newcompany.login).id);
+            try
+            {
+                InitializeComponent();
+                _currentUser = newcompany;
+                using (var db = new AplicationContext())
+                {
+                    Companys_data = new Companys_data(db.Users.FirstOrDefault(u => u.login == newcompany.login).id);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка инициализации: {ex.Message}");
+                Close();
+            }
         }
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e)
@@ -72,10 +83,10 @@ namespace JA.Views
                     Companys_data.Logo = Load_Functions.ConvertImageToBytes(image);
                 }
 
-                using (App.Database)
+                using (var db = new AplicationContext())
                 {
-                    App.Database.Companys_data.Add(Companys_data);
-                    App.Database.SaveChanges();
+                    db.Companys_data.Add(Companys_data);
+                    db.SaveChanges();
                 }
 
                 MainWindow window = new MainWindow(_currentUser);

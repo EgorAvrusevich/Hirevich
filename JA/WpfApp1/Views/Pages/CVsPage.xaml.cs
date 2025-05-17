@@ -46,7 +46,7 @@ namespace JA.Views.Pages
                 {
                     CVs.Clear();
 
-                    var CVsFromDb = db.Users_data.ToList();
+                    var CVsFromDb = db.Users_data.Where(u => db.Users.FirstOrDefault(r => r.id == u.Id).admin == 0).ToList();
 
                     foreach (var CV in CVsFromDb)
                     {

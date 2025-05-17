@@ -2,15 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace JA.Classes
 {
-
+    [Table("Companys_data")]
     public class Companys_data : INotifyPropertyChanged
     {
+        [Key]
+        [ForeignKey("User")]
         public int Id {  get; set; }
         private string? _discription {  get; set; }
         public string? Discription
@@ -53,6 +57,9 @@ namespace JA.Classes
                 OnPropertyChanged(nameof(Logo));
             }
         }
+
+        public User User { get; set; }
+        public ICollection<Application> Applications { get; set; }
 
         public Companys_data() { }
         public Companys_data(int id) { Id = id; }

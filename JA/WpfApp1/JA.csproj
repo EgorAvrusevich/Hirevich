@@ -41,9 +41,13 @@
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.5.1" />
-    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.5" />
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
   </ItemGroup>
 
@@ -67,6 +71,8 @@
     <Page Include="Views\EditWindows\EditSpecialityWindow.xaml" />
     <Page Include="Views\EditWindows\EditAboutWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyInfoWindow.xaml" />
+    <Page Include="Views\EditWindows\EditUserWindow.xaml" />
+    <Page Include="Views\EditWindows\EditVacancyWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyEmailWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyDiscriptionWindow.xaml" />
     <Page Include="Views\Pages\ApplicationsPage.xaml">
@@ -179,6 +185,9 @@
     <None Update="Views\CVWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Views\EditWindows\EditUserWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\EditWindows\EditAboutWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
@@ -198,6 +207,9 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\EditWindows\EditSpecialityWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditWindows\EditVacancyWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\MoreInfoWindowCompany.xaml">

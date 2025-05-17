@@ -26,9 +26,19 @@ namespace JA.Views
         private PersonalData PersonalData { get; set; }
         public MoreInfoWindowUser(User newuser)
         {
-            InitializeComponent();
-            _currentUser = newuser;
-            PersonalData = new PersonalData(App.Database.Users.FirstOrDefault(u => u.login == newuser.login).id);
+            try
+            {
+                InitializeComponent();
+                _currentUser = newuser;
+                using (var db = new AplicationContext()) {
+                    PersonalData = new PersonalData(db.Users.FirstOrDefault(u => u.login == newuser.login).id);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка инициализации: {ex.Message}");
+                Close();
+            }
         }
         public MoreInfoWindowUser()
         {
@@ -54,8 +64,6 @@ namespace JA.Views
                     var imagePath = openFileDialog.FileName;
                     Photo.ImageSource = Load_Functions.LoadImageFromFile(imagePath);
 
-                    // Можно сохранить путь к файлу или сами байты изображения
-                    // byte[] imageBytes = File.ReadAllBytes(imagePath);
                 }
                 catch (Exception ex)
                 {
@@ -76,7 +84,7 @@ namespace JA.Views
                 PersonalData.About = AboutBox.Text;
                 PersonalData.Age = AgeBox.Text;
                 PersonalData.Speciality = SpeccialityBox.Text;
-                switch (CountryBox.SelectedItem)
+                switch (CountryBox.Text)
                 {
                     case "Беларусь":
                         PersonalData.Country = "belarus";
@@ -125,10 +133,10 @@ namespace JA.Views
                     PersonalData.Photo = Load_Functions.ConvertImageToBytes(image);
                 }
 
-                using (App.Database)
+                using (var db = new AplicationContext())
                 {
-                    App.Database.Users_data.Add(PersonalData);
-                    App.Database.SaveChanges();
+                    db.Users_data.Add(PersonalData);
+                    db.SaveChanges();
                 }
 
                 MainWindow window = new MainWindow(_currentUser);
@@ -142,6 +150,5 @@ namespace JA.Views
 
             }
         }
-
     }
 }

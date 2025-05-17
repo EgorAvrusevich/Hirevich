@@ -5,8 +5,165 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JA.Views"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
+        Title="Административная панель" 
+        Height="650" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+
+    <Window.Resources>
+        <!-- Стили для кнопок -->
+        <Style x:Key="AdminButton" TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="8 4"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style x:Key="DeleteButton" BasedOn="{StaticResource AdminButton}" TargetType="Button">
+            <Setter Property="Background" Value="#FFCD5C5C"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="EditButton" BasedOn="{StaticResource AdminButton}" TargetType="Button">
+            <Setter Property="Background" Value="#FF5CB85C"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- Стиль для DataGrid -->
+        <Style x:Key="AdminDataGrid" TargetType="DataGrid">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="SelectionUnit" Value="FullRow"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="RowHeaderWidth" Value="0"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="CanUserDeleteRows" Value="False"/>
+            <Setter Property="CanUserResizeRows" Value="False"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <TabControl>
+            <!-- Вкладка пользователей -->
+            <TabItem Header="Пользователи">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Панель инструментов -->
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                        <Button Content="Обновить" Command="{Binding RefreshUsersCommand}" Style="{StaticResource AdminButton}"/>
+                        <Button Content="Добавить пользователя" Command="{Binding AddUserCommand}" Style="{StaticResource EditButton}"/>
+                    </StackPanel>
+
+                    <!-- Таблица пользователей -->
+                    <DataGrid Grid.Row="1" ItemsSource="{Binding Users}" Style="{StaticResource AdminDataGrid}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="Auto"/>
+                            <DataGridTextColumn Header="Логин" Binding="{Binding login}" Width="*"/>
+                            <DataGridCheckBoxColumn Header="Соискатель" Binding="{Binding isSercher}" Width="Auto"/>
+                            <DataGridCheckBoxColumn Header="Админ" Binding="{Binding admin}" Width="Auto"/>
+                            <DataGridTemplateColumn Header="Действия" Width="Auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="Редактировать" 
+                                                    Command="{Binding DataContext.EditUserCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Style="{StaticResource EditButton}"/>
+                                            <Button Content="Удалить" 
+                                                    Command="{Binding DataContext.DeleteUserCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Style="{StaticResource DeleteButton}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <!-- Вкладка вакансий -->
+            <TabItem Header="Вакансии">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                        <Button Content="Обновить" Command="{Binding RefreshVacanciesCommand}" Style="{StaticResource AdminButton}"/>
+                        <Button Content="Добавить вакансию" Command="{Binding AddVacancyCommand}" Style="{StaticResource EditButton}"/>
+                    </StackPanel>
+
+                    <DataGrid Grid.Row="1" ItemsSource="{Binding Vacancies}" Style="{StaticResource AdminDataGrid}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
+                            <DataGridTextColumn Header="Название" Binding="{Binding Vacation_Name}" Width="*"/>
+                            <DataGridTextColumn Header="Компания" Binding="{Binding Company_name}" Width="*"/>
+                            <DataGridTextColumn Header="Зарплата" Binding="{Binding Wage}" Width="Auto"/>
+                            <DataGridTemplateColumn Header="Действия" Width="Auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="Редактировать" 
+                                                    Command="{Binding DataContext.EditVacancyCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Style="{StaticResource EditButton}"/>
+                                            <Button Content="Удалить" 
+                                                    Command="{Binding DataContext.DeleteVacancyCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Style="{StaticResource DeleteButton}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <!-- Вкладка откликов -->
+            <TabItem Header="Отклики">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                        <Button Content="Обновить" Command="{Binding RefreshResponsesCommand}" Style="{StaticResource AdminButton}"/>
+                    </StackPanel>
+
+                    <DataGrid Grid.Row="1" ItemsSource="{Binding Responses}" Style="{StaticResource AdminDataGrid}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Response.Id}" Width="Auto"/>
+                            <DataGridTextColumn Header="Вакансия" Binding="{Binding AppForList.application.Vacation_Name}" Width="*"/>
+                            <DataGridTextColumn Header="Соискатель" Binding="{Binding PersonalData.Applicant.Email}" Width="*"/>
+                            <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="Auto"/>
+                            <DataGridTextColumn Header="Дата" Binding="{Binding Response.ResponseDate, StringFormat={}{0:dd.MM.yyyy}}" Width="Auto"/>
+                            <DataGridTemplateColumn Header="Действия" Width="Auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="Удалить" 
+                                                    Command="{Binding DataContext.DeleteResponseCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Style="{StaticResource DeleteButton}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

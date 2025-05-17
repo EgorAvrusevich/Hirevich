@@ -65,7 +65,7 @@
                                Margin="0,0,10,0"
                                MaxWidth="50"
                                FontSize="14"/>
-                <Ellipse Width="40" Height="40">
+                <Ellipse x:Name="headerPhoto" Width="40" Height="40">
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="{Binding Photo}"/>
                     </Ellipse.Fill>

@@ -20,6 +20,9 @@
     <Compile Update="Views\CVWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EditWindows\EditUserWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\EditWindows\EditAboutWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -42,6 +45,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\EditWindows\EditSpecialityWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditWindows\EditVacancyWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MoreInfoWindowCompany.xaml.cs">
@@ -88,6 +94,9 @@
     <None Update="Views\ChangeStatusDialog.xaml">
       <SubType>Designer</SubType>
     </None>
+    <None Update="Views\EditWindows\EditUserWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
     <None Update="Views\EditWindows\EditAboutWindow.xaml">
       <SubType>Designer</SubType>
     </None>
@@ -95,6 +104,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\EditWindows\EditSpecialityWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Views\EditWindows\EditVacancyWindow.xaml">
       <SubType>Designer</SubType>
     </None>
     <None Update="Views\Pages\CompanyResponsesPage.xaml">

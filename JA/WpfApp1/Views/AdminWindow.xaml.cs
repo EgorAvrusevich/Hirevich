@@ -1,27 +1,271 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using JA.Classes;
+using JA.Views.EditWindows;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Application = JA.Classes.Application;
+using RelayCommand = JA.Classes.RelayCommand;
 
 namespace JA.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для AdminWindow.xaml
-    /// </summary>
     public partial class AdminWindow : Window
     {
-        public AdminWindow()
+        public User _currentUser;
+        public AdminWindow(User currentUser)
         {
             InitializeComponent();
+            _currentUser = currentUser;
+            DataContext = new AdminPanelViewModel();
+        }
+    }
+
+    public class AdminPanelViewModel : ViewModelBase
+    {
+        private ObservableCollection<User> _users;
+        private ObservableCollection<Application> _vacancies;
+        private ObservableCollection<ResponsedAppForList> _responses;
+
+        public ObservableCollection<User> Users
+        {
+            get => _users;
+            set => Set(ref _users, value);
+        }
+
+        public ObservableCollection<Application> Vacancies
+        {
+            get => _vacancies;
+            set => Set(ref _vacancies, value);
+        }
+
+        public ObservableCollection<ResponsedAppForList> Responses
+        {
+            get => _responses;
+            set => Set(ref _responses, value);
+        }
+
+        public ICommand RefreshUsersCommand => new RelayCommand(LoadUsers);
+        public ICommand RefreshVacanciesCommand => new RelayCommand(LoadVacancies);
+        public ICommand RefreshResponsesCommand => new RelayCommand(LoadResponses);
+
+        public ICommand AddUserCommand => new RelayCommand(AddUser);
+        public ICommand EditUserCommand => new RelayCommand<User>(EditUser);
+        public ICommand DeleteUserCommand => new RelayCommand<User>(DeleteUser);
+
+        public ICommand AddVacancyCommand => new RelayCommand(AddVacancy);
+        public ICommand EditVacancyCommand => new RelayCommand<Application>(EditVacancy);
+        public ICommand DeleteVacancyCommand => new RelayCommand<Application>(DeleteVacancy);
+
+        public ICommand DeleteResponseCommand => new RelayCommand<ResponsedAppForList>(DeleteResponse);
+
+        public AdminPanelViewModel()
+        {
+            LoadUsers();
+            LoadVacancies();
+            LoadResponses();
+        }
+
+        private void LoadUsers()
+        {
+            using (var db = new AplicationContext())
+            {
+                Users = new ObservableCollection<User>(db.Users.ToList());
+            }
+        }
+
+        private void LoadVacancies()
+        {
+            using (var db = new AplicationContext())
+            {
+                Vacancies = new ObservableCollection<Application>(
+                    db.Applications
+                        .Include(a => a.Companys_data) // Подгружаем связанные данные компании
+                        .ToList());
+            }
+        }
+
+        private void LoadResponses()
+        {
+            try
+            {
+                using (var db = new AplicationContext())
+                {
+                    Responses = new ObservableCollection<ResponsedAppForList>(db.Responses
+                    .AsNoTracking()
+                    .Join(db.Applications,
+                        response => response.VacancyId,
+                        vacancy => vacancy.Id,
+                        (response, vacancy) => new { response, vacancy })
+                    .Join(db.Companys_data,
+                        joined => joined.vacancy.Id_Company,
+                        company => company.Id,
+                        (joined, company) => new ResponsedAppForList(
+                            new AppForList(
+                                new Application
+                                {
+                                    Id = joined.vacancy.Id,
+                                    Company_name = company.Name,
+                                    Vacation_Name = joined.vacancy.Vacation_Name,
+                                    Wage = joined.vacancy.Wage,
+                                    Experience = joined.vacancy.Experience,
+                                    Country = joined.vacancy.Country,
+                                    Description = joined.vacancy.Description,
+                                    Id_Company = joined.vacancy.Id_Company
+                                }),
+                            joined.response.Status,
+                            db.Users_data.FirstOrDefault(u => u.Id == joined.response.ApplicantId),
+                            joined.response
+                        ))
+                    .ToList());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки откликов: {ex.Message}");
+            }
+        }
+
+        private void AddUser()
+        {
+            // Реализация добавления пользователя
+            var editWindow = new EditUserWindow();
+            if (editWindow.ShowDialog() == true)
+            {
+                LoadUsers();
+            }
+        }
+
+        private void EditUser(User user)
+        {
+            if (user == null) return;
+
+            var editWindow = new EditUserWindow(user);
+            if (editWindow.ShowDialog() == true)
+            {
+                LoadUsers();
+            }
+        }
+
+        private void DeleteUser(User user)
+        {
+            if (user == null) return;
+
+            if (MessageBox.Show($"Удалить пользователя {user.login} и всё что с ним связано?", "Подтверждение",
+                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    using (var db = new AplicationContext())
+                    {
+                        // Включаем каскадное удаление для всех связанных таблиц
+                        var userToDelete = db.Users
+                            .Include(u => u.Users_data) // Для соискателей
+                            .Include(u => u.Companys_data) // Для работодателей
+                            .FirstOrDefault(u => u.id == user.id);
+
+                        if (userToDelete == null)
+                        {
+                            MessageBox.Show("Пользователь уже был удален");
+                            LoadUsers();
+                            return;
+                        }
+
+                        // Для работодателей дополнительно удаляем вакансии
+                        // (хотя ON DELETE CASCADE в Applications должно сработать автоматически)
+                        if (userToDelete.isSercher == 0)
+                        {
+                            var vacancies = db.Applications
+                                .Where(a => a.Id_Company == userToDelete.id)
+                                .ToList();
+
+                            foreach (var vacancy in vacancies)
+                            {
+                                // Ответы удалятся автоматически благодаря ON DELETE CASCADE в Responses
+                                db.Applications.Remove(vacancy);
+                            }
+                        }
+
+                        db.Users.Remove(userToDelete);
+                        int affected = db.SaveChanges();
+
+                        if (affected > 0)
+                        {
+                            MessageBox.Show("Пользователь и все связанные данные успешно удалены");
+                            LoadUsers();
+                            LoadVacancies(); // Обновляем список вакансий
+                            LoadResponses(); // Обновляем список откликов
+                        }
+                        else
+                        {
+                            MessageBox.Show("Не удалось удалить пользователя");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при удалении: {ex.Message}\n\nПодробности: {ex.InnerException?.Message}");
+                }
+            }
+        }
+
+        private void DeleteVacancyWithResponses(Application vacancy)
+        {
+            using(var db = new AplicationContext())
+            {
+                var responses = db.Responses.Where(r => r.VacancyId == vacancy.Id).ToList();
+                db.Responses.RemoveRange(responses);
+                db.SaveChanges();
+            }
+        }
+
+        private void AddVacancy()
+        {
+            var editWindow = new EditVacancyWindow();
+            if (editWindow.ShowDialog() == true)
+            {
+                LoadVacancies();
+            }
+        }
+
+        private void EditVacancy(Application vacancy)
+        {
+            if (vacancy == null) return;
+
+            var editWindow = new EditVacancyWindow(vacancy);
+            if (editWindow.ShowDialog() == true)
+            {
+                LoadVacancies();
+            }
+        }
+
+        private void DeleteVacancy(Application vacancy)
+        {
+            if (vacancy == null) return;
+
+            if (MessageBox.Show($"Удалить вакансию {vacancy.Vacation_Name}?", "Подтверждение",
+                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                DeleteVacancyWithResponses(vacancy);
+                LoadVacancies();
+            }
+        }
+
+        private void DeleteResponse(ResponsedAppForList response)
+        {
+            if (response == null) return;
+
+            if (MessageBox.Show("Удалить этот отклик?", "Подтверждение",
+                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                using (var db = new AplicationContext())
+                {
+                    db.Responses.Remove(response.Response);
+                    db.SaveChanges();
+                    LoadResponses();
+                }
+            }
         }
     }
 }

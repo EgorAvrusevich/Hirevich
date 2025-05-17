@@ -1,0 +1,76 @@
+﻿<Window x:Class="JA.Views.EditWindows.EditVacancyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JA.Views"
+        mc:Ignorable="d"
+        Title="{Binding WindowTitle}" 
+        Height="570" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,10,0,5"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="MinWidth" Value="100"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Название вакансии:"/>
+        <TextBox Grid.Row="1" Text="{Binding Vacancy.Vacation_Name, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Row="2" Content="Компания:"/>
+        <ComboBox Grid.Row="3" 
+                  ItemsSource="{Binding Companies}"
+                  DisplayMemberPath="Name"
+                  SelectedValuePath="Id"
+                  SelectedValue="{Binding Vacancy.Id_Company}"/>
+
+        <Label Grid.Row="4" Content="Зарплата:"/>
+        <TextBox Grid.Row="5" Text="{Binding Vacancy.Wage, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Row="6" Content="Описание:"/>
+        <TextBox Grid.Row="7" Text="{Binding Vacancy.Description, UpdateSourceTrigger=PropertyChanged}"
+                 TextWrapping="Wrap" AcceptsReturn="True" Height="100"/>
+
+        <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Отмена" Click="CancelButton_Click"/>
+            <Button Content="Сохранить" Command="{Binding SaveCommand}" 
+                    Background="#FF5CB85C" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>

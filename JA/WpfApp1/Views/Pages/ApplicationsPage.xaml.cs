@@ -124,6 +124,8 @@ namespace JA.Views.Pages
                 db.SaveChanges();
 
                 MessageBox.Show("Отклик успешно отправлен!");
+
+                RaiseResponseAdded();
             }
             LoadDataFromDataBase();
             
@@ -166,6 +168,13 @@ namespace JA.Views.Pages
             
             ApplicationsList.ItemsSource = filteredData.ToList();
             
+        }
+
+        public event EventHandler ResponseAdded;
+
+        private void RaiseResponseAdded()
+        {
+            ResponseAdded?.Invoke(this, EventArgs.Empty);
         }
     }
 }

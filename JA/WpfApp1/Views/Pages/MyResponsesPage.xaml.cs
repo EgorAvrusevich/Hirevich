@@ -35,7 +35,7 @@ namespace JA.Views.Pages
 
         private ObservableCollection<ResponsedAppForList> applications = new ObservableCollection<ResponsedAppForList>();
 
-        private void LoadDataFromDataBase()
+        public void LoadDataFromDataBase()
         {
             try
             {

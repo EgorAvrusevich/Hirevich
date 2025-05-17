@@ -20,7 +20,6 @@
             <TextBox x:Name="login_box" TextWrapping="Wrap" Text="" Background="#F8F8F8" VerticalAlignment="Center" BorderThickness="0" Margin="10, 0" FontSize="16"/>
         </Border>
         <Label Grid.Row="2" Content="Пароль" FontSize="16" Margin="40,0,0,0"/>
-        <Label Grid.Row="2" Content="Я забыл пароль" FontSize="16" Margin="0,0,40,0" HorizontalAlignment="Right"/>
         <Border Grid.Row="2" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48">
             <PasswordBox x:Name="password_box" Background="#F8F8F8" VerticalAlignment="Center" BorderThickness="0" Margin="10, 0" FontSize="16"/>
         </Border>

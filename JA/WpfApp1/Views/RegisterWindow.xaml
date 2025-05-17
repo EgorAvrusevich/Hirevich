@@ -5,49 +5,214 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JA"
         mc:Ignorable="d"
-        Title="RegisterWindow" Height="555" Width="500" MaxWidth="500" MinWidth="500" MinHeight="555">
-    <Grid>
+        Title="Регистрация" Height="550" Width="500" 
+        MinWidth="500" MinHeight="530"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <!-- Цвета -->
+        <Color x:Key="PrimaryColor">#3498db</Color>
+        <Color x:Key="SecondaryColor">#95a5a6</Color>
+        <Color x:Key="LightGrayColor">#F8F8F8</Color>
+        <Color x:Key="ErrorColor">#e74c3c</Color>
+
+        <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
+        <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}"/>
+        <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGrayColor}"/>
+        <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}"/>
+        <SolidColorBrush x:Key="WhiteBrush" Color="White"/>
+        <SolidColorBrush x:Key="DarkTextBrush" Color="#333333"/>
+        <SolidColorBrush x:Key="BorderBrush" Color="#C2CDCE"/>
+
+        <!-- Стили -->
+        <Style x:Key="HeaderLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{StaticResource DarkTextBrush}"/>
+            <Setter Property="Margin" Value="40,0,0,20"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+
+        <Style x:Key="InputLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="{StaticResource DarkTextBrush}"/>
+            <Setter Property="Margin" Value="40,0,0,5"/>
+        </Style>
+
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource DarkTextBrush}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Opacity" Value="0.9"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для активной кнопки -->
+        <Style x:Key="ActiveToggleButton" BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource LightGrayBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource SecondaryBrush}"/>
+        </Style>
+
+        <!-- Стиль для неактивной кнопки -->
+        <Style x:Key="InactiveToggleButton" BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource WhiteBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource BorderBrush}"/>
+        </Style>
+
+
+
+        <Style x:Key="InputField" TargetType="Border">
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Background" Value="{StaticResource LightGrayBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Margin" Value="40,0,40,20"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Style.Triggers>
+                <Trigger Property="Tag" Value="Error">
+                    <Setter Property="BorderBrush" Value="{StaticResource ErrorBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="InputTextBox" TargetType="TextBox">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="InputPasswordBox" TargetType="PasswordBox">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="PrimaryButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Margin" Value="40,0,40,10"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.9"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Opacity" Value="0.8"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="SecondaryButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="0,0,0,20"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="TextBlock.TextDecorations" Value="Underline"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource WhiteBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Регистрация" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="35"/>
-        <Border Grid.Row="1" Margin="30" CornerRadius="4">
-            <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" BorderBrush="#849A9C" Background="#F8F8F8" Foreground="#849A9C" Name="button_sercher" Click="button_sercher_Click" >Соискатель</Button>
-                <Button Grid.Column="1" BorderBrush="#C2CDCE" Background="#FFFFFF" Foreground="#C2CDCE" Name="button_company" Click="button_company_Click">Компания</Button>
-            </Grid>
-        </Border>
-        <Label Grid.Row="2" Content="Логин" FontSize="16" Margin="40,0,0,0"/>
-        <Border Name="border_login" Grid.Row="2" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48">
-            <TextBox x:Name="loginTextBox" TextWrapping="Wrap" Text="" Background="#F8F8F8" VerticalAlignment="Center" BorderThickness="0" Margin="10, 0" FontSize="16"/>
-        </Border>
-        <Label Grid.Row="3" Content="Пароль" FontSize="16" Margin="40,0,0,0"/>
-        <Border Name="border_password" Grid.Row="3" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48">
-            <PasswordBox x:Name="passwordTextBox" Background="#F8F8F8" VerticalAlignment="Center" BorderThickness="0" Margin="10, 0" FontSize="16" />
-        </Border>
-        <Border Grid.Row="4" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48"
-                VerticalAlignment="Top">
-            <Button  BorderThickness="0" Content="Зарегистрироваться" FontSize="16" Click="Button_Click" />
-        </Border>
-        <Button BorderThickness="0" Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20" Background="White" FontSize="15" Click="Button_Click_1">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Content" Value="У меня есть аккаунт" />
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="White"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
+
+        <!-- Заголовок -->
+        <Label Grid.Row="0" Content="Регистрация" Style="{StaticResource HeaderLabel}"/>
+
+        <!-- Переключатель типа пользователя -->
+        <Grid Grid.Row="1" Margin="40,0,40,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="button_sercher" Grid.Column="0" 
+                    Style="{StaticResource ActiveToggleButton}"
+                    Content="Соискатель"
+                    Click="button_sercher_Click"/>
+            <Button x:Name="button_company" Grid.Column="1" 
+                    Style="{StaticResource InactiveToggleButton}"
+                    Content="Компания"
+                    Click="button_company_Click"/>
+        </Grid>
+
+        <!-- Поле логина -->
+        <StackPanel Grid.Row="2">
+            <Label  Content="Логин" Style="{StaticResource InputLabel}"/>
+            <Border x:Name="border_login" Style="{StaticResource InputField}">
+                <TextBox x:Name="loginTextBox" Style="{StaticResource InputTextBox}"/>
+            </Border>
+            <Label x:Name="LoginError" Visibility="Hidden"  Style="{StaticResource InputLabel}"/>
+        </StackPanel>
+
+        <!-- Поле пароля -->
+        <StackPanel Grid.Row="3">
+            <Label  Content="Пароль" Style="{StaticResource InputLabel}"/>
+            <Border x:Name="border_password"  Style="{StaticResource InputField}">
+                <PasswordBox x:Name="passwordTextBox" Style="{StaticResource InputPasswordBox}"/>
+            </Border>
+            <Label x:Name="PasswordError" Visibility="Hidden" Style="{StaticResource InputLabel}"/>
+        </StackPanel>
+
+        <!-- Кнопка регистрации -->
+        <Button Grid.Row="4" Content="Зарегистрироваться" 
+                Style="{StaticResource PrimaryButton}"
+                Click="Button_Click"/>
+
+        <!-- Ссылка на вход -->
+        <Button Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Style="{StaticResource SecondaryButton}"
+                Content="У меня есть аккаунт"
+                Click="Button_Click_1"/>
     </Grid>
 </Window>

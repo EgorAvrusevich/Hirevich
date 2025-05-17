@@ -84,7 +84,7 @@
                                                 </Ellipse.Fill>
                                             </Ellipse>
                                             <Label VerticalAlignment="Center" FontSize="20" Content="{Binding FirstName}" />
-                                            <Label VerticalAlignment="Center" FontSize="20" Content="{Binding age}" />
+                                            <Label VerticalAlignment="Center" FontSize="20" Content="{Binding Age}" />
                                             <Label VerticalAlignment="Center" FontSize="20">лет</Label>
                                         </StackPanel>
                                         <Border>
