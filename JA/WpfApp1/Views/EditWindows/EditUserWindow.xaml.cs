@@ -49,17 +49,27 @@ namespace JA.Views.EditWindows
             {
                 if (User.id == 0)
                 {
-                    db.Users.Add(User);
+                    if (db.Users.FirstOrDefault(u => u.login == User.login) == null)
+                    { 
+                        db.Users.Add(User);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Пользователь с таким логином уже существует",
+                                          "Ошибка регистрации",
+                                          MessageBoxButton.OK,
+                                          MessageBoxImage.Warning);
+                    }
                 }
                 else
                 {
                     db.Users.Update(User);
-                }
-                db.SaveChanges();
-            }
+                    db.SaveChanges();
 
-            _window.DialogResult = true;
-            _window.Close();
+                    _window.DialogResult = true;
+                    _window.Close();
+                }
+            }
         }
     }
 }
