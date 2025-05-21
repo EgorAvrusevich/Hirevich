@@ -61,7 +61,7 @@ namespace JA.Views.EditWindows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/JA;component/views/editwindows/editspecialitywindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HireVich;component/views/editwindows/editspecialitywindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\EditWindows\EditSpecialityWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

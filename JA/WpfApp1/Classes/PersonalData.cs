@@ -116,7 +116,10 @@ namespace JA.Classes
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        public static event Action DataUpdated;
+        public static void NotifyDataUpdated()
+        {
+            DataUpdated?.Invoke();
+        }
     }
-
-
 }

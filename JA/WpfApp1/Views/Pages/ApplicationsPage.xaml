@@ -57,7 +57,7 @@
                 <!-- Поле поиска -->
                 <Border Style="{StaticResource SearchBoxStyle}">
                     <Grid>
-                        <TextBox Style="{StaticResource SearchTextBox}"/>
+                        <TextBox x:Name="SearchTextBox" Style="{StaticResource SearchTextBox}" TextChanged="SearchTextBox_TextChanged"/>
                         <Image Style="{StaticResource SearchIcon}"/>
                     </Grid>
                 </Border>

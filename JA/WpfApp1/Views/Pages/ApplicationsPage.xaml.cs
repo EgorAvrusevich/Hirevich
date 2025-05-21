@@ -128,7 +128,7 @@ namespace JA.Views.Pages
                 RaiseResponseAdded();
             }
             LoadDataFromDataBase();
-            
+            MyResponsesPage.NotifyDataUpdated();
         });
 
         private void OnLoaded(object sender, RoutedEventArgs e)
@@ -175,6 +175,15 @@ namespace JA.Views.Pages
         private void RaiseResponseAdded()
         {
             ResponseAdded?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchText = SearchTextBox.Text.ToLower();
+            var filtered = applications.Where(r =>
+                r.application.Vacation_Name.ToLower().Contains(searchText) ||
+                r.application.Company_name.ToLower().Contains(searchText)).ToList();
+            ApplicationsList.ItemsSource = filtered;
         }
     }
 }

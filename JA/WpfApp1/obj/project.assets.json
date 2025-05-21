@@ -10529,9 +10529,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\JA.csproj",
-      "projectName": "JA",
-      "projectPath": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\JA.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\HireVich.csproj",
+      "projectName": "HireVich",
+      "projectPath": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\HireVich.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Desktop\\JA1\\Hirevich\\JA\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",

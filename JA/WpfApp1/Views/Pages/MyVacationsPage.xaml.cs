@@ -1,4 +1,6 @@
-﻿using JA.Classes;
+﻿using GalaSoft.MvvmLight.CommandWpf;
+using JA.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -81,6 +83,35 @@ namespace JA.Views.Pages
                 MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
             }
         }
+
+        public ICommand DeleteVacancyCommand => new RelayCommand<AppForList>(async item =>
+        {
+            if (MessageBox.Show("Вы действительно хотите удалить эту вакансию?",
+                "Подтверждение удаления",
+                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    using (var db = new AplicationContext())
+                    {
+                        var response = await db.Applications
+                            .FirstOrDefaultAsync(r => r.Id == item.application.Id);
+
+                        if (response != null)
+                        {
+                            db.Applications.Remove(response);
+                            await db.SaveChangesAsync();
+                            LoadDataFromDataBase(); // Обновляем список
+                            MessageBox.Show("Вакансия успешно удалена");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при удалении вакансии: {ex.Message}");
+                }
+            }
+        });
 
         private void ApplicationsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

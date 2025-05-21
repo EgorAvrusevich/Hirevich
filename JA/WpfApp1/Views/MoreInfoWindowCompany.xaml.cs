@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,10 @@ namespace JA.Views
     {
         private User _currentUser { get; set; }
         private Companys_data Companys_data { get; set; }
+
+        private readonly Regex _emailRegex = new Regex(
+            @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+            RegexOptions.IgnoreCase | RegexOptions.Compiled);
         public MoreInfoWindowCompany()
         {
             InitializeComponent();
@@ -71,10 +76,32 @@ namespace JA.Views
             }
         }
 
+        private bool ValidateEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                MessageBox.Show("Поле email не может быть пустым", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            if (!_emailRegex.IsMatch(email))
+            {
+                MessageBox.Show("Введите корректный email адрес", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                if (!ValidateEmail(EmailBox.Text))
+                {
+                    return;
+                }
                 Companys_data.Name = CompanyName.Text;
                 Companys_data.Email = EmailBox.Text;
                 Companys_data.Discription = AboutBox.Text;

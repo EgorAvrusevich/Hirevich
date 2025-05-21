@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,6 +25,10 @@ namespace JA.Views
     {
         private User _currentUser { get; set; }
         private PersonalData PersonalData { get; set; }
+
+        private readonly Regex _emailRegex = new Regex(
+            @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+            RegexOptions.IgnoreCase | RegexOptions.Compiled);
         public MoreInfoWindowUser(User newuser)
         {
             try
@@ -72,11 +77,81 @@ namespace JA.Views
                 }
             }
         }
+        private bool ValidateEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                MessageBox.Show("Поле email не может быть пустым", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            if (!_emailRegex.IsMatch(email))
+            {
+                MessageBox.Show("Введите корректный email адрес", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool ValidateFields()
+        {
+            bool isValid = true;
+            if (!ValidateEmail(EmailBox.Text))
+            {
+                SetErrorStyle(EmailBox);
+                isValid = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(FirstNameBox.Text))
+            {
+                SetErrorStyle(FirstNameBox);
+                isValid = false;
+            }
+
+            if (!int.TryParse(AgeBox.Text, out int age) || age < 18 || age > 100)
+            {
+                SetErrorStyle(AgeBox);
+                isValid = false;
+            }
+
+            if (string.IsNullOrEmpty(LastNameBox.Text)) 
+            { 
+                SetErrorStyle(LastNameBox);
+                isValid = false;
+            }
+
+            if (string.IsNullOrEmpty(CountryBox.Text))
+            {
+                SetErrorStyle(CountryBox);
+                isValid = false;
+            }
+
+            if (string.IsNullOrEmpty(EducationBox.Text))
+            {
+                SetErrorStyle(EducationBox);
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        private void SetErrorStyle(Control control)
+        {
+            control.BorderBrush = (SolidColorBrush)new BrushConverter().ConvertFrom("#e74c3c");
+            control.BorderThickness = new Thickness(2);
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                if (!ValidateFields())
+                {
+                    return;
+                }
                 PersonalData.FirstName = FirstNameBox.Text;
                 PersonalData.Email = EmailBox.Text;
                 PersonalData.LastName = LastNameBox.Text;

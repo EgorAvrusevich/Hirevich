@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JA"
         mc:Ignorable="d"
-        Title="Регистрация" Height="550" Width="500" 
+        Title="Hirevich" Height="550" Width="500" 
         MinWidth="500" MinHeight="530"
         WindowStartupLocation="CenterScreen">
 

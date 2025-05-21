@@ -6,8 +6,9 @@
       xmlns:local="clr-namespace:JA" xmlns:viewmodels="clr-namespace:JA.ViewModels"
         mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MainWindow"
-      MinWidth = "850px">
+      Title="Hirevich"
+      MinWidth = "850px"
+      MinHeight="500">
     
     <Grid Background="#F8F8F8">
         <Grid.RowDefinitions>

@@ -86,7 +86,7 @@ namespace JA.Views.Pages
                     }
 
                     db.SaveChanges();
-
+                    PersonalData.NotifyDataUpdated();
                     // Обновляем локальные данные
                     _personalData.FirstName = editWindow.FirstName;
                     _personalData.LastName = editWindow.LastName;
@@ -111,6 +111,7 @@ namespace JA.Views.Pages
                     {
                         userData.Education = editWindow.EducationText;
                         db.SaveChanges();
+                        PersonalData.NotifyDataUpdated();
                         PersonalData.Education = editWindow.EducationText;
                         OnPropertyChanged(nameof(PersonalData));
                     }
@@ -130,6 +131,7 @@ namespace JA.Views.Pages
                     {
                         userData.Speciality = editWindow.SpecialityText;
                         db.SaveChanges();
+                        PersonalData.NotifyDataUpdated();
                         PersonalData.Speciality = editWindow.SpecialityText;
                         OnPropertyChanged(nameof(PersonalData));
                     }
@@ -149,6 +151,7 @@ namespace JA.Views.Pages
                     {
                         userData.About = editWindow.AboutText;
                         db.SaveChanges();
+                        PersonalData.NotifyDataUpdated();
                         PersonalData.About = editWindow.AboutText;
                         OnPropertyChanged(nameof(PersonalData));
                     }

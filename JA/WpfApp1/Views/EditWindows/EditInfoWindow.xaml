@@ -53,7 +53,7 @@
 
         <!-- Возраст -->
         <Label Grid.Row="5" Content="Возраст:" Margin="0,0,0,5"/>
-        <TextBox Grid.Row="6" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15"/>
+        <TextBox x:Name="AgeBox" Grid.Row="6" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15"/>
 
         <!-- Кнопки -->
         <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right">

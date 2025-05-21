@@ -93,8 +93,8 @@
                         </Ellipse>
 
                         <Label Style="{StaticResource NameLabel}" Content="{Binding PersonalData.FirstName}"/>
-                        <Label Style="{StaticResource NameLabel}" Content="{Binding PersonalData.LastName}"/>
-                        <Label Style="{StaticResource NameLabel}" Content="{Binding PersonalData.Age}"/>
+                        <Label Style="{StaticResource NameLabel}" Content="{Binding PersonalData.LastName}" Margin="5,0"/>
+                        <Label Style="{StaticResource NameLabel}" Content="{Binding PersonalData.Age}" Margin="5,0"/>
                     </StackPanel>
 
                     <Image Grid.Column="1" 

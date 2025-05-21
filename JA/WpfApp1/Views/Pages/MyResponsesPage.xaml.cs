@@ -26,6 +26,11 @@ namespace JA.Views.Pages
     public partial class MyResponsesPage : Page
     {
         User? _currentUser;
+        public static event Action? UpdateData;
+        public static void NotifyDataUpdated()
+        {
+            UpdateData?.Invoke();
+        }
         public MyResponsesPage(User currentUser)
         {
             InitializeComponent();

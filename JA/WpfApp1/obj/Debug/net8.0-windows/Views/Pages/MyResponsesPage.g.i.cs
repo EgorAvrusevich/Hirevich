@@ -61,7 +61,7 @@ namespace JA.Views.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/JA;component/views/pages/myresponsespage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HireVich;component/views/pages/myresponsespage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Pages\MyResponsesPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

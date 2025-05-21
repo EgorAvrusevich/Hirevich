@@ -14,7 +14,7 @@ namespace JA.Classes
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string dbPath = Path.Combine(AppContext.BaseDirectory, "JAdb.db");
-            optionsBuilder.UseSqlite($"Data Source={dbPath};Cache=Shared;").LogTo(message => System.Diagnostics.Debug.WriteLine(message));
+            optionsBuilder.UseSqlite($"Data Source={dbPath};Cache=Shared;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -69,6 +69,14 @@ namespace JA.Views.EditWindows
                               MessageBoxImage.Warning);
                 return;
             }
+            if (!int.TryParse(AgeBox.Text, out int age) || age < 18 || age > 100)
+            {
+                MessageBox.Show("Некорректный возраст",
+                              "Ошибка",
+                              MessageBoxButton.OK,
+                              MessageBoxImage.Warning);
+                return;
+            }
 
             DialogResult = true;
             Close();

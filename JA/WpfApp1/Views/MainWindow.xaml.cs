@@ -2,9 +2,11 @@
 using JA.Views.Pages;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,8 +27,26 @@ namespace JA.Views
     public partial class MainWindow : Window
     {
         User _currentUser;
-        PersonalData? _personalData;
-        Companys_data? _companyData;
+        private PersonalData? PersonalData;
+        public PersonalData? _personalData
+        {
+            get => PersonalData;
+            set
+            {
+                PersonalData = value;
+                OnPropertyChanged();
+            }
+        }
+        private Companys_data? CompanyData;
+        public Companys_data? _companyData
+        {
+            get => CompanyData;
+            set
+            {
+                CompanyData = value;
+                OnPropertyChanged();
+            }
+        }
         ApplicationsPage? appPage;
         CabinetPage? cabPage;
         CabinetCompanyPage? cabCompPage;
@@ -40,6 +60,8 @@ namespace JA.Views
         {
             InitializeComponent();
             _currentUser = currentUser;
+            PersonalData.DataUpdated += PersonalDataUpdate;
+            Companys_data.DataUpdated += CompanyDataUpdate;
 
             InitializeUI();
         }
@@ -66,10 +88,45 @@ namespace JA.Views
             { 
                 _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
             }
+            _personalData.PropertyChanged += (s, e) =>
+            {
+                OnPropertyChanged(nameof(PersonalData));
+            };
             DataContext = _personalData;
             cabPage = new CabinetPage(_currentUser);
             myResponsesPage = new MyResponsesPage(_currentUser);
+            MyResponsesPage.UpdateData += ResponsesUpdate;
             MainPanel.Content = appPage;
+        }
+
+        private void CompanyDataUpdate()
+        {
+            Dispatcher.Invoke(() =>
+            {
+                using (var db = new AplicationContext())
+                {
+                    _companyData = db.Companys_data.FirstOrDefault(u => u.Id == _currentUser.id);
+                    DataContext = _companyData;
+                }
+            });
+        }
+        private void PersonalDataUpdate()
+        {
+            Dispatcher.Invoke(() =>
+            {
+                using (var db = new AplicationContext())
+                {
+                    _personalData = db.Users_data.FirstOrDefault(u => u.Id == _currentUser.id);
+                    DataContext = _personalData;
+                }
+            });
+        }
+        private void ResponsesUpdate()
+        {
+            Dispatcher.Invoke(() =>
+            {
+                myResponsesPage = new MyResponsesPage(_currentUser);
+            });
         }
 
         private void InitializeEmployerUI()
@@ -85,6 +142,10 @@ namespace JA.Views
                 _companyData = db.Companys_data.FirstOrDefault(u => u.Id == _currentUser.id);
             }
             DataContext = _companyData;
+            _companyData.PropertyChanged += (s, e) =>
+            {
+                OnPropertyChanged(nameof(CompanyData));
+            };
             cabCompPage = new CabinetCompanyPage(_currentUser);
             cvsPage = new CVsPage();
             myVacationsPage = new MyVacationsPage(_currentUser);
@@ -140,6 +201,23 @@ namespace JA.Views
         private void CompanyResponses_page_MouseDown(object sender, MouseButtonEventArgs e)
         {
             MainPanel.Content = companyResponsesPage;
+        }
+
+        public static event Action? UpdatePersonalData;
+        public static void NotifyPersonalDataUpdated()
+        {
+            UpdatePersonalData?.Invoke();
+        }
+        public static event Action? UpdateCompanyData;
+        public static void NotifyCompanyDataUpdated()
+        {
+            UpdateCompanyData?.Invoke();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

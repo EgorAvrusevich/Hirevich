@@ -23,7 +23,7 @@
             <Grid>
                 <Border CornerRadius="4" Padding="1" Margin="10,0,200,0" Background="#F8F8F8" Height="25">
                     <Grid>
-                        <TextBox BorderThickness="0" Background="#F8F8F8" VerticalAlignment="Center" Margin="25,0,0,0"/>
+                        <TextBox x:Name="SearchTextBox" BorderThickness="0" Background="#F8F8F8" VerticalAlignment="Center" Margin="25,0,0,0" TextChanged="SearchTextBox_TextChanged"/>
                         <Image Source="/Images/lupa.png" Height="10" Width="10" HorizontalAlignment="Left" Margin="5"/>
                     </Grid>
                 </Border>

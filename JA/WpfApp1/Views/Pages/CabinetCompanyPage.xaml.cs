@@ -51,6 +51,7 @@ namespace JA.Views.Pages
                     company.Email = editWindow.Email;
 
                     db.SaveChanges();
+                    Companys_data.NotifyDataUpdated();
                     Data = company;
                 }
             }
@@ -71,6 +72,7 @@ namespace JA.Views.Pages
                     company.Discription = editWindow.Discription;
 
                     db.SaveChanges();
+                    Companys_data.NotifyDataUpdated();
                     Data = company;
                 }
             }
@@ -96,6 +98,7 @@ namespace JA.Views.Pages
                     }
 
                     db.SaveChanges();
+                    Companys_data.NotifyDataUpdated();
                     Data = company;
                 }
             }

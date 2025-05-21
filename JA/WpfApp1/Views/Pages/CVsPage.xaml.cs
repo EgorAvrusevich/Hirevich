@@ -109,5 +109,13 @@ namespace JA.Views.Pages
             CVsList.ItemsSource = filteredData.ToList();
 
         }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchText = SearchTextBox.Text.ToLower();
+                var filtered = CVs.Where(r =>
+                    r.Speciality.ToLower().Contains(searchText));
+            CVsList.ItemsSource = filtered;
+        }
     }
 }
