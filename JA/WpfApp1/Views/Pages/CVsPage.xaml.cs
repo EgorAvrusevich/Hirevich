@@ -35,6 +35,7 @@ namespace JA.Views.Pages
             var filtersControl = (FiltersPopupCVsControl)FiltersPopupCVs.Child;
             filtersControl.ViewModel.FiltersApplied += ApplyFilters;
         }
+        private FiltersViewModel _currentFilters;
 
         private ObservableCollection<PersonalData> CVs = new ObservableCollection<PersonalData>();
 
@@ -54,7 +55,7 @@ namespace JA.Views.Pages
                     }
                 }
 
-                CVsList.ItemsSource = CVs;
+                ApplyAllFilters();
             }
             catch (Exception ex)
             {
@@ -75,6 +76,36 @@ namespace JA.Views.Pages
             }
         }
 
+        private void ApplyAllFilters()
+        {
+            var searchText = SearchTextBox.Text.ToLower();
+
+            var filteredData = CVs.Where(item =>
+            {
+                // Условие поиска
+                if (!string.IsNullOrEmpty(searchText) &&
+                    !item.Speciality.ToLower().Contains(searchText))
+                {
+                    return false;
+                }
+
+                // Условия фильтрации
+                if (_currentFilters != null)
+                {
+                    if (_currentFilters.SelectedCountry != default &&
+                        item.Country != _currentFilters.SelectedCountry)
+                    {
+                        return false;
+                    }
+
+                    // Добавьте другие условия фильтрации по необходимости
+                }
+
+                return true;
+            });
+
+            CVsList.ItemsSource = new ObservableCollection<PersonalData>(filteredData.ToList());
+        }
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
@@ -91,31 +122,14 @@ namespace JA.Views.Pages
 
         private void ApplyFilters(FiltersViewModel filters)
         {
-            // Закрываем popup после применения фильтров
             FiltersPopupCVs.IsOpen = false;
-
-            // Ваша логика фильтрации данных
-            if (filters == null) return;
-
-
-            var filteredData = CVs.Where(item =>
-            {
-                if (filters.SelectedCountry != default && item.Country != filters.SelectedCountry)
-                    return false;
-
-                return true;
-            });
-
-            CVsList.ItemsSource = filteredData.ToList();
-
+            _currentFilters = filters;
+            ApplyAllFilters();
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var searchText = SearchTextBox.Text.ToLower();
-                var filtered = CVs.Where(r =>
-                    r.Speciality.ToLower().Contains(searchText));
-            CVsList.ItemsSource = filtered;
+            ApplyAllFilters();
         }
     }
 }

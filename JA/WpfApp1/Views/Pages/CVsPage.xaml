@@ -19,12 +19,13 @@
         </Grid.ColumnDefinitions>
 
         <!-- Верхняя панель с поиском -->
-        <Border Grid.Row="0" Height="40" Margin="20" Background="White" CornerRadius="4">
+        <Border Grid.Row="0" Style="{StaticResource TopPanelStyle}">
             <Grid>
-                <Border CornerRadius="4" Padding="1" Margin="10,0,200,0" Background="#F8F8F8" Height="25">
+                <!-- Поле поиска -->
+                <Border Style="{StaticResource SearchBoxStyle}">
                     <Grid>
-                        <TextBox x:Name="SearchTextBox" BorderThickness="0" Background="#F8F8F8" VerticalAlignment="Center" Margin="25,0,0,0" TextChanged="SearchTextBox_TextChanged"/>
-                        <Image Source="/Images/lupa.png" Height="10" Width="10" HorizontalAlignment="Left" Margin="5"/>
+                        <TextBox x:Name="SearchTextBox" Style="{StaticResource SearchTextBox}" TextChanged="SearchTextBox_TextChanged"/>
+                        <Image Style="{StaticResource SearchIcon}"/>
                     </Grid>
                 </Border>
                 <Border Margin="0,0,10,0" Height="25" Width="180" HorizontalAlignment="Right" 
@@ -104,8 +105,10 @@
                                         </Ellipse.Fill>
                                     </Ellipse>
                                 </Grid>
-
-                                <Label Grid.Row="1" Content="{Binding speciality}" FontSize="20" />
+                                <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom">
+                                    <Label VerticalAlignment="Center">Спец в:</Label>
+                                    <Label Content="{Binding Speciality}" FontSize="14" />
+                                </StackPanel>
                             </Grid>
                         </Border>
                     </DataTemplate>

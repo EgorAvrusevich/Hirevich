@@ -80,6 +80,7 @@
 
         <!-- Список вакансий -->
         <ListBox Grid.Row="1" 
+                 Margin ="20, 0"
                  Style="{StaticResource CardList}"
                  x:Name="ApplicationsList"
                  ItemsSource="{Binding applications}"
@@ -117,8 +118,10 @@
                             <!-- Зарплата -->
                             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5,0,0">
                                 <Image Style="{StaticResource WageIcon}"/>
+                                <Label Style="{StaticResource WageLabel}" Content="Зарплата: " Margin=" 0"/>
                                 <Label Style="{StaticResource WageLabel}" 
-                                       Content="{Binding application.Wage, StringFormat='Зарплата: {0:C}'}"/>
+                                       Content="{Binding application.Wage}" Margin="0"/>
+                                <Label Style="{StaticResource WageLabel}" Content="$" Margin="-5, 0,0,0"/>
                             </StackPanel>
 
                             <!-- Описание -->

@@ -73,7 +73,7 @@
     <Style x:Key="CardListItem" TargetType="ListBoxItem">
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="Padding" Value="0"/>
-        <Setter Property="Margin" Value="0 10 0 10"/>
+        <Setter Property="Margin" Value="0 0 0 10"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListBoxItem">

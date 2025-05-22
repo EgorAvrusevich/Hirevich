@@ -25,6 +25,7 @@ namespace JA.Views
     {
         private User _currentUser { get; set; }
         private PersonalData PersonalData { get; set; }
+        private bool isComplete = false;
 
         private readonly Regex _emailRegex = new Regex(
             @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
@@ -34,10 +35,10 @@ namespace JA.Views
             try
             {
                 InitializeComponent();
-                _currentUser = newuser;
                 using (var db = new AplicationContext()) {
-                    PersonalData = new PersonalData(db.Users.FirstOrDefault(u => u.login == newuser.login).id);
+                    _currentUser = db.Users.FirstOrDefault(u => u.login == newuser.login);
                 }
+                PersonalData = new PersonalData(_currentUser.id);
             }
             catch (Exception ex)
             {
@@ -213,7 +214,7 @@ namespace JA.Views
                     db.Users_data.Add(PersonalData);
                     db.SaveChanges();
                 }
-
+                isComplete = true;
                 MainWindow window = new MainWindow(_currentUser);
                 window.Show();
                 Close();
@@ -223,6 +224,21 @@ namespace JA.Views
                 MessageBox.Show($"Ошибка при сохранении: {ex.Message}",
                        "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
 
+            }
+
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!isComplete)
+            {
+                if (MessageBox.Show("Вы действительно хотите остановить регистрацию?", "Предупреждение",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                    using (var db = new AplicationContext())
+                    {
+                        db.Users.Remove(_currentUser);
+                        db.SaveChanges();
+                    }
+                else e.Cancel = true;
             }
         }
     }

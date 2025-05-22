@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:JA"
         mc:Ignorable="d"
         Title="MoreInfoWindow" Height="557" Width="800" MinHeight=" 557" MinWidth="800"
-        ScrollViewer.CanContentScroll="True">
+        ScrollViewer.CanContentScroll="True" Closing="Window_Closing">
     <Grid>
         <StackPanel>
             <Label HorizontalAlignment="Center" FontSize="18" Foreground="#133F42" Margin="10">Здравствуйте, давайте заполним информацию о вашей компании!!!</Label>

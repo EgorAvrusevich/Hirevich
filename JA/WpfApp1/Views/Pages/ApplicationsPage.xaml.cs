@@ -89,7 +89,7 @@ namespace JA.Views.Pages
                 }
 
                 // Обновляем привязку данных (если используется в WPF)
-                ApplicationsList.ItemsSource = applications;
+                UpdateFilteredList();
             }
             catch (Exception ex)
             {
@@ -149,25 +149,51 @@ namespace JA.Views.Pages
             // Закрываем popup после применения фильтров
             FiltersPopup.IsOpen = false;
 
-            // Ваша логика фильтрации данных
-            if (filters == null) return;
+            // Обновляем отображение с учетом всех фильтров и поиска
+            UpdateFilteredList();
+        }
 
-            
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Обновляем отображение при изменении текста поиска
+            UpdateFilteredList();
+        }
+
+        private void UpdateFilteredList()
+        {
+            // Получаем текущий текст поиска
+            var searchText = SearchTextBox.Text.ToLower();
+
+            // Получаем текущие фильтры (предполагаем, что они доступны через свойство)
+            var filters = ((FiltersPopupControl)FiltersPopup.Child).ViewModel;
+
+            // Применяем все фильтры и поиск
             var filteredData = applications.Where(item =>
             {
+                // Условия фильтрации
                 if (filters.SelectedCountry != default && item.application.Country != filters.SelectedCountry)
                     return false;
-                    
-                if (!string.IsNullOrEmpty(filters.MinSalary) && 
+
+                if (!string.IsNullOrEmpty(filters.MinSalary) &&
                     int.TryParse(filters.MinSalary, out var minSalary) &&
                     item.application.Wage < minSalary)
                     return false;
-                    
+
+                if (filters.SelectedExperience != default &&
+                    item.application.Experience != filters.SelectedExperience)
+                    return false;
+
+                // Условие поиска
+                if (!string.IsNullOrEmpty(searchText) &&
+                    !item.application.Vacation_Name.ToLower().Contains(searchText) &&
+                    !item.application.Company_name.ToLower().Contains(searchText))
+                    return false;
+
                 return true;
             });
-            
+
+            // Обновляем ItemsSource
             ApplicationsList.ItemsSource = filteredData.ToList();
-            
         }
 
         public event EventHandler ResponseAdded;
@@ -177,13 +203,5 @@ namespace JA.Views.Pages
             ResponseAdded?.Invoke(this, EventArgs.Empty);
         }
 
-        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var searchText = SearchTextBox.Text.ToLower();
-            var filtered = applications.Where(r =>
-                r.application.Vacation_Name.ToLower().Contains(searchText) ||
-                r.application.Company_name.ToLower().Contains(searchText)).ToList();
-            ApplicationsList.ItemsSource = filtered;
-        }
     }
 }

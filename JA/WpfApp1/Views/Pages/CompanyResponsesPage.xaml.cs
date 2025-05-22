@@ -24,6 +24,7 @@ namespace JA.Views.Pages
             _currentCompany = companyUser;
             LoadResponses();
             ResponsesListView.ItemsSource = _responses;
+            FilterComboBox.Text = "Все статусы";
         }
 
         private void LoadResponses()
@@ -65,6 +66,7 @@ namespace JA.Views.Pages
                     {
                         _responses.Add(response);
                     }
+                    ApplyFilters();
                 }
             }
             catch (Exception ex)
@@ -107,30 +109,36 @@ namespace JA.Views.Pages
             }
         });
 
-        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void ApplyFilters()
         {
             var searchText = SearchTextBox.Text.ToLower();
+            var selectedStatus = (FilterComboBox.SelectedItem as ComboBoxItem)?.Tag.ToString();
+
             var filtered = _responses.Where(r =>
-                r.AppForList.application.Vacation_Name.ToLower().Contains(searchText) ||
-                r.AppForList.application.Company_name.ToLower().Contains(searchText)).ToList();
+            {
+                // Условие поиска
+                bool searchCondition = string.IsNullOrEmpty(searchText) ||
+                                     r.AppForList.application.Vacation_Name.ToLower().Contains(searchText) ||
+                                     r.AppForList.application.Company_name.ToLower().Contains(searchText);
+
+                // Условие фильтра по статусу
+                bool statusCondition = selectedStatus == "Все" ||
+                                     r.StatusText == selectedStatus;
+
+                return searchCondition && statusCondition;
+            }).ToList();
+
             ResponsesListView.ItemsSource = filtered;
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ApplyFilters();
         }
 
         private void FilterComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (FilterComboBox.SelectedItem is ComboBoxItem selectedItem)
-            {
-                var status = selectedItem.Tag.ToString();
-                if (status == "Все")
-                {
-                    ResponsesListView.ItemsSource = _responses;
-                }
-                else
-                {
-                    var filtered = _responses.Where(r => r.StatusText == status).ToList();
-                    ResponsesListView.ItemsSource = filtered;
-                }
-            }
+            ApplyFilters();
         }
     }
 }

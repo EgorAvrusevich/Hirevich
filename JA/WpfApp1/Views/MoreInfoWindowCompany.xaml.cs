@@ -24,6 +24,7 @@ namespace JA.Views
     {
         private User _currentUser { get; set; }
         private Companys_data Companys_data { get; set; }
+        private bool isComplete = false;
 
         private readonly Regex _emailRegex = new Regex(
             @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
@@ -37,15 +38,16 @@ namespace JA.Views
             try
             {
                 InitializeComponent();
-                _currentUser = newcompany;
                 using (var db = new AplicationContext())
                 {
-                    Companys_data = new Companys_data(db.Users.FirstOrDefault(u => u.login == newcompany.login).id);
+                    _currentUser = db.Users.FirstOrDefault(u => u.login == newcompany.login);
                 }
+                Companys_data = new Companys_data(_currentUser.id);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка инициализации: {ex.Message}");
+                isComplete = true;
                 Close();
             }
         }
@@ -115,6 +117,7 @@ namespace JA.Views
                     db.Companys_data.Add(Companys_data);
                     db.SaveChanges();
                 }
+                isComplete = true;
 
                 MainWindow window = new MainWindow(_currentUser);
                 window.Show();
@@ -125,6 +128,21 @@ namespace JA.Views
                 MessageBox.Show($"Ошибка при сохранении: {ex.Message}",
                        "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
 
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!isComplete)
+            {
+                if (MessageBox.Show("Вы действительно хотите остановить регистрацию?", "Предупреждение",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                    using (var db = new AplicationContext())
+                    {
+                        db.Users.Remove(_currentUser);
+                        db.SaveChanges();
+                    }
+                else e.Cancel = true;
             }
         }
     }

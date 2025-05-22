@@ -12,10 +12,10 @@ namespace JA.Classes
 
         public List<string> ExperienceLevels { get; } = new List<string>
         {
-            "Не имеет значения",
             "Без опыта",
             "1-3 года",
-            "3+ года"
+            "3-6 лет",
+            "Более 6 лет"
         };
 
         private string _selectedCountry;
