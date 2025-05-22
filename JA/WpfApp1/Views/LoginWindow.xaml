@@ -15,7 +15,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Вход" VerticalAlignment="Center" Margin="40,0,0,0" FontSize="35"/>
-        <Label Grid.Row="1" Content="Login" FontSize="16" Margin="40,0,0,0"/>
+        <Label Grid.Row="1" Content="Логин" FontSize="16" Margin="40,0,0,0"/>
         <Border Grid.Row="1" CornerRadius="4" HorizontalAlignment="Center" MinWidth="420" Background="#F8F8F8" MaxHeight="48" MinHeight="48">
             <TextBox x:Name="login_box" TextWrapping="Wrap" Text="" Background="#F8F8F8" VerticalAlignment="Center" BorderThickness="0" Margin="10, 0" FontSize="16"/>
         </Border>

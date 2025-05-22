@@ -52,6 +52,10 @@ namespace JA.Views.EditWindows
                     if (db.Users.FirstOrDefault(u => u.login == User.login) == null)
                     { 
                         db.Users.Add(User);
+                        db.SaveChanges();
+
+                        _window.DialogResult = true;
+                        _window.Close();
                     }
                     else
                     {

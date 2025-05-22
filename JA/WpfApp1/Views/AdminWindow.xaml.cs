@@ -228,6 +228,7 @@ namespace JA.Views
             {
                 var responses = db.Responses.Where(r => r.VacancyId == vacancy.Id).ToList();
                 db.Responses.RemoveRange(responses);
+                db.Applications.Remove(vacancy);
                 db.SaveChanges();
             }
         }
