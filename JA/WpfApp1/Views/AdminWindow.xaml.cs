@@ -18,7 +18,7 @@ namespace JA.Views
         {
             InitializeComponent();
             _currentUser = currentUser;
-            DataContext = new AdminPanelViewModel();
+            DataContext = new AdminPanelViewModel(_currentUser);
         }
     }
 
@@ -60,8 +60,13 @@ namespace JA.Views
 
         public ICommand DeleteResponseCommand => new RelayCommand<ResponsedAppForList>(DeleteResponse);
 
-        public AdminPanelViewModel()
+        public User _currentUser;
+        public AdminPanelViewModel(User currentUser)
         {
+            using (var db = new AplicationContext())
+            {
+                _currentUser = db.Users.FirstOrDefault(u => u.login == currentUser.login);
+            }
             LoadUsers();
             LoadVacancies();
             LoadResponses();
@@ -152,17 +157,25 @@ namespace JA.Views
         {
             if (user == null) return;
 
+            // Сравниваем по ID, а не по ссылке на объект
+            if (user.id == _currentUser.id)
+            {
+                MessageBox.Show("Вы не можете удалить текущего пользователя.", "Предупреждение",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             if (MessageBox.Show($"Удалить пользователя {user.login} и всё что с ним связано?", "Подтверждение",
-                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
                     using (var db = new AplicationContext())
                     {
-                        // Включаем каскадное удаление для всех связанных таблиц
+                        // Получаем пользователя из базы данных
                         var userToDelete = db.Users
-                            .Include(u => u.Users_data) // Для соискателей
-                            .Include(u => u.Companys_data) // Для работодателей
+                            .Include(u => u.Users_data)
+                            .Include(u => u.Companys_data)
                             .FirstOrDefault(u => u.id == user.id);
 
                         if (userToDelete == null)
@@ -172,19 +185,21 @@ namespace JA.Views
                             return;
                         }
 
-                        // Для работодателей дополнительно удаляем вакансии
-                        // (хотя ON DELETE CASCADE в Applications должно сработать автоматически)
-                        if (userToDelete.isSercher == 0)
+                        // Дополнительная проверка на случай, если что-то изменилось
+                        if (userToDelete.id == _currentUser.id)
+                        {
+                            MessageBox.Show("Вы не можете удалить текущего пользователя.");
+                            return;
+                        }
+
+                        // Удаление связанных данных
+                        if (userToDelete.isSercher == 0) // Для работодателей
                         {
                             var vacancies = db.Applications
                                 .Where(a => a.Id_Company == userToDelete.id)
                                 .ToList();
 
-                            foreach (var vacancy in vacancies)
-                            {
-                                // Ответы удалятся автоматически благодаря ON DELETE CASCADE в Responses
-                                db.Applications.Remove(vacancy);
-                            }
+                            db.Applications.RemoveRange(vacancies);
                         }
 
                         db.Users.Remove(userToDelete);
@@ -194,18 +209,15 @@ namespace JA.Views
                         {
                             MessageBox.Show("Пользователь и все связанные данные успешно удалены");
                             LoadUsers();
-                            LoadVacancies(); // Обновляем список вакансий
-                            LoadResponses(); // Обновляем список откликов
-                        }
-                        else
-                        {
-                            MessageBox.Show("Не удалось удалить пользователя");
+                            LoadVacancies();
+                            LoadResponses();
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ошибка при удалении: {ex.Message}\n\nПодробности: {ex.InnerException?.Message}");
+                    MessageBox.Show($"Ошибка при удалении: {ex.Message}\n\nПодробности: {ex.InnerException?.Message}",
+                        "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
