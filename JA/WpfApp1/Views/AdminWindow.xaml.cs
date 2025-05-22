@@ -20,6 +20,11 @@ namespace JA.Views
             _currentUser = currentUser;
             DataContext = new AdminPanelViewModel(_currentUser);
         }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            var win = new MainWindow(_currentUser);
+            win.Show();
+        }
     }
 
     public class AdminPanelViewModel : ViewModelBase
@@ -280,5 +285,6 @@ namespace JA.Views
                 }
             }
         }
+
     }
 }

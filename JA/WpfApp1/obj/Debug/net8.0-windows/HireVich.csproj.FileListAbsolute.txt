@@ -450,3 +450,7 @@ C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\refint\HireV
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\HireVich.pdb
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\HireVich.genruntimeconfig.cache
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\ref\HireVich.dll
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowCompany.g.cs
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowUser.g.cs
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowCompany.baml
+C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowUser.baml

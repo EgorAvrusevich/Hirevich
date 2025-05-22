@@ -53,9 +53,26 @@ namespace JA.Views.EditWindows
                     { 
                         db.Users.Add(User);
                         db.SaveChanges();
-
-                        _window.DialogResult = true;
-                        _window.Close();
+                        if(User.isSercher == 0)
+                        {
+                            var window = new EditMoreInfoWindowCompany(User);
+                            if(window.ShowDialog() == true)
+                            {
+                                _window.DialogResult = true;
+                            }
+                            else _window.DialogResult = false;
+                            _window.Close();
+                        }
+                        else
+                        {
+                            var window = new EditMoreInfoWindowUser(User);
+                            if (window.ShowDialog() == true)
+                            {
+                                _window.DialogResult = true;
+                            }
+                            else _window.DialogResult = false;
+                            _window.Close();
+                        }
                     }
                     else
                     {

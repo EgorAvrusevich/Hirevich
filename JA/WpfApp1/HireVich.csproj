@@ -72,6 +72,8 @@
     <Page Include="Views\EditWindows\EditAboutWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyInfoWindow.xaml" />
     <Page Include="Views\EditWindows\EditUserWindow.xaml" />
+    <Page Include="Views\EditWindows\EditMoreInfoWindowCompany.xaml" />
+    <Page Include="Views\EditWindows\EditMoreInfoWindowUser.xaml" />
     <Page Include="Views\EditWindows\EditVacancyWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyEmailWindow.xaml" />
     <Page Include="Views\EditWindows\EditCompanyDiscriptionWindow.xaml" />
@@ -167,6 +169,15 @@
     <Page Include="Views\Controls\FiltersPopupControl.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\EditWindows\EditMoreInfoWindowCompany.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditWindows\EditMoreInfoWindowUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JA.Views"
         mc:Ignorable="d"
+        Closing="Window_Closing"
         Title="Административная панель" 
         Height="650" Width="1000"
         WindowStartupLocation="CenterScreen"
