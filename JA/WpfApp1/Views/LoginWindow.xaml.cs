@@ -1,4 +1,5 @@
-﻿using JA.Classes;
+﻿using HireVich.Classes;
+using JA.Classes;
 using JA.Views;
 using System;
 using System.Collections.Generic;
@@ -31,8 +32,8 @@ namespace JA.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             User? user;
-            using (var db = new AplicationContext()) {
-                user = db.Users.FirstOrDefault( u => u.login == login_box.Text);
+            using (var db = new AdoContext()) {
+                user = db.GetUserByLogin(login_box.Text);
                 if (user != null)
                 {
                     if (user.password != password_box.Password)

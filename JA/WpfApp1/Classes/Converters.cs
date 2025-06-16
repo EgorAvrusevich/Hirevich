@@ -44,4 +44,17 @@ namespace JA.Classes
             throw new NotImplementedException();
         }
     }
+
+    public class IntToBoolConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return value is int intValue && intValue == 1;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return value is bool boolValue && boolValue ? 1 : 0;
+        }
+    }
 }

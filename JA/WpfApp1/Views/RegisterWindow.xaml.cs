@@ -1,4 +1,5 @@
-﻿using JA.Classes;
+﻿using HireVich.Classes;
+using JA.Classes;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 using System.Windows;
@@ -108,20 +109,12 @@ namespace JA.Views
             try
             {
                 User newuser;
-                using (var db = new AplicationContext())
+                using (var db = new AdoContext())
                 {
 
-                    if (db.Users.Any(u => u.login == login))
-                    {
-                        MessageBox.Show("Пользователь с таким логином уже существует",
-                                      "Ошибка регистрации",
-                                      MessageBoxButton.OK,
-                                      MessageBoxImage.Warning);
-                        return;
-                    }
-
                     newuser = new User(login, password, isSercher);
-                    db.Users.Add(newuser);
+
+                    db.AddNewUser(newuser);
                     db.SaveChanges();
 
                     db.Entry(newuser).Reload();

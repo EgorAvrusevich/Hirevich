@@ -454,3 +454,7 @@ C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWi
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowUser.g.cs
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowCompany.baml
 C:\Users\J\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowUser.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowCompany.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowUser.g.cs
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowCompany.baml
+C:\Users\User\Desktop\JA1\Hirevich\JA\WpfApp1\obj\Debug\net8.0-windows\Views\EditWindows\EditMoreInfoWindowUser.baml

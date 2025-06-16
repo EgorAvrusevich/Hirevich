@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using HireVich.Classes;
 using JA.Classes;
 using JA.Views.EditWindows;
 using Microsoft.EntityFrameworkCore;
@@ -79,9 +80,9 @@ namespace JA.Views
 
         private void LoadUsers()
         {
-            using (var db = new AplicationContext())
+            using (var db = new AdoContext())
             {
-                Users = new ObservableCollection<User>(db.Users.ToList());
+                Users = db.LoadUsers();
             }
         }
 
@@ -282,9 +283,9 @@ namespace JA.Views
             if (MessageBox.Show("Удалить этот отклик?", "Подтверждение",
                 MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                using (var db = new AplicationContext())
+                using (var db = new AdoContext())
                 {
-                    db.Responses.Remove(response.Response);
+                    db.DeleteResponse(response.Response);
                     db.SaveChangesAsync().ConfigureAwait(false);
                     LoadResponses();
                 }
