@@ -93,7 +93,7 @@ namespace JA.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HireVich;component/views/moreinfowindowcompany.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HireVich;V1.0.0.0;component/views/moreinfowindowcompany.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\MoreInfoWindowCompany.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

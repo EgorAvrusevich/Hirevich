@@ -1,5 +1,6 @@
 ﻿using JA.Classes;
 using JA.Views.Controls;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

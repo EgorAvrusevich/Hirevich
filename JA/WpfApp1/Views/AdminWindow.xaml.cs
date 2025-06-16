@@ -177,45 +177,50 @@ namespace JA.Views
                 {
                     using (var db = new AplicationContext())
                     {
-                        // Получаем пользователя из базы данных
-                        var userToDelete = db.Users
-                            .Include(u => u.Users_data)
-                            .Include(u => u.Companys_data)
-                            .FirstOrDefault(u => u.id == user.id);
+                        using (var tran = db.Database.BeginTransaction())
+                        { 
+                            // Получаем пользователя из базы данных
+                            var userToDelete = db.Users
+                                .Include(u => u.Users_data)
+                                .Include(u => u.Companys_data)
+                                .FirstOrDefault(u => u.id == user.id);
 
-                        if (userToDelete == null)
-                        {
-                            MessageBox.Show("Пользователь уже был удален");
-                            LoadUsers();
-                            return;
-                        }
+                            if (userToDelete == null)
+                            {
+                                MessageBox.Show("Пользователь уже был удален");
+                                LoadUsers();
+                                return;
+                            }
 
-                        // Дополнительная проверка на случай, если что-то изменилось
-                        if (userToDelete.id == _currentUser.id)
-                        {
-                            MessageBox.Show("Вы не можете удалить текущего пользователя.");
-                            return;
-                        }
+                            // Дополнительная проверка на случай, если что-то изменилось
+                            if (userToDelete.id == _currentUser.id)
+                            {
+                                MessageBox.Show("Вы не можете удалить текущего пользователя.");
+                                return;
+                            }
 
-                        // Удаление связанных данных
-                        if (userToDelete.isSercher == 0) // Для работодателей
-                        {
-                            var vacancies = db.Applications
-                                .Where(a => a.Id_Company == userToDelete.id)
-                                .ToList();
+                            // Удаление связанных данных
+                            if (userToDelete.isSercher == 0) // Для работодателей
+                            {
+                                var vacancies = db.Applications
+                                    .Where(a => a.Id_Company == userToDelete.id)
+                                    .ToList();
 
-                            db.Applications.RemoveRange(vacancies);
-                        }
+                                db.Applications.RemoveRange(vacancies);
+                            }
 
-                        db.Users.Remove(userToDelete);
-                        int affected = db.SaveChanges();
+                            db.Users.Remove(userToDelete);
+                            int affected = db.SaveChanges();
 
-                        if (affected > 0)
-                        {
-                            MessageBox.Show("Пользователь и все связанные данные успешно удалены");
-                            LoadUsers();
-                            LoadVacancies();
-                            LoadResponses();
+                            if (affected > 0)
+                            {
+                                MessageBox.Show("Пользователь и все связанные данные успешно удалены");
+                                LoadUsers();
+                                LoadVacancies();
+                                LoadResponses();
+                            }
+
+                            tran.Commit();
                         }
                     }
                 }
@@ -280,7 +285,7 @@ namespace JA.Views
                 using (var db = new AplicationContext())
                 {
                     db.Responses.Remove(response.Response);
-                    db.SaveChanges();
+                    db.SaveChangesAsync().ConfigureAwait(false);
                     LoadResponses();
                 }
             }

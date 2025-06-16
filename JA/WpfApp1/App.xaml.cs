@@ -25,10 +25,6 @@ namespace JA
 
                 // Проверка/создание БД
                 _database.Database.EnsureCreated();
-
-                // Для отладки: выводим путь к БД
-                //MessageBox.Show($"БД создана: {Path.GetFullPath("JAdb.db")}", "Info",
-                //    MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {

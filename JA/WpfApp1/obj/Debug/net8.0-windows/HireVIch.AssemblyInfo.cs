@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HireVich")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9437db15d8fb33ff7bf646712082fd3e08ef6695")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41037df7c942604b948bd7e6da50013d30706ca5")]
 [assembly: System.Reflection.AssemblyProductAttribute("HireVich")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HireVich")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -133,7 +133,7 @@ namespace JA.Views.EditWindows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HireVich;component/views/editwindows/editmoreinfowindowuser.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HireVich;V1.0.0.0;component/views/editwindows/editmoreinfowindowuser.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\EditWindows\EditMoreInfoWindowUser.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

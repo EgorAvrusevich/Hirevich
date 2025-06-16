@@ -54,7 +54,7 @@ namespace JA.Views.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HireVich;component/views/pages/cabinetpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HireVich;V1.0.0.0;component/views/pages/cabinetpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Pages\CabinetPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
